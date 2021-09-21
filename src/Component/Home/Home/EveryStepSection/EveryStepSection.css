@@ -1,0 +1,23 @@
+.everyStep_section_container {
+  background-image: url("../../../../Media/img/Home-Img/every-step-section-img/every-step-section.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 8% 3%;
+}
+.everyStep_section_container h3 {
+  font-size: 36px;
+  line-height: 40px;
+  font-family: "Poppins", sans-serif;
+  color: #0f3661;
+  font-weight: 600;
+  line-height: 42px;
+}
+.everyStep_section_container h6 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 550;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  color: #0f3661d1;
+}

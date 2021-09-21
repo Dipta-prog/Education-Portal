@@ -1,0 +1,55 @@
+.photo-frame {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.photo-frame:hover .photo img {
+  transform: scale(1.2);
+  transition: transform 0.4s ease-in-out 0.1s;
+}
+.photo-details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: none;
+  /* transition: transform 2s ease-in-out 2s !important; */
+}
+.photo-frame:hover .photo-details {
+  display: block;
+
+  transition: margin-right 2s ease-in-out;
+}
+.photo-details:hover {
+  transition: all 0.3s ease !important;
+  background-color: #86bc42cc;
+  padding: 5% 8%;
+}
+
+.photo-frame:hover .photo-details p {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 19px;
+  color: white;
+}
+.photo-frame:hover .photo-details span {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 23px;
+  color: white;
+}
+.border_gallery {
+  border-bottom: 2px solid white;
+  width: 40%;
+  margin-top: 3%;
+  margin-bottom: 10%;
+}
+.photo-details p {
+}
+/*  */
+#gellery_search_icon {
+  color: white;
+  font-size: 25px;
+  float: right !important;
+}
