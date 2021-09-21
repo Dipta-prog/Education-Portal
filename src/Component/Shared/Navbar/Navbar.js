@@ -4,9 +4,10 @@ import './Navbar.scss';
 
 const Navbar = () => {
     return (
-        <nav className="nav-area">
+        <div className="nav-section">
+        <nav className=" container nav-area">
         <input type="checkbox" id="box" />
-        <label for="box" className="btn-area"><i className="fa fa-align-left"></i></label>
+        <label for="box" className="btn-area"><i className="fa fa-align-right"></i></label>
         <label>
             <img src={logo} alt="" className="logo" />
         </label>
@@ -17,7 +18,7 @@ const Navbar = () => {
             <li><a href="#">Services</a></li>
             <li><a href="#">Events</a></li>
         </ul>
-    </nav>
+    </nav></div>
     );
 };
 
