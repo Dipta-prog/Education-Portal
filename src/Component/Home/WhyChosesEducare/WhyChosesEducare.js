@@ -1,5 +1,5 @@
 import React from "react";
-import "./WhyChosesEducare.css";
+import "./WhyChosesEducare.scss";
 import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/chones-educare.png";
 import {
   FaCloudDownloadAlt,

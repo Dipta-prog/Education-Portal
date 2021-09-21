@@ -6,10 +6,13 @@ import ImportantFact from "./ImportantFact/ImportantFact";
 import MotivationSection from "./MotivationSection/MotivationSection";
 import PhotoGallery from "./PhotoGallery/PhotoGallery";
 import TopGraduated from "./TopGraduated/TopGraduated";
+import Navbar from "../../Shared/Navbar/Navbar";
+import Footer from "../../Shared/Footer/Footer";
 
 const Home = () => {
   return (
     <div>
+      <Navbar/>
       <AboutEducare></AboutEducare>
       <WhyChosesEducare></WhyChosesEducare>
       <EveryStepSection></EveryStepSection>
@@ -18,6 +21,7 @@ const Home = () => {
       <PhotoGallery></PhotoGallery>
       <MotivationSection></MotivationSection>
       <TopGraduated></TopGraduated>
+      <Footer/>
     </div>
   );
 };

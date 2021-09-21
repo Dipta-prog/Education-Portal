@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFile, FaTh, FaUsers, FaThList } from "react-icons/fa";
-import "./ImportantFact.css";
+import "./ImportantFact.scss";
 import CountUp from "react-countup";
 const importanFact = [
   {

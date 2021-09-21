@@ -1,6 +1,6 @@
 import React from "react";
 import { FaRegCalendarCheck, FaCheckSquare } from "react-icons/fa";
-import "./AboutEducare.css";
+import "./AboutEducare.scss";
 import aboutRducareImg from "../../../../Media/img/about-educare-img/about-educare.png";
 const goalList = [
   {

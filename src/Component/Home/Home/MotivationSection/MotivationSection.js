@@ -1,5 +1,5 @@
 import React from "react";
-import "./MotivationSection.css";
+import "./MotivationSection.scss";
 import motivationSectionVideoPartImg from "../../../../Media/img/Home-Img/student-motivation-img/v_bg.jpg";
 import { FaChevronRight } from "react-icons/fa";
 const MotivationSection = () => {
