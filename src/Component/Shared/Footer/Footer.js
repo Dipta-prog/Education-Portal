@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from '../../Images/education-portal-logo.jpg';
-import './Footer.css';
+// import logo from '../../Images/education-portal-logo.jpg';
+import logo from '../../../Media/img/Shared-Images/education-portal-logo.jpg';
+import './Footer.scss';
 
 const Footer = () => {
     return (

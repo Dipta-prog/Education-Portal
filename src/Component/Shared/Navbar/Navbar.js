@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../../Images/education-portal-logo.jpg';
-import './Navbar.css';
+import logo from '../../../Media/img/Shared-Images/education-portal-logo.jpg';
+import './Navbar.scss';
 
 const Navbar = () => {
     return (

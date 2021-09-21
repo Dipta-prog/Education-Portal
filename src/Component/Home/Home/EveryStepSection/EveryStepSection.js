@@ -1,6 +1,6 @@
 import React from "react";
 import everyStepSectionImg from "../../../../Media/img/Home-Img/every-step-section-img/every-step-section.jpg";
-import "./EveryStepSection.css";
+import "./EveryStepSection.scss";
 const EveryStepSection = () => {
   return (
     <div className="everyStep_section_container">

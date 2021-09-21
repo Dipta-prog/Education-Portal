@@ -1,5 +1,5 @@
 import React from "react";
-import "./PhotoGallery.css";
+import "./PhotoGallery.scss";
 import img1 from "../../../../Media/img/Home-Img/photo-gallery/1.jpg";
 import img2 from "../../../../Media/img/Home-Img/photo-gallery/2.jpg";
 import img3 from "../../../../Media/img/Home-Img/photo-gallery/3.jpg";

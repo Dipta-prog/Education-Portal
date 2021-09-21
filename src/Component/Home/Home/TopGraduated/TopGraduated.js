@@ -1,5 +1,5 @@
 import React from "react";
-import "./TopGraduated.css";
+import "./TopGraduated.scss";
 const topGraduated = [
   {
     img: (
