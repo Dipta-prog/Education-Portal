@@ -1,0 +1,35 @@
+.motivation_section_container {
+  background-image: linear-gradient(#000000c7, #000000bf, #000000bd, #000000cf),
+    url("../../../../Media/img/Home-Img/student-motivation-img/section_3_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 0;
+  background-attachment: fixed;
+}
+/* .motivation_section_videoPart {
+  background-image: url("../../../../Media/img/Home-Img/student-motivation-img/v_bg.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.motivation_section_description h3 {
+  font-size: 26px;
+  color: #ffffff;
+
+  text-transform: capitalize;
+  font-family: "Trirong", serif;
+  font-weight: 400;
+}
+.motivation_section_description p {
+  color: #d0d1da;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  font-size: 14px;
+  padding-right: 5%;
+}
+.video_click_icon {
+  position: absolute;
+  top: 2335px;
+  color: red;
+}

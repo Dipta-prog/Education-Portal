@@ -1,12 +1,24 @@
-import './App.css';
-import Footer from './Components/Footer/Footer';
-import Navbar from './Components/Navbar/Navbar';
-
+import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./Component/Home/Home/Home";
+import Login from "./Firebase/Login/Login/Login";
 function App() {
   return (
     <div>
-      <Navbar />
-      <Footer />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
