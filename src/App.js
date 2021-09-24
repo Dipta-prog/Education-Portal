@@ -6,7 +6,6 @@ import Login from "./Firebase/Login/Login/Login";
 function App() {
   return (
     <div>
-      {/* <h1>Hello I am Joti</h1> */}
       <Router>
         <Switch>
           <Route exact path="/">
