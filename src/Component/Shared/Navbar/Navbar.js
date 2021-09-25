@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../../Media/img/Shared-Images/education-portal-logo.jpg';
 import './Navbar.scss';
 
@@ -17,6 +18,7 @@ const Navbar = () => {
             <li><a href="#">Contact</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Events</a></li>
+            <li ><Link className=" border border-2" to="/login">Login</Link></li>
         </ul>
     </nav></div>
     );
