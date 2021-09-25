@@ -1,8 +1,8 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory, useLocation } from "react-router";
+import { useHistory, useLocation } from 'react-router';
 import loginImg from "../../../Media/img/login-img/bg.svg";
 import firebaseConfig from "../../firebase.config";
 
@@ -30,40 +30,42 @@ const Login = () => {
     })
     console.log(data)
     const auth = getAuth();
+    console.log(auth)
     signInWithEmailAndPassword(auth, data.email, data.password)
       .then((userCredential) => {
         const loginUser = userCredential.user
-        console.log(loginUser)
+        console.log(userCredential)
         const newUserInfo = { ...user };
         newUserInfo.email = loginUser.email;
         newUserInfo.password = data.password;
         newUserInfo.error = '';
         newUserInfo.success = true;
         setUser(newUserInfo);
-        history.replace(from)
+        history.replace(from);
       })
       .catch((error) => {
-
+        console.log("code",error.code, "firebase error message", error.message)
         const newUserInfo = { ...user }
-        console.log(newUserInfo)
+        // console.log(newUserInfo)
         newUserInfo.success = false;
         newUserInfo.error = error.message;
-        console.log(error)
+        
         setUser(newUserInfo);
       });
   }
 
-  // const handleLogOut = () => {
+  const handleLogOut = () => {
 
-  //   const auth = getAuth();
-  //   signOut(auth).then((data) => {
-  //     // Sign-out successful.
-  //     console.log(data)
-  //   }).catch((error) => {
-  //     // An error happened.
-  //     console.log(error)
-  //   });
-  // }
+    const auth = getAuth();
+    signOut(auth).then((data) => {
+      setUser({});
+      // Sign-out successful.
+      console.log("Log out successful")
+    }).catch((error) => {
+      // An error happened.
+      console.log(error)
+    });
+  }
 
   return (
     <div
@@ -101,11 +103,11 @@ const Login = () => {
               {errors.password && <span className="text-danger">Password is required</span>}
 
               <br />
-              <input className="btn btn-success" type="submit" />
+              {/* <input className="btn btn-success" type="submit" /> */}
 
-              {/* {
+              {
                 user.success && user.error === '' ? <button onClick={handleLogOut} className="btn btn-danger">Log out</button> : <input className="btn btn-success" type="submit" />
-              } */}
+              }
             </form>
           </div>
         </div>
