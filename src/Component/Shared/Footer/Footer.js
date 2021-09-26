@@ -92,25 +92,23 @@ const Footer = () => {
                     <span>Get connected with us on social networks:</span>
                 </div>
 
-
-
                 <div>
-                    <a href="" className="me-4 text-reset">
+                    <a href="#facebook" className="me-4 text-reset">
                         <i className="fa fa-facebook-f"></i>
                     </a>
-                    <a href="" className="me-4 text-reset">
+                    <a href="#twitter" className="me-4 text-reset">
                         <i className="fa fa-twitter"></i>
                     </a>
-                    <a href="" className="me-4 text-reset">
+                    <a href="#google" className="me-4 text-reset">
                         <i className="fa fa-google"></i>
                     </a>
-                    <a href="" className="me-4 text-reset">
+                    <a href="#instagram" className="me-4 text-reset">
                         <i className="fa fa-instagram"></i>
                     </a>
-                    <a href="" className="me-4 text-reset">
+                    <a href="#linkedin" className="me-4 text-reset">
                         <i className="fa fa-linkedin"></i>
                     </a>
-                    <a href="" className="me-4 text-reset">
+                    <a href="#github" className="me-4 text-reset">
                         <i className="fa fa-github"></i>
                     </a>
                 </div>
@@ -121,7 +119,7 @@ const Footer = () => {
             {/* Copyright  */}
             <div className="text-center p-4" style={{ backgroundColor: "#101010" }}>
                 © 2021 Copyright:
-                <a className="text-yellow fw-bold" href="#">Education portal</a>
+                <a className="text-yellow fw-bold" href="#home">Education portal</a>
             </div>
 
         </footer>

@@ -11,11 +11,11 @@ const Navbar = () => {
                 <img src={logo} alt="" className="logo" />
             </label>
             <ul className="nav-links">
-                <li><a className='nav-deco' href="#">Home</a></li>
-                <li><a className='nav-deco' href="#">About</a></li>
-                <li><a className='nav-deco' href="#">Contact</a></li>
-                <li><a className='nav-deco' href="#">Services</a></li>
-                <li><a className='nav-deco' href="#">Events</a></li>
+                <li><a className='nav-deco' href="#home">Home</a></li>
+                <li><a className='nav-deco' href="#about">About</a></li>
+                <li><a className='nav-deco' href="#contact">Contact</a></li>
+                <li><a className='nav-deco' href="#services">Services</a></li>
+                <li><a className='nav-deco' href="#events">Events</a></li>
             </ul>
         </nav>
     );
