@@ -6,18 +6,19 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
 }
 
-
+.nav-section{
+    background-color: #202020;
+}
 .nav-area {
     width: 100%;
-    padding: 7px 2%;
-    background-color: #202020;
+    padding: 8px 0;
+    
 }
 
 .logo {
-    padding: 0 10px;
     cursor: pointer;
     height: 60px;
     border-radius: 3px;
@@ -27,13 +28,11 @@
 .nav-links {
     list-style: none;
     float: right;
-    margin-right: 20px;
 }
 
 .nav-area ul li {
     display: inline-block;
     line-height: 60px;
-    margin: 0 5px;
     padding: 0px 15px;
 
 }
@@ -45,6 +44,7 @@
     transition: all 0.5s ease 0s;
     padding: 8px;
     border-radius: 8px;
+    text-decoration: none;
 }
 
 .nav-area ul li a:hover {
@@ -65,13 +65,14 @@
 #box {
     display: none;
 }
-@media (max-width: 960px){
+@media (max-width: 992px){
     .nav-area ul li {
         margin: 0;
-        padding: 0px 5px;
+        padding: 0px 4px;
     }
     
 }
+
 
 @media (max-width: 768px) {
     .btn-area {
@@ -88,32 +89,29 @@
     .nav-area {
         width: 100%;
         padding: 7px 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
     }
 
     .nav-area ul {
         position: absolute;
         width: 100%;
-        height: 100vh;
         background: #202020;
-        top: 75px;
+        top: 60px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+        padding-right: 32px;
     }
 
     .nav-area ul li {
         display: block;
         margin: 0;
         line-height: 30px;
-        padding: 25px 0;
+        padding: 11px 0;
 
     }
 
     .nav-area ul li a {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .nav-area ul li:hover {
@@ -126,5 +124,12 @@
 
     #box:checked~ul {
         left: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .nav-area {
+        width: 90%;
+        padding: 7px 0;
     }
 }
