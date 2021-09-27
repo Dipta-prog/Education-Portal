@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import WhyChosesEducare from "../WhyChosesEducare/WhyChosesEducare";
 import AboutEducare from "./AboutEducare/AboutEducare";
 import EveryStepSection from "./EveryStepSection/EveryStepSection";
@@ -8,11 +8,21 @@ import PhotoGallery from "./PhotoGallery/PhotoGallery";
 import TopGraduated from "./TopGraduated/TopGraduated";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Footer from "../../Shared/Footer/Footer";
-
+import Header from "./Header/Header";
+import StudentReviews from "./StudentReviews/StudentReviews";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Home = () => {
+  // /////
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
+  // ////
   return (
-    <div>
-      <Navbar/>
+    <div style={{ overflowX: "hidden" }}>
+      <Navbar />
+      <Header></Header>
       <AboutEducare></AboutEducare>
       <WhyChosesEducare></WhyChosesEducare>
       <EveryStepSection></EveryStepSection>
@@ -21,7 +31,8 @@ const Home = () => {
       <PhotoGallery></PhotoGallery>
       <MotivationSection></MotivationSection>
       <TopGraduated></TopGraduated>
-      <Footer/>
+      <StudentReviews></StudentReviews>
+      <Footer />
     </div>
   );
 };
