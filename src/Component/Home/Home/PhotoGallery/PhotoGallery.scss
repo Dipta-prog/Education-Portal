@@ -27,11 +27,12 @@
   padding: 5% 8%;
 }
 
-.photo-frame:hover .photo-details p {
+.photo-frame:hover .photo-details small {
   font-style: italic;
   font-weight: 400;
   font-size: 19px;
   color: white;
+  display: block;
 }
 .photo-frame:hover .photo-details span {
   font-family: inherit;
@@ -41,7 +42,7 @@
 }
 .border_gallery {
   border-bottom: 2px solid white;
-  width: 40%;
+  width: 50%;
   margin-top: 3%;
   margin-bottom: 10%;
 }
@@ -52,4 +53,19 @@
   color: white;
   font-size: 25px;
   float: right !important;
+}
+@media (max-width: 396px) {
+  .photo-frame:hover .photo-details small {
+    font-size: 14px;
+  }
+  .photo-frame:hover .photo-details span {
+    font-size: 16px;
+  }
+  .border_gallery {
+    margin-top: 2%;
+    margin-bottom: none;
+  }
+  #gellery_search_icon {
+    font-size: 20px;
+  }
 }

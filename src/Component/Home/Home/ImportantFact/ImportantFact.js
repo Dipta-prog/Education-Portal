@@ -39,17 +39,20 @@ const ImportantFact = () => {
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-        <div className="row">
+        <div className="row" style={{ padding: "0 2%" }}>
           {importanFact.map((fact, i) => (
             <div
               key={i}
               className="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3"
-              style={{ marginBottom: "4%" }}
+              style={{
+                paddingBottom: "1%",
+                paddingLeft: "1%",
+                paddingRight: "1%",
+                paddingTop: "1%",
+              }}
             >
               <div className="single_importantFact_card">
                 <div
