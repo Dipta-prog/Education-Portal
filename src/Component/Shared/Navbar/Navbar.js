@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="nav-section">
         <nav className=" container nav-area">
         <input type="checkbox" id="box" />
-        <label for="box" className="btn-area"><i className="fa fa-align-right"></i></label>
+        <label htmlFor="box" className="btn-area"><i className="fa fa-align-right"></i></label>
         <label>
             <img src={logo} alt="" className="logo" />
         </label>
