@@ -67,8 +67,6 @@ const AboutEducare = () => {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's stan
                   when an unknown printer took a galley of type and scramble.
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
                 </p>
                 <div className="row">
                   {goalList.map((list) => (

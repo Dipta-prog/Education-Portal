@@ -1,0 +1,40 @@
+.students_reviews_container {
+  text-align: center !important;
+
+  padding: 7% 3%;
+  background-color: white;
+  border-left: 2px solid #86bc42cc;
+  margin: 20px !important;
+}
+.students_reviews_container img {
+  width: 17%;
+  border-radius: 100%;
+  border: 6px solid #eeeeee;
+  margin: auto;
+}
+.students_reviews_container p {
+  color: #646a7c;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2% 5%;
+  height: 70px;
+  overflow-y: auto;
+}
+.students_reviews_container h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #86bc42cc;
+  letter-spacing: 1px;
+}
+/*  */
+.students_reviews_container p::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 5px;
+}
+
+.students_reviews_container p::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #8cc24bcc;
+}
+/*  */

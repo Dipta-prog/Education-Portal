@@ -76,7 +76,11 @@ const TopGraduated = () => {
       </div>
       <div className="row">
         {topGraduated.map((top, i) => (
-          <div key={i} className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+          <div
+            key={i}
+            className="col-sm-6 col-md-6 col-lg-4 col-xl-4"
+            style={{ paddingBottom: "4%" }}
+          >
             <div className="top_graduated_container">
               {top.img}
 
