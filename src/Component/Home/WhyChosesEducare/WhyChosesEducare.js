@@ -11,9 +11,11 @@ import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/cho
 import {
   FaBalanceScale,
   FaBullhorn,
+  FaCloudDownloadAlt,
+  FaPaperPlane,
   FaSquare,
 } from "react-icons/fa";
-import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/chones-educare.png";
+// import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/chones-educare.png";
 import "./WhyChosesEducare.scss";
 const whyChosesEducareList = [
   {
