@@ -1,7 +1,7 @@
 import React from "react";
-import { FaRegCalendarCheck, FaCheckSquare } from "react-icons/fa";
-import "./AboutEducare.scss";
+import { FaCheckSquare } from "react-icons/fa";
 import aboutRducareImg from "../../../../Media/img/about-educare-img/about-educare.png";
+import "./AboutEducare.scss";
 const goalList = [
   {
     title: (
@@ -52,7 +52,7 @@ const AboutEducare = () => {
             <div className="about_educare_title">
               <div className="about_educare_header_title">
                 <h2>
-                  ABOUT EDUCARE <span>ONLINE COURSES</span>
+                  ABOUT EDUCATION <span>PORTAL COURSES</span>
                 </h2>
 
                 <div className="line1"></div>

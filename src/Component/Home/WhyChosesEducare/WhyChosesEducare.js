@@ -9,13 +9,12 @@ import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/cho
 // import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/chones-educare.png";
 
 import {
-  FaCloudDownloadAlt,
-  FaPaperPlane,
   FaBalanceScale,
   FaBullhorn,
   FaSquare,
 } from "react-icons/fa";
-import { CgShapeRhombus } from "react-icons/cg";
+import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/chones-educare.png";
+import "./WhyChosesEducare.scss";
 const whyChosesEducareList = [
   {
     title: (
@@ -119,7 +118,7 @@ const WhyChosesEducare = () => {
       <div className="container">
         <div className="all_section_header_title">
           <big>
-            WHY CHOOSE <span>EDUCARE</span>
+            WHY CHOOSE <span>Education Portal</span>
           </big>{" "}
           <div className="lines">
             <div className="lines1"></div>

@@ -11,7 +11,7 @@ const topGraduated = [
         </div>
       </div>
     ),
-    title: <h6>Personal Template On ThemeForest</h6>,
+    title: <h6>Lorem, ipsum dolor sit amet</h6>,
     dispriction: (
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
@@ -29,7 +29,7 @@ const topGraduated = [
         </div>
       </div>
     ),
-    title: <h6>Personal Template On ThemeForest</h6>,
+    title: <h6>Lorem, ipsum dolor sit amet</h6>,
     dispriction: (
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
@@ -47,7 +47,7 @@ const topGraduated = [
         </div>
       </div>
     ),
-    title: <h6>Personal Template On ThemeForest</h6>,
+    title: <h6>Lorem, ipsum dolor sit amet</h6>,
     dispriction: (
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
