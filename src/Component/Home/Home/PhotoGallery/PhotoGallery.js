@@ -75,7 +75,7 @@ const PhotoGallery = () => {
                 <p>Catagory</p>
                 <span>Product Name</span>
                 <div className="border_gallery"></div>
-                <FaSearchPlus id="gellery_search_icon" />
+                <FaSearchPlus id="gallery_search_icon" />
               </div>
             </div>
           </div>

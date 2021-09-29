@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import Home from "./Component/Home/Home/Home";
+import CourseDetails from "./Component/Pages/CourseDetails/CourseDetails";
+import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
 import Login from "./Firebase/Login/Login/Login";
 function App() {
   return (
@@ -16,6 +18,12 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/courseDetails">
+            <CourseDetails />
+          </Route>
+          <Route path="/teacherForm">
+            <TeacherForm />
           </Route>
         </Switch>
       </Router>
