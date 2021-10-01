@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import welcomeBanner from '../../../Media/img/Welcome-banner/Welcome.JPG';
-=======
 import welcomeBanner from '../../../Media/img/Welcome-banner/Welcome.jpg';
->>>>>>> Development
 import Navbar from '../../Shared/Navbar/Navbar';
 import Weekly from '../Weekly/Weekly';
 import './CourseDetails.scss';

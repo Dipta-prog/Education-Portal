@@ -91,28 +91,6 @@ const Footer = () => {
 
 
 
-<<<<<<< HEAD
-                <div>
-                    <a href="#facebook" className="me-4 text-reset">
-                        <i className="fa fa-facebook-f"></i>
-                    </a>
-                    <a href="#twitter" className="me-4 text-reset">
-                        <i className="fa fa-twitter"></i>
-                    </a>
-                    <a href="#google" className="me-4 text-reset">
-                        <i className="fa fa-google"></i>
-                    </a>
-                    <a href="#instagram" className="me-4 text-reset">
-                        <i className="fa fa-instagram"></i>
-                    </a>
-                    <a href="#linkedin" className="me-4 text-reset">
-                        <i className="fa fa-linkedin"></i>
-                    </a>
-                    <a href="#github" className="me-4 text-reset">
-                        <i className="fa fa-github"></i>
-                    </a>
-                </div>
-=======
                         <div className="col-md-6">
                             <a href="" className="me-4 text-reset">
                                 <i className="fa fa-facebook-f"></i>
@@ -129,7 +107,6 @@ const Footer = () => {
                             </a>
 
                         </div>
->>>>>>> Development
 
                     </div>
                 </div>
@@ -142,14 +119,6 @@ const Footer = () => {
                     </div>
 
 
-<<<<<<< HEAD
-            {/* Copyright  */}
-            <div className="text-center p-4" style={{ backgroundColor: "#101010" }}>
-                © 2021 Copyright:
-                <a className="text-yellow fw-bold" href="#home">Education portal</a>
-            </div>
-=======
->>>>>>> Development
 
         </footer>
     );
