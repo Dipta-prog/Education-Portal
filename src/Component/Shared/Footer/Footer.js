@@ -31,13 +31,13 @@ const Footer = () => {
                                     Office
                                 </h6>
                                 <p>
-                                    <a href="#!" className="text-reset">Home</a>
+                                    <a href="#!" className="text-reset deco-remove">Home</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">About</a>
+                                    <a href="#!" className="text-reset deco-remove">About</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Contact</a>
+                                    <a href="#!" className="text-reset deco-remove">Contact</a>
                                 </p>
 
                             </div>
@@ -50,16 +50,16 @@ const Footer = () => {
                                     Useful links
                                 </h6>
                                 <p>
-                                    <a href="#!" className="text-reset">Terms & Conditions</a>
+                                    <a href="#!" className="text-reset deco-remove">Terms & Conditions</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Settings</a>
+                                    <a href="#!" className="text-reset deco-remove">Settings</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">FaQ</a>
+                                    <a href="#!" className="text-reset deco-remove">FaQ</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Help</a>
+                                    <a href="#!" className="text-reset deco-remove">Help</a>
                                 </p>
                             </div>
 
