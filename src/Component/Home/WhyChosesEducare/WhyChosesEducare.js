@@ -1,13 +1,22 @@
 import React from "react";
 import "./WhyChosesEducare.scss";
-import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/chones-educare.png";
+
+import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/choses-educare-book.e38756c2.png";
+
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { fadOcta } from "@fortawesome/free-solid-svg-icons";
+
+// import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/chones-educare.png";
+
 import {
-  FaCloudDownloadAlt,
-  FaPaperPlane,
   FaBalanceScale,
   FaBullhorn,
+  FaCloudDownloadAlt,
+  FaPaperPlane,
+  FaSquare,
 } from "react-icons/fa";
-import { CgShapeRhombus } from "react-icons/cg";
+// import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/chones-educare.png";
+import "./WhyChosesEducare.scss";
 const whyChosesEducareList = [
   {
     title: (
@@ -18,16 +27,11 @@ const whyChosesEducareList = [
             <FaCloudDownloadAlt className="pull_left_icons" />
           </div>
           <div className="pull_right">
-            <CgShapeRhombus
-              style={{
-                fontSize: "26px",
-                color: "#86bc42",
-              }}
-            />
+            <FaSquare className="pull_right_icons" />
           </div>
         </div>
 
-        <div className="whyChosesEducareList_titles">
+        <div data-aos="fade-left" className="whyChosesEducareList_titles">
           <h5>RESIDENTIAL SERVICES</h5>
           <p>
             Backed by some of the biggest names in the industry, Firefox OS is
@@ -46,16 +50,11 @@ const whyChosesEducareList = [
             <FaPaperPlane className="pull_left_icons" />
           </div>
           <div className="pull_right">
-            <CgShapeRhombus
-              style={{
-                fontSize: "26px",
-                color: "#86bc42",
-              }}
-            />
+            <FaSquare className="pull_right_icons" />
           </div>
         </div>
 
-        <div className="whyChosesEducareList_titles">
+        <div data-aos="fade-left" className="whyChosesEducareList_titles">
           <h5>COMMERCIAL SERVICES</h5>
           <p>
             Backed by some of the biggest names in the industry, Firefox OS is
@@ -74,16 +73,11 @@ const whyChosesEducareList = [
             <FaBalanceScale className="pull_left_icons" />
           </div>
           <div className="pull_right">
-            <CgShapeRhombus
-              style={{
-                fontSize: "26px",
-                color: "#86bc42",
-              }}
-            />
+            <FaSquare className="pull_right_icons" />
           </div>
         </div>
 
-        <div className="whyChosesEducareList_titles">
+        <div data-aos="fade-left" className="whyChosesEducareList_titles">
           <h5>OUR BEST STAFF</h5>
           <p>
             Backed by some of the biggest names in the industry, Firefox OS is
@@ -102,16 +96,11 @@ const whyChosesEducareList = [
             <FaBullhorn className="pull_left_icons" />
           </div>
           <div className="pull_right">
-            <CgShapeRhombus
-              style={{
-                fontSize: "26px",
-                color: "#86bc42",
-              }}
-            />
+            <FaSquare className="pull_right_icons" />
           </div>
         </div>
 
-        <div className="whyChosesEducareList_titles">
+        <div data-aos="fade-up" className="whyChosesEducareList_titles">
           <h5>24 HOURS SERVICES</h5>
           <p>
             Backed by some of the biggest names in the industry, Firefox OS is
@@ -131,7 +120,7 @@ const WhyChosesEducare = () => {
       <div className="container">
         <div className="all_section_header_title">
           <big>
-            WHY CHOOSE <span>EDUCARE</span>
+            WHY CHOOSE <span>Education Portal</span>
           </big>{" "}
           <div className="lines">
             <div className="lines1"></div>
@@ -140,9 +129,7 @@ const WhyChosesEducare = () => {
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
         {/*  */}
@@ -154,10 +141,13 @@ const WhyChosesEducare = () => {
             alignItems: "center",
           }}
         >
-          <div className="col-sm-5">
-            <img src={chosesEduCareImg} alt="" style={{ width: "100%" }} />
+          <div className="col-sm-12 col-md-5 col-lg-6 col-xl-5 why_choses_educare_book_img">
+            <img src={chosesEduCareImg} alt="" className="" />
           </div>
-          <div className="col-sm-7" style={{ marginTop: "3%" }}>
+          <div
+            className="col-sm-12 col-md-7 col-lg-6 col-xl-7"
+            style={{ marginTop: "3%" }}
+          >
             {whyChosesEducareList.map((list, i) => (
               <div key={i}>{list.title}</div>
             ))}

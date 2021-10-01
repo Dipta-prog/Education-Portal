@@ -32,7 +32,7 @@
   text-align: center;
   border-radius: 2px;
 }
-.top_graduated_imges big {
+.datesInGraduate big {
   font-size: 15px;
   font-weight: 400;
   font-family: sans-serif;
@@ -47,4 +47,64 @@
 .top_graduated_container p {
   text-align: center;
   line-height: 25px;
+}
+/* media quary */
+@media (max-width: 1399px) {
+  .datesInGraduate {
+    width: 30%;
+
+    padding: 10px;
+  }
+  .datesInGraduate big {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .datesInGraduate {
+    width: 35%;
+
+    padding: 10px 12px;
+  }
+  .datesInGraduate big {
+    font-size: 13px;
+  }
+  .top_graduated_container h6 {
+    font-size: 16px;
+    padding-top: 3%;
+  }
+  .top_graduated_container p {
+    line-height: 19px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .datesInGraduate {
+    width: 25%;
+
+    padding: 10px;
+  }
+  .datesInGraduate big {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .top_graduated_container h6 {
+    font-size: 18px;
+    padding-top: 5%;
+  }
+  .top_graduated_container p {
+    line-height: 19px;
+    font-size: 14px;
+    padding: 0 4%;
+  }
+}
+@media (max-width: 374px) {
+  .datesInGraduate {
+    width: 34%;
+
+    padding: 10px;
+  }
+  .datesInGraduate big {
+    font-size: 12px;
+    font-weight: 400;
+  }
 }

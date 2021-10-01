@@ -5,16 +5,16 @@ import './Footer.scss';
 
 const Footer = () => {
     return (
-        <footer className="text-center text-decoration-none text-lg-start footer-bg text-white mt-4">
-            <section className="pt-5">
-                <div className="container text-md-start">
+        <footer className="text-decoration-none footer-bg text-white">
+            <div className="pt-5 px-2">
+                <div className="container">
 
                     <div className="row">
 
-                        <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <div className="col-md-3 col-lg-4">
 
-                            <h6 className="text-uppercase fw-bold mb-4">
-                                <i className="fa fa-gem me-3"><img src={logo} alt="" height="60px" /></i>
+                            <h6 className="text-uppercase fw-bold ">
+                                <i className="fa fa-gem me-3"><img src={logo} alt="" className="footer-logo" /></i>
                             </h6>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum exercitationem rerum nostrum delectus
@@ -25,41 +25,41 @@ const Footer = () => {
 
                         <div className="row col-md-5">
 
-                            <div className="col-md-5 col-sm-6 mx-auto mb-4">
+                            <div className="col-md-6 col-sm-6 col-6 mb-4">
                                 {/* Links */}
                                 <h6 className="text-uppercase text-yellow fw-bold mb-4">
                                     Office
                                 </h6>
                                 <p>
-                                    <a href="#!" className="text-reset">Home</a>
+                                    <a href="#!" className="text-reset deco-remove">Home</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">About</a>
+                                    <a href="#!" className="text-reset deco-remove">About</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Contact</a>
+                                    <a href="#!" className="text-reset deco-remove">Contact</a>
                                 </p>
 
                             </div>
 
 
 
-                            <div className="col-md-7 col-sm-6 mx-auto mb-4">
+                            <div className="col-md-6 col-sm-6 col-6 mx-auto mb-4">
                                 {/* useful Links  */}
                                 <h6 className="text-uppercase text-yellow fw-bold mb-4">
                                     Useful links
                                 </h6>
                                 <p>
-                                    <a href="#!" className="text-reset">Terms & Conditions</a>
+                                    <a href="#!" className="text-reset deco-remove">Terms & Conditions</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Settings</a>
+                                    <a href="#!" className="text-reset deco-remove">Settings</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">FaQ</a>
+                                    <a href="#!" className="text-reset deco-remove">FaQ</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Help</a>
+                                    <a href="#!" className="text-reset deco-remove">Help</a>
                                 </p>
                             </div>
 
@@ -81,48 +81,44 @@ const Footer = () => {
                         </div>
 
                     </div>
+                    
+                    {/* Section: Social media */}
+                    <div className="text-center row border-bottom py-3">
 
+                        <div className=" col-md-6">
+                            <span>Get connected with us</span>
+                        </div>
+
+
+
+                        <div className="col-md-6">
+                            <a href="" className="me-4 text-reset">
+                                <i className="fa fa-facebook-f"></i>
+                            </a>
+                            <a href="" className="me-4 text-reset">
+                                <i className="fa fa-twitter"></i>
+                            </a>
+
+                            <a href="" className="me-4 text-reset">
+                                <i className="fa fa-instagram"></i>
+                            </a>
+                            <a href="" className="me-4 text-reset">
+                                <i className="fa fa-linkedin"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
                 </div>
-            </section>
-
-            {/* Section: Social media */}
-            <section className="container d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-
-                <div className="me-5 d-none d-lg-block">
-                    <span>Get connected with us on social networks:</span>
-                </div>
-
-
-
-                <div>
-                    <a href="" className="me-4 text-reset">
-                        <i className="fa fa-facebook-f"></i>
-                    </a>
-                    <a href="" className="me-4 text-reset">
-                        <i className="fa fa-twitter"></i>
-                    </a>
-                    <a href="" className="me-4 text-reset">
-                        <i className="fa fa-google"></i>
-                    </a>
-                    <a href="" className="me-4 text-reset">
-                        <i className="fa fa-instagram"></i>
-                    </a>
-                    <a href="" className="me-4 text-reset">
-                        <i className="fa fa-linkedin"></i>
-                    </a>
-                    <a href="" className="me-4 text-reset">
-                        <i className="fa fa-github"></i>
-                    </a>
-                </div>
-
-            </section>
-
-
-            {/* Copyright  */}
-            <div className="text-center p-4" style={{ backgroundColor: "#101010" }}>
-                © 2021 Copyright:
-                <a className="text-yellow fw-bold" href="#">Education portal</a>
+               
             </div>
+ {/* Copyright  */}
+                    <div className="text-center p-4" style={{ backgroundColor: "#101010" }}>
+                        © 2021 Copyright:
+                        <span className="text-yellow fw-bold" href="#"> Education portal</span>
+                    </div>
+
+
 
         </footer>
     );

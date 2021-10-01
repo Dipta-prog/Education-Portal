@@ -56,9 +56,10 @@ const PhotoGallery = () => {
           <div className="lines3"></div>
         </div>
       </div>
-      <div className="row" style={{ marginTop: "5%" }}>
-        {photogallery.map((photos) => (
+      <div className="row" style={{ marginTop: "5%", padding: "0 2%" }}>
+        {photogallery.map((photos, i) => (
           <div
+            key={i}
             className="col-sm-6 col-md-4 col-lg-3 col-xl-2 col-6"
             style={{
               paddingBottom: "1%",
@@ -67,15 +68,15 @@ const PhotoGallery = () => {
               paddingTop: "1%",
             }}
           >
-            <div class="photo-frame">
-              <div class="photo">
+            <div className="photo-frame">
+              <div className="photo">
                 <img src={photos.img} alt="" style={{ width: "100%" }} />
               </div>
-              <div class="photo-details">
-                <p>Catagory</p>
+              <div className="photo-details">
+                <small>Catagory</small>
                 <span>Product Name</span>
                 <div className="border_gallery"></div>
-                <FaSearchPlus id="gellery_search_icon" />
+                <FaSearchPlus id="gallery_search_icon" />
               </div>
             </div>
           </div>
