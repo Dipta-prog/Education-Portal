@@ -1,12 +1,53 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> Development
 import { useForm } from "react-hook-form";
 import WeekInputByTeacher from './WeekInputByTeacher/WeekInputByTeacher';
 
 const TeacherForm = () => {
 
+<<<<<<< HEAD
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
 
+=======
+    const [courseDetailsData, setCourseDetailsData] = useState({
+        courseCode: null,
+        program: '',
+        faculty: '',
+        courseCategory: '',
+        courseOutline: '',
+        textBook: '',
+        teacherName: '',
+        officeRoom: '',
+        cellNumber: null,
+        email: '',
+        guideline: '',
+        announcement: '',
+    })
+
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
+        console.log(data);
+        const temp = {
+            ...courseDetailsData, 
+            courseCode: data.courseCode,
+            program: data.program,
+            faculty: '',
+            courseCategory: '',
+            courseOutline: '',
+            textBook: '',
+            teacherName: '',
+            officeRoom: '',
+            cellNumber: null,
+            email: '',
+            guideline: '',
+            announcement: '',
+        }
+    };
+>>>>>>> Development
 
     return (
         <div className="teacherForm">
@@ -31,6 +72,7 @@ const TeacherForm = () => {
                                 <label htmlFor="courseCode">Course Category</label>
                                 <input className="form-control" {...register("courseCategory")} required />
 
+<<<<<<< HEAD
 
 
 
@@ -42,6 +84,17 @@ const TeacherForm = () => {
                                 <input className="form-control" type="file" rows="8" cols="10" required />
 
                             </div>
+=======
+                                <h3>Course Outline</h3>
+                                <textarea className="form-control" rows="8" cols="10" required></textarea>
+
+                                <h3>Text Book</h3>
+                                <input className="form-control" type="file" rows="8" cols="10" />
+
+                            </div>
+
+
+>>>>>>> Development
                             <div className="col-md-6">
 
                                 <h3>Course Information</h3>
