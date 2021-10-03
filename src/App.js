@@ -3,9 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CourseDetails from '../src/Component/Pages/CourseDetails/CourseDetails';
 import "./App.scss";
 import Home from "./Component/Home/Home/Home";
+import AdminDashboard from "./Component/Pages/Admin/AdminDashboard/AdminDashboard";
+// import Overview from './Component/Pages/Admin/AdminDashboard/Overview';
+// import { Reports, ReportsOne, ReportsThree, ReportsTwo } from './Component/Pages/Admin/AdminDashboard/Reports';
+// import Team from './Component/Pages/Admin/AdminDashboard/Team';
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
-import SIdebar from "./Component/Shared/Sidebar/SIdebar";
+import Sidebar from "./Component/Shared/Sidebar/SIdebar";
 import Login from "./Firebase/Login/Login/Login";
+
 
 function App() {
   return (
@@ -27,10 +32,17 @@ function App() {
           <Route path="/teacherForm">
             <TeacherForm />
           </Route>
-          <Route path="/sidebar">
-            <SIdebar />
+          <Route path="/admin">
+            <AdminDashboard />
           </Route>
+
+          
+          
+       
+
         </Switch>
+
+        
       </Router>
     </div>
   );
