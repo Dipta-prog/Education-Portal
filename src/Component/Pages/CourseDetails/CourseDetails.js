@@ -1,5 +1,5 @@
 import React from 'react';
-import welcomeBanner from '../../../Media/img/Welcome-banner/Welcome.JPG';
+import welcomeBanner from '../../../Media/img/Welcome-banner/Welcome.jpg';
 import Navbar from '../../Shared/Navbar/Navbar';
 import Weekly from '../Weekly/Weekly';
 import './CourseDetails.scss';
@@ -57,7 +57,7 @@ const CourseDetails = () => {
                 <div>
                     <img src={welcomeBanner} alt="" />
                     <h5>Believe in your infinite potential. Your only limitations are those you set upon yourself. Believe in yourself, your abilities and your own potential. Never let self-doubt hold you captive. You are worthy of all that you dream of and hope for.</h5>
-                    <a href="">Student Survey of the course</a>
+                    <a href="#abc">Student Survey of the course</a>
 
 
                     <Weekly />
