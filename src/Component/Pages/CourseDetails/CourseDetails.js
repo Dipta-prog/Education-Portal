@@ -1,5 +1,5 @@
 import React from 'react';
-import welcomeBanner from '../../../Media/img/Welcome-banner/Welcome.JPG';
+import welcomeBanner from '../../../Media/img/Welcome-banner/Welcome.jpg';
 import Navbar from '../../Shared/Navbar/Navbar';
 import Weekly from '../Weekly/Weekly';
 import './CourseDetails.scss';
