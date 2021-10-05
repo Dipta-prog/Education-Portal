@@ -67,12 +67,15 @@ const MakeNewAdmin = () => {
                                             <div className="form-group">
                                                 <label className="form-label">Email</label>
                                                 <input {...register("email", { required: true })} placeholder="Admin Email" type="text" className="form-control field-box" />
+                                                {errors.email && <span className="text-danger">Write a Valid Email</span>}
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-12">
                                             <div className="form-group">
                                                 <label className="form-label">Password</label>
                                                 <input {...register("password", { required: true })} type="password" placeholder="Password" className="form-control field-box" />
+                                                {errors.password && <span className="text-danger">Write a Valid Password</span>}
+                                                
                                             </div>
                                         </div>
                                     </div>

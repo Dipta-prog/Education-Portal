@@ -5,6 +5,7 @@ import "./App.scss";
 import AddCourse from "./Component/Administration/Admin Dashboard/Course/AddCourse/AddCourse";
 import Dashboard from "./Component/Administration/Admin Dashboard/Dashboard/Dashboard";
 import AddDepartment from "./Component/Administration/Admin Dashboard/Department/AddDepartment/AddDepartment";
+import AddEvents from "./Component/Administration/Admin Dashboard/Events/AddEvents/AddEvents";
 import MakeNewAdmin from "./Component/Administration/Admin Dashboard/MakeNewAdmin/MakeNewAdmin";
 import AddStudent from "./Component/Administration/Admin Dashboard/Student/AddStudent/AddStudent";
 import StudentsList from "./Component/Administration/Admin Dashboard/Student/StudentsList/StudentsList";
@@ -62,6 +63,9 @@ function App() {
           </Route>
           <Route path="/makeNewAdmin">
             <MakeNewAdmin />
+          </Route>
+          <Route path="/addAnEvent">
+            <AddEvents />
           </Route>
           <Route path="/adminDashboard">
             <Dashboard />
