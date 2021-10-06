@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CourseDetails from '../src/Component/Pages/CourseDetails/CourseDetails';
 import "./App.scss";
 import Home from "./Component/Home/Home/Home";
+import Assign from "./Component/Pages/Assign/Assign";
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
 import SIdebar from "./Component/Shared/Sidebar/SIdebar";
 import Login from "./Firebase/Login/Login/Login";
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path="/sidebar">
             <SIdebar />
+          </Route>
+          <Route path="/assign">
+            <Assign />
           </Route>
         </Switch>
       </Router>
