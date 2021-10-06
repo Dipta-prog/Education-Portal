@@ -1,44 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from "react-hook-form";
 import WeekInputByTeacher from './WeekInputByTeacher/WeekInputByTeacher';
 
 const TeacherForm = () => {
 
-    const [courseDetailsData, setCourseDetailsData] = useState({
-        courseCode: null,
-        program: '',
-        faculty: '',
-        courseCategory: '',
-        courseOutline: '',
-        textBook: '',
-        teacherName: '',
-        officeRoom: '',
-        cellNumber: null,
-        email: '',
-        guideline: '',
-        announcement: '',
-    })
-
     const { register, handleSubmit } = useForm();
-    
+
     const onSubmit = data => {
-        console.log(data);
-        const temp = {
-            ...courseDetailsData, 
+        const eventData = {
             courseCode: data.courseCode,
             program: data.program,
-            faculty: '',
-            courseCategory: '',
-            courseOutline: '',
-            textBook: '',
-            teacherName: '',
-            officeRoom: '',
-            cellNumber: null,
-            email: '',
-            guideline: '',
-            announcement: '',
-        }
+            faculty: data.faculty,
+            courseCategory: data.courseCategory,
+            courseOutline: data.courseOutline,
+            textBook: data.textBook,
+            teacherName: data.teacherName,
+            officeRoom: data.officeRoom,
+            cellNumber: data.cellNumber,
+            email: data.email,
+            guideline: data.guideline,
+            announcement: data.announcement,
+        };
+        console.log(eventData);
+
     };
+
+
 
     return (
         <div className="teacherForm">
@@ -54,46 +41,44 @@ const TeacherForm = () => {
                                 <label htmlFor="courseCode">Course Code</label>
                                 <input className="form-control" {...register("courseCode")} required />
 
-                                <label htmlFor="courseCode">Program</label>
+                                <label htmlFor="program">Program</label>
                                 <input className="form-control" {...register("program")} required />
 
-                                <label htmlFor="courseCode">Faculty</label>
+                                <label htmlFor="faculty">Faculty</label>
                                 <input className="form-control" {...register("faculty")} required />
 
-                                <label htmlFor="courseCode">Course Category</label>
+                                <label htmlFor="courseCategory">Course Category</label>
                                 <input className="form-control" {...register("courseCategory")} required />
 
-                                <h3>Course Outline</h3>
-                                <textarea className="form-control" rows="8" cols="10" required></textarea>
+                                <label htmlFor="courseOutline">Course Outline</label>
+                                <input className="form-control" {...register("courseOutline")} required />
 
-                                <h3>Text Book</h3>
-                                <input className="form-control" type="file" rows="8" cols="10" />
+                                <label htmlFor="textBook">Text Book</label>
+                                <input className="form-control" {...register("textBook")} type="file" />
 
                             </div>
 
 
                             <div className="col-md-6">
 
-                                <h3>Course Information</h3>
-                                <label htmlFor="courseCode">Teacher Name</label>
-                                <input className="form-control" {...register("courseCode")} required />
+                                <h3>Teacher Name</h3>
+                                <label htmlFor="teacherName">Teacher Name</label>
+                                <input className="form-control" {...register("teacherName")} required />
 
-                                <label htmlFor="courseCode">Office Room</label>
-                                <input className="form-control" {...register("program")} required />
+                                <label htmlFor="officeRoom">Office Room</label>
+                                <input className="form-control" {...register("officeRoom")} required />
 
-                                <label htmlFor="courseCode">Cell Number</label>
-                                <input className="form-control" {...register("faculty")} required />
+                                <label htmlFor="cellNumber">Cell Number</label>
+                                <input className="form-control" type="number" {...register("cellNumber")} required />
 
-                                <label htmlFor="courseCode">Email</label>
-                                <input className="form-control" {...register("courseCategory")} required />
+                                <label htmlFor="email">Email</label>
+                                <input className="form-control" type="email" {...register("email")} required />
 
+                                <label htmlFor="guideline">Guideline</label>
+                                <input className="form-control" name="guideline" {...register("guideline")} required />
 
-                                <h3>Guideline</h3>
-                                <textarea className="form-control" rows="8" cols="10" required></textarea>
-
-
-                                <h3>Announcement</h3>
-                                <textarea className="form-control" rows="8" cols="10" required></textarea>
+                                <label htmlFor="announcement">Announcement</label>
+                                <input className="form-control" name="announcement" {...register("announcement")} required />
                             </div>
                         </div>
                         <div className="text-center mt-5">

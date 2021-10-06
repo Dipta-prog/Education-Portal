@@ -1,0 +1,21 @@
+.assign {
+  padding: 50px;
+  margin: 50px;
+}
+
+.submissionStatus,
+.gradingStatus,
+.timeRemaining,
+.submittedFile {
+  display: flex;
+  margin: 30px;
+  padding: 10px;
+}
+
+.submissionStatusHeadline,
+.gradingStatusHeadline,
+.timeRemainingHeadline,
+.submittedFileHeadline {
+  padding-right: 30px;
+  margin-right: 30px;
+}

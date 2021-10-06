@@ -4,6 +4,7 @@ import CourseDetails from '../src/Component/Pages/CourseDetails/CourseDetails';
 import "./App.scss";
 import Home from "./Component/Home/Home/Home";
 import AdminDashboard from "./Component/Pages/Admin/AdminDashboard/AdminDashboard";
+import Assign from "./Component/Pages/Assign/Assign";
 // import Overview from './Component/Pages/Admin/AdminDashboard/Overview';
 // import { Reports, ReportsOne, ReportsThree, ReportsTwo } from './Component/Pages/Admin/AdminDashboard/Reports';
 // import Team from './Component/Pages/Admin/AdminDashboard/Team';
@@ -36,7 +37,9 @@ function App() {
             <AdminDashboard />
           </Route>
 
-          
+          <Route path="/assign">
+            <Assign />
+          </Route>
           
        
 
