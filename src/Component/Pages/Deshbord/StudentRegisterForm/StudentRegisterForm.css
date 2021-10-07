@@ -1,0 +1,10 @@
+.student_form_container {
+  background-color: #f6f6f6;
+  height: 100vh;
+}
+.input_err {
+  color: red;
+  font-size: 13px;
+}
+.student_form_container span {
+}
