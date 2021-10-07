@@ -5,7 +5,7 @@ import "./App.scss";
 import Home from "./Component/Home/Home/Home";
 import Assign from "./Component/Pages/Assign/Assign";
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
-import SIdebar from "./Component/Shared/Sidebar/SIdebar";
+import Sidebar from "./Component/Shared/Sidebar/Sidebar";
 import Login from "./Firebase/Login/Login/Login";
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
             <TeacherForm />
           </Route>
           <Route path="/sidebar">
-            <SIdebar />
+            <Sidebar />
           </Route>
           <Route path="/assign">
             <Assign />
