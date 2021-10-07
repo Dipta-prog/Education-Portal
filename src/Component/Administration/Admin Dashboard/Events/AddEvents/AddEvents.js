@@ -22,7 +22,7 @@ const AddEvents = () => {
             eventDate: data.eventDate
         }
         console.log(tempEventData)
-        const url = 'http://localhost:3000/addAnEvent'
+        const url = 'http://localhost:1000/event/addEvent'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -35,7 +35,7 @@ const AddEvents = () => {
     };
 
     return (
-        <div className="row d-flex justify-content-center align-items-center">
+        <div className="d-flex justify-content-center align-items-center">
         <div className="col-md-8 component-bg-color">
             <div className="page-header">
                 <div className="row">

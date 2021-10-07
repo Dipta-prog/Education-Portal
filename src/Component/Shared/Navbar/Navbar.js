@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import logo from '../../../Media/img/Shared-Images/education-portal-logo.jpg';
 import './Navbar.scss';
 
 const Navbar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+
+
     return (
         <div className="nav-section">
             <nav className=" container nav-area">
@@ -18,7 +22,12 @@ const Navbar = () => {
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Events</a></li>
-                    <li ><Link className=" border border-2" to="/login">Login</Link></li>
+                    {/* <li>
+                    <Link className=" border border-2" to="/login">Login</Link>
+                    </li> */}
+                    <li>{
+                        loggedInUser.email ? <span>{loggedInUser.email}</span> : <Link className=" border border-2" to="/login">Login</Link>}
+                    </li>
                 </ul>
             </nav></div>
     );

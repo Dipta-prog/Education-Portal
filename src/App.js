@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CourseDetails from '../src/Component/Pages/CourseDetails/CourseDetails';
 import "./App.scss";
@@ -17,9 +17,15 @@ import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
 import SIdebar from "./Component/Shared/Sidebar/SIdebar";
 import Login from "./Firebase/Login/Login/Login";
 
+
+export const UserContext = createContext();
+
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
     <div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]} >
       <Router>
         <Switch>
           <Route exact path="/">
@@ -72,6 +78,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      </UserContext.Provider>
     </div>
   );
 }

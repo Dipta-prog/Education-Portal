@@ -43,7 +43,7 @@ const AddTeacher = () => {
             image: data.image,
         }
         console.log(newTeacherData)
-        const url = 'http://localhost:3000/addTeacher'
+        const url = 'http://localhost:1000/admin/addTeacher'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -154,12 +154,12 @@ const AddTeacher = () => {
                                                 <input {...register("country", { required: true })} type="text" className="form-control" />
                                             </div>
                                         </div>
-                                        <div className="col-sm-6 col-12">
+                                        {/* <div className="col-sm-6 col-12">
                                             <div className="form-group">
                                                 <label className="form-label">Image</label>
                                                 <input {...register("image")} type="file" className="form-control" />
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <input className="btn btn-primary mt-3" type="submit" />
                                 </form>

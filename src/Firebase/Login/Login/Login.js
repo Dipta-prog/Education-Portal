@@ -1,13 +1,16 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation } from 'react-router';
+import { UserContext } from '../../../App';
 import loginImg from "../../../Media/img/login-img/bg.svg";
 import firebaseConfig from "../../firebase.config";
 
 
 const Login = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+  
 
   const [user, setUser] = useState({
     email: '',
@@ -41,6 +44,7 @@ const Login = () => {
         newUserInfo.error = '';
         newUserInfo.success = true;
         setUser(newUserInfo);
+        setLoggedInUser(newUserInfo)
         history.replace(from);
       })
       .catch((error) => {

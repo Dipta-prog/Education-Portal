@@ -21,7 +21,7 @@ const MakeNewAdmin = () => {
             password: data.password
         }
         console.log(newAdminData)
-        const url = 'http://localhost:3000/makeNewAdmin'
+        const url = 'http://localhost:1000/admin/addAdmin'
         fetch(url, {
             method: 'POST',
             headers: {

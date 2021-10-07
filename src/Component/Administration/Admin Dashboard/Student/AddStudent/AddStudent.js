@@ -40,7 +40,7 @@ const AddStudent = () => {
             country: data.country,
             image: data.image,
         }
-        const url = 'http://localhost:3000/addStudent'
+        const url = 'http://localhost:1000/admin/addStudent'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -54,123 +54,123 @@ const AddStudent = () => {
 
 
     return (
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col component-bg-color">
-                <div class="page-header">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h2 class="page-title my-3">Add Students</h2>
+        <div className="d-flex justify-content-center align-items-center">
+            <div className="component-bg-color">
+                <div className="page-header">
+                    <div className="row">
+                        <div className="col-sm-12">
+                            <h2 className="page-title my-3">Add Students</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
+                <div className="">
+                    <div className="col-sm-12">
+                        <div className="card">
+                            <div className="card-body">
                                 <form onSubmit={handleSubmit(onSubmit)}>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <h5 class="form-title"><span>Basic Details</span></h5>
-                                        </div><div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Student ID</label>
-                                                <input {...register("id", { required: true })} type="number" class="form-control" />
+                                    <div className="row">
+                                        <div className="col-sm-12">
+                                            <h5 className="form-title"><span>Basic Details</span></h5>
+                                        </div><div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Student ID</label>
+                                                <input {...register("id", { required: true })} type="number" className="form-control" />
+                                                {errors.id && <span className="text-danger">Id Is Required</span>}
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Name</label>
+                                                <input {...register("name", { required: true })} type="text" className="form-control" />
 
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Name</label>
-                                                <input {...register("name", { required: true })} type="text" class="form-control" />
+
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Mobile Number</label>
+                                                <input {...register("mobile", { required: true })} type="number" className="form-control" />
 
                                             </div>
                                         </div>
-
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Mobile Number</label>
-                                                <input {...register("mobile", { required: true })} type="number" class="form-control" />
-
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Department</label>
-                                                <input {...register("department", { required: true })} type="text" class="form-control" />
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Department</label>
+                                                <input {...register("department", { required: true })} type="text" className="form-control" />
 
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <h5 class="form-title"><span>Login Details</span></h5>
+                                        <div className="col-12">
+                                            <h5 className="form-title"><span>Login Details</span></h5>
                                         </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Username</label>
-                                                <input {...register("userName", { required: true })} type="text" class="form-control" />
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Username</label>
+                                                <input {...register("userName", { required: true })} type="text" className="form-control" />
 
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Email ID</label>
-                                                <input {...register("email", { required: true })} type="email" class="form-control" />
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Email ID</label>
+                                                <input {...register("email", { required: true })} type="email" className="form-control" />
 
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Password</label>
-                                                <input {...register("password", { required: true })} type="password" class="form-control" />
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Password</label>
+                                                <input {...register("password", { required: true })} type="password" className="form-control" />
 
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <h5 class="form-title"><span>Address</span></h5>
+                                        <div className="col-12">
+                                            <h5 className="form-title"><span>Address</span></h5>
                                         </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Address</label>
-                                                <input {...register("address", { required: true })} type="text" class="form-control" />
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Address</label>
+                                                <input {...register("address", { required: true })} type="text" className="form-control" />
 
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">City</label>
-                                                <input {...register("city", { required: true })} type="text" class="form-control" />
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">City</label>
+                                                <input {...register("city", { required: true })} type="text" className="form-control" />
 
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">State</label>
-                                                <input {...register("state", { required: true })} type="text" class="form-control" />
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">State</label>
+                                                <input {...register("state", { required: true })} type="text" className="form-control" />
 
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Zip Code</label>
-                                                <input {...register("zip", { required: true })} type="number" class="form-control" />
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Zip Code</label>
+                                                <input {...register("zip", { required: true })} type="number" className="form-control" />
 
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Country</label>
-                                                <input {...register("country", { required: true })} type="text" class="form-control" />
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Country</label>
+                                                <input {...register("country", { required: true })} type="text" className="form-control" />
 
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <label class="form-label">Image</label>
-                                                <input {...register("image")} type="file" class="form-control" />
+                                        {/* <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Image</label>
+                                                <input {...register("image")} type="file" className="form-control" />
 
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
-                                    <input class="btn btn-primary mt-3" type="submit" />
+                                    <input className="btn btn-primary mt-3" type="submit" />
                                 </form>
                             </div>
                         </div>

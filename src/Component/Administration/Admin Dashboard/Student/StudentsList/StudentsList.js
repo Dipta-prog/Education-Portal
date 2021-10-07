@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "../../tableStyle/tableStyle.scss";
 import SingleStudentData from '../SingleStudentData/SingleStudentData';
 
 const StudentsList = () => {
 
-    const studentsData = [
-        { name: 'sajal', id: 212, email: 'test@test.com' },
-        { name: 'sajal', id: 212, email: 'test@test.com' },
-        { name: 'sajal', id: 212, email: 'test@test.com' },
-        { name: 'sajal', id: 212, email: 'test@test.com' },
-        { name: 'sajal', id: 212, email: 'test@test.com' },
-        { name: 'sajal', id: 212, email: 'test@test.com' },
-        { name: 'sajal', id: 212, email: 'test@test.com' },
-    ];
+    const [studentsData, setStudentsData] = useState([]);
+    useEffect(() => {
+        const url = "http://localhost:1000/admin/allStudent"
+        fetch(url)
+        .then(res => res.json())
+        .then(data => setStudentsData(data.result))
+    }, [studentsData])
+
+    // const studentsData = [
+    //     { name: 'sajal', id: 212, email: 'test@test.com' },
+    //     { name: 'sajal', id: 212, email: 'test@test.com' },
+    //     { name: 'sajal', id: 212, email: 'test@test.com' },
+    //     { name: 'sajal', id: 212, email: 'test@test.com' },
+    //     { name: 'sajal', id: 212, email: 'test@test.com' },
+    //     { name: 'sajal', id: 212, email: 'test@test.com' },
+    //     { name: 'sajal', id: 212, email: 'test@test.com' },
+    // ];
 
     return (
         <div className="row d-flex justify-content-center align-items-center">

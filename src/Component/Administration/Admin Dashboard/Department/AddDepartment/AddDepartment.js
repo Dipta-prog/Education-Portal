@@ -23,7 +23,7 @@ const AddDepartment = () => {
             departmentCode: data.departmentCode,
             image: data.image,
         }
-        const url = 'http://localhost:3000/addDepartment'
+        const url = 'http://localhost:1000/department/addDepartment'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -33,6 +33,7 @@ const AddDepartment = () => {
         })
             .then(res => res.json())
             .then(data => console.log(data))
+            .catch(err => console.log(err))
     };
 
     return (
@@ -70,12 +71,12 @@ const AddDepartment = () => {
                                                 <input {...register("departmentCode", { required: true })} type="number" className="form-control" />
                                             </div>
                                         </div>
-                                        <div className="col-sm-6 col-12">
+                                        {/* <div className="col-sm-6 col-12">
                                             <div className="form-group">
                                                 <label className="form-label">image</label>
                                                 <input {...register("image")} type="file" className="form-control" />
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <input className="btn btn-primary mt-3" type="submit" />
                                 </form>
