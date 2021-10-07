@@ -6,8 +6,12 @@ import Home from "./Component/Home/Home/Home";
 import Deshbord from "./Component/Pages/Deshbord/Deshbord";
 import StudentRegisterForm from "./Component/Pages/Deshbord/StudentRegisterForm/StudentRegisterForm";
 import StudentComment from "./Component/Pages/StudentComment/StudentComment";
+import AdminDashboard from "./Component/Pages/Admin/AdminDashboard/AdminDashboard";
+// import Overview from './Component/Pages/Admin/AdminDashboard/Overview';
+// import { Reports, ReportsOne, ReportsThree, ReportsTwo } from './Component/Pages/Admin/AdminDashboard/Reports';
+// import Team from './Component/Pages/Admin/AdminDashboard/Team';
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
-import SIdebar from "./Component/Shared/Sidebar/SIdebar";
+import Sidebar from "./Component/Shared/Sidebar/SIdebar";
 import Login from "./Firebase/Login/Login/Login";
 import NewLogin from "./Firebase/NewLogin/NewLogin";
 export const UseSelcCourseContext = createContext();
@@ -50,6 +54,9 @@ function App() {
             </Route>
             <Route path="/newLogin">
               <NewLogin></NewLogin>
+            </Route>
+            <Route path="/admin">
+              <AdminDashboard />
             </Route>
             {/*  */}
           </Switch>
