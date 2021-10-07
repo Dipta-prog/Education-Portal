@@ -11,9 +11,9 @@ import AdminDashboard from "./Component/Pages/Admin/AdminDashboard/AdminDashboar
 // import { Reports, ReportsOne, ReportsThree, ReportsTwo } from './Component/Pages/Admin/AdminDashboard/Reports';
 // import Team from './Component/Pages/Admin/AdminDashboard/Team';
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
-import Sidebar from "./Component/Shared/Sidebar/SIdebar";
 import Login from "./Firebase/Login/Login/Login";
 import NewLogin from "./Firebase/NewLogin/NewLogin";
+import Sidebar from "./Component/Shared/Sidebar/SIdebar";
 export const UseSelcCourseContext = createContext();
 function App() {
   const [studentSelactedCourse, setStudentSelactedCourse] = useState({});
@@ -30,9 +30,9 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/login">
+            {/* <Route path="/login">
               <Login></Login>
-            </Route>
+            </Route> */}
             <Route path="/courseDetails">
               <CourseDetails />
             </Route>
@@ -40,7 +40,7 @@ function App() {
               <TeacherForm />
             </Route>
             <Route path="/sidebar">
-              <SIdebar />
+              <Sidebar />
             </Route>
             {/* arif */}
             <Route path="/deshbord">
@@ -52,7 +52,7 @@ function App() {
             <Route path="/student-comment">
               <StudentComment></StudentComment>
             </Route>
-            <Route path="/newLogin">
+            <Route path="/login">
               <NewLogin></NewLogin>
             </Route>
             <Route path="/admin">
