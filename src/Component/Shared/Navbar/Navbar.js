@@ -17,11 +17,11 @@ const Navbar = () => {
                     <img src={logo} alt="" className="logo" />
                 </label>
                 <ul className="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Events</a></li>
+                    <li><Link to="/">Home</Link> </li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/services">Services</Link></li>
+                    <li><Link to="/events">Events</Link></li>
                     {/* <li>
                     <Link className=" border border-2" to="/login">Login</Link>
                     </li> */}
