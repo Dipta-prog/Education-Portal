@@ -13,13 +13,10 @@ const WeekInputByTeacher = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <h3>Weekly Topics</h3>
                 <label htmlFor="discussionTopics">Discussion Topics</label>
-                <textarea className="form-control" {...register("discussionTopics")} rows="6" cols="10" required ></textarea>
+                <textarea className="form-control" {...register("discussionTopics")} required ></textarea>
 
                 <label htmlFor="learningOutcomes">Learning Outcomes</label>
-                <textarea className="form-control" {...register("discussionTopics")} rows="6" cols="10" required ></textarea>
-
-                <label htmlFor="lectureSlide">Lecture Slide</label>
-                <input className="form-control" type="file" {...register("lectureSlide")} />
+                <textarea className="form-control" {...register("learningOutcomes")} required ></textarea>
 
                 <label htmlFor="lectureSlide">Lecture Slide</label>
                 <input className="form-control" type="file" {...register("lectureSlide")} />

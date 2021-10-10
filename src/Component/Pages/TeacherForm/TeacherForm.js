@@ -63,8 +63,8 @@ const TeacherForm = () => {
                                 <label htmlFor="courseCode">Course Category</label>
                                 <input className="form-control" {...register("courseCategory")} required />
 
-                                <h3>Course Outline</h3>
-                                <textarea className="form-control" rows="8" cols="10" required></textarea>
+                                <label htmlFor="courseOutline">Course Outline</label>
+                                <textarea className="form-control" {...register("courseOutline")} required></textarea>
 
                                 <h3>Text Book</h3>
                                 <input className="form-control" type="file" rows="8" cols="10" />
@@ -88,12 +88,12 @@ const TeacherForm = () => {
                                 <input className="form-control" {...register("courseCategory")} required />
 
 
-                                <h3>Guideline</h3>
-                                <textarea className="form-control" rows="8" cols="10" required></textarea>
+                                <label htmlFor="guideline">Guideline</label>
+                                <textarea className="form-control" {...register("courseCategory")} required></textarea>
 
 
-                                <h3>Announcement</h3>
-                                <textarea className="form-control" rows="8" cols="10" required></textarea>
+                                <label htmlFor="announcement">Announcement</label>
+                                <textarea className="form-control" {...register("announcement")} required></textarea>
                             </div>
                         </div>
                         <div className="text-center mt-5">

@@ -38,11 +38,9 @@ const Sidebar = () => {
                 </div>
                 <SidebarNav sidebar={sidebar}>
                     <div className="sidebarWrap">
-                        <Link to='#'>
-                            <div className="navIcon">
-                                <AiIcons.AiOutlineClose onClick={showSidebar} />
-                            </div>
-                        </Link>
+                        <div className="navIcon">
+                            <AiIcons.AiOutlineClose onClick={showSidebar} />
+                        </div>
                         {SidebarData.map((item, index) => {
                             return <SubMenu item={item} key={index} />;
                         })}
