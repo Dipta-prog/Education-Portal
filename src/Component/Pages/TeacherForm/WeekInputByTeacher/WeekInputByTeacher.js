@@ -3,10 +3,15 @@ import { useForm } from "react-hook-form";
 
 const WeekInputByTeacher = () => {
 
-    const { register, handleSubmit, watch } = useForm();
-    const onSubmit = data => console.log(data);
-
-    console.log(watch("example"));
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
+        const weeklyData = {
+            discussionTopics: data.discussionTopics,
+            learningOutcomes: data.learningOutcomes,
+            lectureSlide: data.lectureSlide,
+        };
+        console.log(weeklyData);
+    };
 
     return (
         <div className="mt-5 pt-t">
@@ -24,7 +29,7 @@ const WeekInputByTeacher = () => {
                 <br />
 
                 <div className="text-center">
-                    <button type="submit" class="btn btn-success">Success</button>
+                    <button type="submit" className="btn btn-success">Success</button>
                 </div>
             </form>
         </div>
