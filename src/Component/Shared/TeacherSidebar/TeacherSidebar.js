@@ -36,9 +36,9 @@ const TeacherSidebar = () => {
                     </Link>
                 </div>
                 <TeacherSidebarNav sidebar={sidebar}>
-                    <div className="navIcon">
+                    {/* <div className="navIcon">
                         <AiIcons.AiOutlineClose onClick={showSidebar} />
-                    </div>
+                    </div> */}
                     <div className="sidebarWrap">
                         <Link to='#'>
                             <div className="navIcon">
