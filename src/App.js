@@ -5,6 +5,7 @@ import "./App.scss";
 import Home from "./Component/Home/Home/Home";
 import Assign from "./Component/Pages/Assign/Assign";
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
+import TeacherProfile from "./Component/Pages/TeacherProfile/TeacherProfile";
 import Sidebar from "./Component/Shared/Sidebar/Sidebar";
 import TeacherSidebar from "./Component/Shared/TeacherSidebar/TeacherSidebar";
 import Login from "./Firebase/Login/Login/Login";
@@ -36,7 +37,13 @@ function App() {
             <Assign />
           </Route>
           <Route path='/teacherSidebar'>
-              <TeacherSidebar />
+            <TeacherSidebar />
+          </Route>
+          <Route path='/teacherSidebar'>
+            <TeacherSidebar />
+          </Route>
+          <Route path='/teacherProfile'>
+            <TeacherProfile />
           </Route>
         </Switch>
       </Router>
