@@ -5,11 +5,11 @@ import "./App.scss";
 import Home from "./Component/Home/Home/Home";
 import AdminDashboard from "./Component/Pages/Admin/AdminDashboard/AdminDashboard";
 import Assign from "./Component/Pages/Assign/Assign";
-// import Overview from './Component/Pages/Admin/AdminDashboard/Overview';
-// import { Reports, ReportsOne, ReportsThree, ReportsTwo } from './Component/Pages/Admin/AdminDashboard/Reports';
-// import Team from './Component/Pages/Admin/AdminDashboard/Team';
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
-import Sidebar from "./Component/Shared/Sidebar/SIdebar";
+import TeacherProfile from "./Component/Pages/TeacherProfile/TeacherProfile";
+import Sidebar from "./Component/Shared/Sidebar/Sidebar";
+import TeacherSidebar from "./Component/Shared/TeacherSidebar/TeacherSidebar";
+
 import Login from "./Firebase/Login/Login/Login";
 
 
@@ -33,12 +33,25 @@ function App() {
           <Route path="/teacherForm">
             <TeacherForm />
           </Route>
+
           <Route path="/admin">
             <AdminDashboard />
           </Route>
 
+          <Route path="/sidebar">
+            <Sidebar />
+          </Route>
           <Route path="/assign">
             <Assign />
+          </Route>
+          <Route path='/teacherSidebar'>
+            <TeacherSidebar />
+          </Route>
+          <Route path='/teacherSidebar'>
+            <TeacherSidebar />
+          </Route>
+          <Route path='/teacherProfile'>
+            <TeacherProfile />
           </Route>
           
        

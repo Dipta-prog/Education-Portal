@@ -9,7 +9,6 @@ const WeekInputByTeacher = () => {
             discussionTopics: data.discussionTopics,
             learningOutcomes: data.learningOutcomes,
             lectureSlide: data.lectureSlide,
-            weeklyOutcome: data.weeklyOutcome,
         };
         console.log(weeklyData);
     };
@@ -19,13 +18,10 @@ const WeekInputByTeacher = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <h3>Weekly Topics</h3>
                 <label htmlFor="discussionTopics">Discussion Topics</label>
-                <input className="form-control" {...register("discussionTopics")} required />
+                <textarea className="form-control" {...register("discussionTopics")} required ></textarea>
 
                 <label htmlFor="learningOutcomes">Learning Outcomes</label>
-                <input className="form-control" {...register("learningOutcomes")} required />
-
-                <label htmlFor="lectureSlide">Lecture Slide</label>
-                <input className="form-control" type="file" {...register("lectureSlide")} />
+                <textarea className="form-control" {...register("learningOutcomes")} required ></textarea>
 
                 <label htmlFor="lectureSlide">Weekly Outcome</label>
                 <input className="form-control" type="file" {...register("weeklyOutcome")} />
@@ -33,7 +29,7 @@ const WeekInputByTeacher = () => {
                 <br />
 
                 <div className="text-center">
-                    <button type="submit" class="btn btn-success">Success</button>
+                    <button type="submit" className="btn btn-success">Success</button>
                 </div>
             </form>
         </div>

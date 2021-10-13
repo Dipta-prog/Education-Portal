@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 
 const MidInputByTeacher = () => {
 
-    const { register, handleSubmit, watch } = useForm();
+    const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
 
     return (
@@ -25,7 +25,7 @@ const MidInputByTeacher = () => {
                 <br />
 
                 <div className="text-center">
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" className="btn btn-success">Submit</button>
                 </div>
             </form>
         </div>
