@@ -37,7 +37,6 @@ const AddStudent = () => {
             state: data.state,
             zip: data.zip,
             country: data.country,
-            image: data.image,
         }
         const url = 'http://localhost:1000/admin/addStudent'
         fetch(url, {
