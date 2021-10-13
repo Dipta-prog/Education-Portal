@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 
@@ -13,10 +14,12 @@ const AddStudent = () => {
         address: '',
         city: '',
         state: '',
+        role: '',
         zip: null,
         country: '',
         image: ''
     })
+    const [imageURL, setImageURL] = useState(null)
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = data => {
@@ -35,8 +38,10 @@ const AddStudent = () => {
             address: data.address,
             city: data.city,
             state: data.state,
+            role: data.role,
             zip: data.zip,
             country: data.country,
+            image: imageURL
         }
         const url = 'http://localhost:1000/admin/addStudent'
         fetch(url, {
@@ -51,7 +56,8 @@ const AddStudent = () => {
 
         const userData = {
             ...studentData,
-            name: data.name,
+            name: data.name, 
+            email: data.email,
             role: data.role,
             userName: data.userName,
             password: data.password,
@@ -68,6 +74,22 @@ const AddStudent = () => {
             .then(res => res.json())
             .then(data => console.log(data))
     };
+    const handleImageUpload = event => {
+        console.log(event.target.files[0])
+        const imageData = new FormData();
+        imageData.set('key', '3a55021cd0e8e960fecdb61ee3bca9f2')
+        imageData.append('image', event.target.files[0])
+    
+        axios.post('https://api.imgbb.com/1/upload', imageData)
+            .then(function (response) {
+                console.log(response.data.data.display_url)
+                setImageURL(response.data.data.display_url);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    
+    }
 
 
     return (
@@ -185,12 +207,12 @@ const AddStudent = () => {
 
                                             </div>
                                         </div>
-                                        {/* <div className="col-sm-6 col-12">
+                                        <div className="col-sm-6 col-12">
                                             <div className="form-group">
                                                 <label className="form-label">Image</label>
-                                                <input {...register("image")} type="file" className="form-control" />
+                                                <input {...register("image")} type="file" onChange={handleImageUpload} className="form-control" />
                                             </div>
-                                        </div> */}
+                                        </div>
                                     </div>
                                     <input className="btn btn-primary mt-3" type="submit" />
                                 </form>
