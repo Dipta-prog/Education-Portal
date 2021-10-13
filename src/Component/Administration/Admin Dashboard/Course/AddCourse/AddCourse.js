@@ -23,7 +23,7 @@ const AddCourse = () => {
         const newCourseData = {
             ...courseData,
             courseName: data.courseName,
-            courseDetails: data.details,
+            courseDetails: data.courseDetails,
             courseCode: data.courseCode,
             image: imageURL,
             courseFinishedDate: data.courseFinishedDate,
