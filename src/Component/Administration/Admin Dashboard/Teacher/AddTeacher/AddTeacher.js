@@ -10,6 +10,7 @@ const AddTeacher = () => {
         department: '',
         userName: '',
         email: '',
+        role: '',
         password: '',
         address: '',
         city: '',
@@ -34,7 +35,6 @@ const AddTeacher = () => {
             department: data.department,
             userName: data.userName,
             email: data.email,
-            password: data.password,
             address: data.address,
             city: data.city,
             state: data.state,
@@ -53,6 +53,26 @@ const AddTeacher = () => {
         })
             .then(res => res.json())
             .then(data => console.log(data))
+
+            const userData = {
+                ...teacherData,
+                name: data.name, 
+                email: data.email,
+                role: data.role,
+                userName: data.userName,
+                password: data.password,
+            }
+    
+            const signupUrl = 'http://localhost:1000/user/signup'
+            fetch(signupUrl, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            })
+                .then(res => res.json())
+                .then(data => console.log(data))
     };
 
     return (
@@ -119,6 +139,12 @@ const AddTeacher = () => {
                                             <div className="form-group">
                                                 <label className="form-label">Password</label>
                                                 <input {...register("password", { required: true })} type="password" className="form-control" />
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Role</label>
+                                                <input {...register("role", { required: true })} value="teacher" type="text" className="form-control" />
                                             </div>
                                         </div>
                                         <div className="col-12">

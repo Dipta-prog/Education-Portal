@@ -32,7 +32,6 @@ const AddStudent = () => {
             department: data.department,
             userName: data.userName,
             email: data.email,
-            password: data.password,
             address: data.address,
             city: data.city,
             state: data.state,
@@ -47,6 +46,25 @@ const AddStudent = () => {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(newStudentData)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+
+        const userData = {
+            ...studentData,
+            name: data.name,
+            role: data.role,
+            userName: data.userName,
+            password: data.password,
+        }
+
+        const signupUrl = 'http://localhost:1000/user/signup'
+        fetch(signupUrl, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userData)
         })
             .then(res => res.json())
             .then(data => console.log(data))
@@ -124,6 +142,12 @@ const AddStudent = () => {
 
                                             </div>
                                         </div>
+                                        <div className="col-sm-6 col-12">
+                                            <div className="form-group">
+                                                <label className="form-label">Role</label>
+                                                <input {...register("role", { required: true })} type="text" value="student" className="form-control" />
+                                            </div>
+                                        </div>
                                         <div className="col-12">
                                             <h5 className="form-title"><span>Address</span></h5>
                                         </div>
@@ -166,7 +190,6 @@ const AddStudent = () => {
                                             <div className="form-group">
                                                 <label className="form-label">Image</label>
                                                 <input {...register("image")} type="file" className="form-control" />
-
                                             </div>
                                         </div> */}
                                     </div>
