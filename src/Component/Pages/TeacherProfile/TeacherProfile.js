@@ -1,7 +1,5 @@
-import {
-    faFacebookF, faGooglePlusG, faInstagram
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faGooglePlusG, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
 import TeacherSidebar from '../../Shared/TeacherSidebar/TeacherSidebar';
 import './TeacherProfile.scss';
