@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../../../Shared/Sidebar/SIdebar';
+import Sidebar from '../../../Shared/Sidebar/Sidebar';
 
 const AdminDashboard = () => {
     return (

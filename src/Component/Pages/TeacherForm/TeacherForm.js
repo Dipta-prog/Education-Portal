@@ -1,44 +1,43 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import WeekInputByTeacher from './WeekInputByTeacher/WeekInputByTeacher';
 
 const TeacherForm = () => {
 
-    const [courseDetailsData, setCourseDetailsData] = useState({
-        courseCode: null,
-        program: '',
-        faculty: '',
-        courseCategory: '',
-        courseOutline: '',
-        textBook: '',
-        teacherName: '',
-        officeRoom: '',
-        cellNumber: null,
-        email: '',
-        guideline: '',
-        announcement: '',
-    })
+    const { register, handleSubmit, reset } = useForm();
 
-    const { register, handleSubmit } = useForm();
-    
+
     const onSubmit = data => {
-        console.log(data);
-        const temp = {
-            ...courseDetailsData, 
+
+        reset('', {
+            keepValues: false,
+        })
+        
+        const eventData = {
             courseCode: data.courseCode,
             program: data.program,
-            faculty: '',
-            courseCategory: '',
-            courseOutline: '',
-            textBook: '',
-            teacherName: '',
-            officeRoom: '',
-            cellNumber: null,
-            email: '',
-            guideline: '',
-            announcement: '',
-        }
+            faculty: data.faculty,
+            courseCategory: data.courseCategory,
+            courseOutline: data.courseOutline,
+            // textBook: data.textBook,
+            teacherName: data.teacherName,
+            officeRoom: data.officeRoom,
+            cellNumber: data.cellNumber,
+            email: data.email,
+            guideline: data.guideline,
+            announcement: data.announcement,
+        };
+
+        fetch('http://localhost:1000/courseInformation/addCourseDataByTeacher', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(eventData)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
     };
+
+
 
     return (
         <div className="teacherForm">
@@ -51,23 +50,23 @@ const TeacherForm = () => {
                         <div className="row">
                             <div className="col-md-6">
                                 <h3>Basic Information</h3>
-                                <label htmlFor="courseCode">Course Code</label>
+                                <label>Course Code</label>
                                 <input className="form-control" {...register("courseCode")} required />
 
-                                <label htmlFor="courseCode">Program</label>
+                                <label>Program</label>
                                 <input className="form-control" {...register("program")} required />
 
-                                <label htmlFor="courseCode">Faculty</label>
+                                <label>Faculty</label>
                                 <input className="form-control" {...register("faculty")} required />
 
-                                <label htmlFor="courseCode">Course Category</label>
+                                <label>Course Category</label>
                                 <input className="form-control" {...register("courseCategory")} required />
 
-                                <h3>Course Outline</h3>
-                                <textarea className="form-control" rows="8" cols="10" required></textarea>
+                                <label>Course Outline</label>
+                                <textarea className="form-control" {...register("courseOutline")} required></textarea>
 
-                                <h3>Text Book</h3>
-                                <input className="form-control" type="file" rows="8" cols="10" />
+                                {/* <h3>Text Book</h3>
+                                <input className="form-control" type="file" rows="8" cols="10" /> */}
 
                             </div>
 
@@ -75,29 +74,33 @@ const TeacherForm = () => {
                             <div className="col-md-6">
 
                                 <h3>Course Information</h3>
-                                <label htmlFor="courseCode">Teacher Name</label>
-                                <input className="form-control" {...register("courseCode")} required />
+                                <label>Teacher Name</label>
+                                <input className="form-control" {...register("teacherName")} required />
 
-                                <label htmlFor="courseCode">Office Room</label>
-                                <input className="form-control" {...register("program")} required />
+                                <label>Office Room</label>
+                                <input className="form-control" {...register("officeRoom")} required />
 
-                                <label htmlFor="courseCode">Cell Number</label>
-                                <input className="form-control" {...register("faculty")} required />
+                                <label>Cell Number</label>
+                                <input className="form-control" {...register("cellNumber")} required />
 
-                                <label htmlFor="courseCode">Email</label>
-                                <input className="form-control" {...register("courseCategory")} required />
+                                <label>Email</label>
+                                <input className="form-control" {...register("email")} required />
 
+                                <label htmlFor="cellNumber">Cell Number</label>
+                                <input className="form-control" type="number" {...register("cellNumber")} required />
 
-                                <h3>Guideline</h3>
-                                <textarea className="form-control" rows="8" cols="10" required></textarea>
+                                <label>Guideline</label>
+                                <textarea className="form-control" {...register("guideline")} required></textarea>
 
+                                <label htmlFor="guideline">Guideline</label>
+                                <input className="form-control" name="guideline" {...register("guideline")} required />
 
-                                <h3>Announcement</h3>
-                                <textarea className="form-control" rows="8" cols="10" required></textarea>
+                                <label>Announcement</label>
+                                <textarea className="form-control" {...register("announcement")} required></textarea>
                             </div>
                         </div>
                         <div className="text-center mt-5">
-                            <button type="submit" class="btn btn-success">Submit</button>
+                            <button type="submit" className="btn btn-success">Submit</button>
                         </div>
                     </form>
 
