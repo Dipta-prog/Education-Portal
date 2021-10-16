@@ -15,20 +15,20 @@ import AddTeacher from "./Component/Administration/Admin Dashboard/Teacher/AddTe
 import TeacherList from "./Component/Administration/Admin Dashboard/Teacher/TeacherList/TeacherList";
 import Home from "./Component/Home/Home/Home";
 import NotFound from "./Component/NotFound/NotFound";
-import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
 // <<<<<<< HEAD
 import AdminDashboard from "./Component/Pages/Admin/AdminDashboard/AdminDashboard";
+import Assign from "./Component/Pages/Assign/Assign";
 import Deshbord from "./Component/Pages/Deshbord/Deshbord";
 import StudentRegisterForm from "./Component/Pages/Deshbord/StudentRegisterForm/StudentRegisterForm";
 import StudentComment from "./Component/Pages/StudentComment/StudentComment";
+import StudentDeshbord from "./Component/Pages/StudentDeshbord/StudentDeshbord";
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
 import TeacherProfile from "./Component/Pages/TeacherProfile/TeacherProfile";
-
-import NewLogin from "./Firebase/NewLogin/NewLogin";
-import Assign from "./Component/Pages/Assign/Assign";
-import TeacherSidebar from "./Component/Shared/TeacherSidebar/TeacherSidebar";
-import StudentDeshbord from "./Component/Pages/StudentDeshbord/StudentDeshbord";
+import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
 import Sidebar from "./Component/Shared/Sidebar/Sidebar";
+import TeacherSidebar from "./Component/Shared/TeacherSidebar/TeacherSidebar";
+import NewLogin from "./Firebase/NewLogin/NewLogin";
+
 // =======
 
 // import Deshbord from "./Component/Pages/Deshbord/Deshbord";
@@ -66,18 +66,20 @@ function App() {
               <Route path="/home">
                 <Home></Home>
               </Route>
+
               {/* <Route path="/login">
               <Login></Login>
-            </Route> */}
+                </Route> */}
+
               <Route path="/courseDetails">
                 <CourseDetails />
               </Route>
               <Route path="/teacherForm">
                 <TeacherForm />
               </Route>
-              <Route path="/sidebar">
+              {/* <Route path="/sidebar">
                 <Sidebar></Sidebar>
-              </Route>
+              </Route> */}
               {/* arif */}
               <Route path="/deshboard">
                 <Deshbord></Deshbord>
@@ -110,41 +112,41 @@ function App() {
                 <TeacherProfile />
               </Route>
               <Route path="/teachersList">
-            <TeacherList />
-          </Route>
-          <Route path="/studentsList">
-            <StudentsList />
-          </Route>
-          <PrivateRoute path="/addTeacher">
-            <AddTeacher />
-          </PrivateRoute>
-          <Route path="/addStudent">
-            <AddStudent />
-          </Route>
-          <Route path="/viewStudent">
-            <StudentView />
-          </Route>
-          <Route path="/addCourse">
-            <AddCourse />
-          </Route>
-          <Route path="/allCourse">
-            <CourseList />
-          </Route>
-          <Route path="/addDepartment">
-            <AddDepartment />
-          </Route>
-          <PrivateRoute path="/makeNewAdmin">
-            <MakeNewAdmin />
-          </PrivateRoute>
-          <Route path="/addAnEvent">
-            <AddEvents />
-          </Route>
-          <Route path="/adminDashboard">
-            <Dashboard />
-          </Route>
-          <Route path="/*">
-            <NotFound />
-          </Route>
+                <TeacherList />
+              </Route>
+              <Route path="/studentsList">
+                <StudentsList />
+              </Route>
+              <PrivateRoute path="/addTeacher">
+                <AddTeacher />
+              </PrivateRoute>
+              <Route path="/addStudent">
+                <AddStudent />
+              </Route>
+              <Route path="/viewStudent">
+                <StudentView />
+              </Route>
+              <Route path="/addCourse">
+                <AddCourse />
+              </Route>
+              <Route path="/allCourse">
+                <CourseList />
+              </Route>
+              <Route path="/addDepartment">
+                <AddDepartment />
+              </Route>
+              <PrivateRoute path="/makeNewAdmin">
+                <MakeNewAdmin />
+              </PrivateRoute>
+              <Route path="/addAnEvent">
+                <AddEvents />
+              </Route>
+              <Route path="/adminDashboard">
+                <Dashboard />
+              </Route>
+              <Route path="/*">
+                <NotFound />
+              </Route>
               {/*  */}
             </Switch>
           </Router>
