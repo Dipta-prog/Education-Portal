@@ -13,6 +13,7 @@ import Sidebar from "./Component/Shared/Sidebar/Sidebar";
 import NewLogin from "./Firebase/NewLogin/NewLogin";
 import Assign from "./Component/Pages/Assign/Assign";
 import TeacherSidebar from "./Component/Shared/TeacherSidebar/TeacherSidebar";
+import OurTeachers from "./Component/Pages/OurTeachers/OurTeachers";
 
 export const UseSelcCourseContext = createContext();
 function App() {
@@ -24,16 +25,16 @@ function App() {
   >
     <Router>
       <Switch>
-        <Route exact path="/">
+        {/* <Route exact path="/">
           <Home></Home>
         </Route>
         <Route path="/home">
           <Home></Home>
-        </Route>
+        </Route> */}
         {/* <Route path="/login">
               <Login></Login>
             </Route> */}
-        <Route path="/courseDetails">
+        {/* <Route path="/courseDetails">
           <CourseDetails />
         </Route>
         <Route path="/teacherForm">
@@ -41,9 +42,9 @@ function App() {
         </Route>
         <Route path="/sidebar">
           <Sidebar />
-        </Route>
+        </Route> */}
         {/* arif */}
-        <Route path="/deshbord">
+        {/* <Route path="/deshbord">
           <Deshbord></Deshbord>
         </Route>
         <Route path="/student-register">
@@ -69,8 +70,11 @@ function App() {
           </Route>
           <Route path='/teacherProfile'>
             <TeacherProfile />
-          </Route>
+          </Route> */}
         {/*  */}
+        <Route to="/ourTeachers">
+          <OurTeachers />
+        </Route>
       </Switch>
     </Router>
   </UseSelcCourseContext.Provider>
