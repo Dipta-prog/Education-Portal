@@ -61,12 +61,19 @@ const AboutEducare = () => {
               </div>
               <div className="about_educare_header_description">
                 <h4>
-                  A little about us and a breif history of how we started.
+                  A little about us and a brief history of how we started.
                 </h4>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's stan
-                  when an unknown printer took a galley of type and scramble.
+                  Since its establishment, Education Portal has been focusing on
+                  assisting the students in facing the challenges of the
+                  ever-advancing world. EP is a platform where students can rise
+                  to the highest level of their capability. It provides an
+                  outstanding and supportive environment for both undergraduate
+                  and postgraduate students. A talented and dedicated group of
+                  academics provide guidance and tutelage the students need to
+                  pursue their research and academic goals. The dynamic teaching
+                  and learning environment of EPbrims with talent, creativity,
+                  and international connections.
                 </p>
                 <div className="row">
                   {goalList.map((list) => (
