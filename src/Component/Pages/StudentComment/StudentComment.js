@@ -2,41 +2,59 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import myImg from "../../../Media/img/student-img/arifull.jpg";
+import "./StudentComment.scss";
+import ReplyCommentList from "./StudentCommentUnderReplyComment/ReplyCommentList/ReplyCommentList";
+import StudentCommentUnderReplyComment from "./StudentCommentUnderReplyComment/StudentCommentUnderReplyComment";
 const StudentComment = () => {
+  const [clicked, setClicked] = useState("web");
   const [studentComment, setStudentComment] = useState({});
   console.log(studentComment);
   const [studentsCommentsdata, setStudentsCommentsdata] = useState([]);
   console.log(studentsCommentsdata);
+  // const [repeat, setrepeat] = useState("");
+  // useEffect(() => {
+  //   setrepeat(studentsCommentsdata);
+  // }, []);
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
-    setStudentComment(data);
+  const onSubmit = (data, e) => {
+    const datas = { ...data, commentss: [] };
+    console.log("data", datas);
+    setStudentComment(datas);
     axios
-      .post("http://localhost:1000/studentComment", studentComment)
+      .post("http://localhost:1000/studentComment", datas)
 
       .then((data) => {
-        console.log(data);
+        console.log("1", data);
       })
       .catch((error) => {
         console.error(error);
       });
+    // e.target.reset();
   };
   ////get////
 
   useEffect(() => {
     fetch("http://localhost:1000/studentComment")
       .then((res) => res.json())
-      .then((data) => setStudentsCommentsdata(data.rasult));
-  }, [studentsCommentsdata]);
+      .then((data) => {
+        console.log("2", data.rasult);
+        setStudentsCommentsdata(data.rasult);
+      });
+  }, []);
 
-  // /////
+  // ///java script code read more//////
+
+  // ///////////
   return (
     <div>
       <div className="container">
+        <br />
+        <h3>Shere, Your Problem</h3>
         <div
           className="row"
           style={
@@ -84,6 +102,7 @@ const StudentComment = () => {
                       padding: "2% 0",
                       borderBottom: "1px solid #dddd",
                     }}
+                    id="student_problem_container"
                   >
                     <div
                       style={{
@@ -104,13 +123,52 @@ const StudentComment = () => {
                         <p>{comment.title}</p>
                       </div>
                     </div>
+                    <>
+                      {" "}
+                      {clicked === "readMore" ? (
+                        <StudentCommentUnderReplyComment
+                          comment={comment}
+                        ></StudentCommentUnderReplyComment>
+                      ) : (
+                        <div style={{ display: "none" }}>
+                          <StudentCommentUnderReplyComment
+                            comment={comment}
+                          ></StudentCommentUnderReplyComment>
+                        </div>
+                      )}
+                      {clicked !== "readMore" ? (
+                        <big
+                          onClick={() => setClicked("readMore")}
+                          id="read-moree-btn"
+                        >
+                          See More...
+                        </big>
+                      ) : (
+                        <big
+                          id="read-moree-btn"
+                          onClick={() => setClicked("readLess")}
+                        >
+                          See Less...
+                        </big>
+                      )}
+                    </>
                   </div>
                 )}{" "}
               </>
             ))}
+            <></>
           </div>
         </div>
       </div>
+      {/* {studentsCommentsdata.map((replyComments) => (
+        <>
+          {replyComments.commentss.map((c) => (
+            <>
+              <p>{c.replyComment}</p>
+            </>
+          ))}
+        </>
+      ))} */}
     </div>
   );
 };

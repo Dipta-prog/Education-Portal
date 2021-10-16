@@ -38,8 +38,8 @@ const ImportantFact = () => {
             <div className="lines3"></div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Teaching is done by experienced and helpful teachers. Weak students
+            are quided separetly.
           </p>
         </div>
         <div className="row" style={{ padding: "0 2%" }}>

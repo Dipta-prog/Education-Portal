@@ -1,5 +1,4 @@
 import React from "react";
-import everyStepSectionImg from "../../../../Media/img/Home-Img/every-step-section-img/every-step-section.jpg";
 import "./EveryStepSection.scss";
 const EveryStepSection = () => {
   return (
@@ -10,8 +9,8 @@ const EveryStepSection = () => {
           We Are With You Every Step <br />
           Get Started Easily.
         </h3>
-        <h6>Make your Website Faster, Safer & Better Support.</h6>
-        <button className="btn btn-success">GET STARTED NOW !</button>
+        <h6>Lorem ipsum dolor sit amet consectetur.</h6>
+        <button className="resister_btn">GET STARTED NOW !</button>
       </div>
     </div>
   );

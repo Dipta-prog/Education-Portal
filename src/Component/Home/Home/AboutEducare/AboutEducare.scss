@@ -29,15 +29,17 @@
 // }
 
 .about_educare_header_description p {
-  line-height: 24px;
+  line-height: 27px;
   font-weight: 499;
   padding-bottom: 2%;
+  font-size: 15px;
 }
 /*  */
 .about_educare_list {
   font-style: italic;
   font-weight: 400 !important;
   color: #646a7cd1;
+  font-size: 13pz;
 }
 
 // line part//
@@ -83,7 +85,8 @@
     padding: 3% 0;
   }
   .about_educare_header_description p {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 27px;
   }
 }
 

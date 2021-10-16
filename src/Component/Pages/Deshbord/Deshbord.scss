@@ -1,0 +1,42 @@
+.deshbord_container h4 {
+  font-size: 22px;
+  font-weight: 500;
+  font-weight: 700;
+  color: #1eaace;
+  font-family: monospace;
+}
+.deshbord_description {
+  padding: 6% 4%;
+  padding-bottom: 3%;
+}
+.deshbord_description h4 span {
+  font-size: 12px;
+  padding-left: 1%;
+  color: #0b2138e3;
+  font-weight: 300;
+  font-style: italic;
+  font-family: sans-serif;
+}
+.deshbord_description p {
+  padding-top: 1%;
+  font-size: 17px;
+  font-weight: 500;
+  color: #111;
+}
+.deshbord_courseDetls_bottom_part {
+  border: 1px solid #e5e5e5;
+  padding: 0 5%;
+  padding-left: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.deshbord_courseDetls_bottom_part_icons {
+  border-left: 1px solid #cfcece;
+  padding: 30% !important;
+}
+.deshbord_courseDetls_bottom_part_icons_part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

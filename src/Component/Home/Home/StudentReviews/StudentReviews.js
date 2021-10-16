@@ -85,8 +85,8 @@ const StudentReviews = () => {
         </div>
 
         <Slider {...settings}>
-          {studentReviews.map((review) => (
-            <div className="students_reviews_container">
+          {studentReviews.map((review, i) => (
+            <div key={i} className="students_reviews_container">
               <img src={review.img} alt="" />
               <p>{review.text}</p>
               <h6>{review.name}</h6>

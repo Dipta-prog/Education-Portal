@@ -9,13 +9,14 @@ import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/cho
 // import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/chones-educare.png";
 
 import {
-  FaCloudDownloadAlt,
-  FaPaperPlane,
   FaBalanceScale,
   FaBullhorn,
+  FaCloudDownloadAlt,
+  FaPaperPlane,
   FaSquare,
 } from "react-icons/fa";
-import { CgShapeRhombus } from "react-icons/cg";
+// import chosesEduCareImg from "../../../Media/img/Home-Img/choses-educare-img/chones-educare.png";
+import "./WhyChosesEducare.scss";
 const whyChosesEducareList = [
   {
     title: (
@@ -31,11 +32,8 @@ const whyChosesEducareList = [
         </div>
 
         <div data-aos="fade-left" className="whyChosesEducareList_titles">
-          <h5>RESIDENTIAL SERVICES</h5>
-          <p>
-            Backed by some of the biggest names in the industry, Firefox OS is
-            an open platform that fosters greater
-          </p>
+          <h5>BEST TEACHERS</h5>
+          <p>Teaching is done by experienced and helpful teachers.</p>
         </div>
       </div>
     ),
@@ -54,11 +52,8 @@ const whyChosesEducareList = [
         </div>
 
         <div data-aos="fade-left" className="whyChosesEducareList_titles">
-          <h5>COMMERCIAL SERVICES</h5>
-          <p>
-            Backed by some of the biggest names in the industry, Firefox OS is
-            an open platform that fosters greater
-          </p>
+          <h5>EXTERA CARENESS</h5>
+          <p>Weak students are quided separetly.</p>
         </div>
       </div>
     ),
@@ -77,10 +72,9 @@ const whyChosesEducareList = [
         </div>
 
         <div data-aos="fade-left" className="whyChosesEducareList_titles">
-          <h5>OUR BEST STAFF</h5>
+          <h5>PRACTICAL CLASSES VIDEOS.</h5>
           <p>
-            Backed by some of the biggest names in the industry, Firefox OS is
-            an open platform that fosters greater
+            Recoded videos are realiased to better understand practical classes.
           </p>
         </div>
       </div>
@@ -119,7 +113,7 @@ const WhyChosesEducare = () => {
       <div className="container">
         <div className="all_section_header_title">
           <big>
-            WHY CHOOSE <span>EDUCARE</span>
+            WHY CHOOSE <span>Education Portal</span>
           </big>{" "}
           <div className="lines">
             <div className="lines1"></div>
@@ -127,8 +121,8 @@ const WhyChosesEducare = () => {
             <div className="lines3"></div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Education portal focuses more on skill development as a result, the
+            students have a beautifull future career.
           </p>
         </div>
         {/*  */}
