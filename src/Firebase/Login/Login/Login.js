@@ -75,7 +75,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation } from "react-router";
 import loginImg from "../../../Media/img/login-img/bg.svg";
@@ -143,6 +143,7 @@ const Login = () => {
         newUserInfo.error = "";
         newUserInfo.success = true;
         setUser(newUserInfo);
+        setLoggedInUser(newUserInfo)
         history.replace(from);
       })
       .catch((error) => {
