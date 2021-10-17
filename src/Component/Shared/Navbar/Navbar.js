@@ -24,10 +24,32 @@ const Navbar = () => {
             <a href="#">About</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <div className="right-menu">
+              <button className="menu-button">EVENT</button>
+              <div className="dropdown-menu">
+                <a href="">Our Event</a><br />
+                <a href="">Event Details</a><br />
+              </div>
+            </div>
           </li>
           <li>
-            <a href="#">Services</a>
+            <div className="right-menu">
+              <button className="menu-button">COURSE</button>
+              <div className="dropdown-menu">
+                <a href="">Our Courses</a><br />
+                <a href="">Course List</a><br />
+                <a href="">Course Details</a><br />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="right-menu">
+              <button className="menu-button">TEACHERS</button>
+              <div className="dropdown-menu">
+                <a href="">Our Teacher</a><br />
+                <a href="">Teacher Details</a><br />
+              </div>
+            </div>
           </li>
           <li>
             <a href="#">Events</a>
