@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import * as AiIcons from 'react-icons/ai';
 import * as FaIcons from 'react-icons/fa';
@@ -8,6 +9,7 @@ import './Sidebar.scss';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 
+
 const SidebarNav = styled.nav`
   background: #15171c;
   width: 250px;
@@ -16,15 +18,16 @@ const SidebarNav = styled.nav`
   justify-content: center;
   position: fixed;
   top: 0;
-  left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
+  left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
   transition: 350ms;
   z-index: 10;
 `;
 
 const Sidebar = () => {
-    const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
-    const showSidebar = () => setSidebar(!sidebar);
+  const showSidebar = () => setSidebar(!sidebar);
+
 
     return (
         <>
@@ -49,6 +52,7 @@ const Sidebar = () => {
             </IconContext.Provider>
         </>
     );
+
 };
 
 export default Sidebar;

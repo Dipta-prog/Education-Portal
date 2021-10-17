@@ -12,24 +12,30 @@ import Header from "./Header/Header";
 import StudentReviews from "./StudentReviews/StudentReviews";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import BoolsTest from "../../BoolsTest";
+
 const Home = () => {
   // /////
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
 
-  // ////
+  /////
   return (
     <div style={{ overflowX: "hidden" }}>
       <Navbar />
       <Header></Header>
+      <BoolsTest></BoolsTest>
       <AboutEducare></AboutEducare>
       <WhyChosesEducare></WhyChosesEducare>
+
       <EveryStepSection></EveryStepSection>
 
       <ImportantFact></ImportantFact>
       <PhotoGallery></PhotoGallery>
+
       <MotivationSection></MotivationSection>
+
       <TopGraduated></TopGraduated>
       <StudentReviews></StudentReviews>
       <Footer />

@@ -10,7 +10,7 @@ const EveryStepSection = () => {
           Get Started Easily.
         </h3>
         <h6>Lorem ipsum dolor sit amet consectetur.</h6>
-        <button className="btn btn-success">GET STARTED NOW !</button>
+        <button className="resister_btn">GET STARTED NOW !</button>
       </div>
     </div>
   );

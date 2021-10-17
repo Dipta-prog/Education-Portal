@@ -16,11 +16,13 @@ const MotivationSection = () => {
           <div className="col-sm-6 col-md-7">
             <div className="motivation_section_description">
               {" "}
-              <h3>Obtain Your Dream Job At Education Portal</h3>
+              {/* <h3>Obtain Your Dream Job At Education Portal</h3> */}
+              <h3>Our Multimedia Classroom</h3>
               <p>
                 Nam cursus imperdiet elit. Fusce sollicitudin eget nulla in
                 condimentum. Nullam dignissim id magna non tempus. Vivamus
                 molestie nulla nec pharetra dignissim.
+                {/* Each oh our classrooms has a multimedia  system where every complex topic is easily explained tonstudents. */}
               </p>
               <button className="btn btn-primary"> See More</button>
             </div>
