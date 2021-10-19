@@ -21,7 +21,7 @@ const MakeNewAdmin = () => {
             password: data.password
         }
         console.log(newAdminData)
-        const url = 'http://localhost:1000/admin/addAdmin'
+        const url = 'https://education-portal-1.herokuapp.com/admin/addAdmin'
         fetch(url, {
             method: 'POST',
             headers: {

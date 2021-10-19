@@ -32,7 +32,7 @@ const AddCourse = () => {
             departmentName: data.departmentName,
             
         }
-        const url = 'http://localhost:1000/course/addCourse'
+        const url = 'https://education-portal-1.herokuapp.com/course/addCourse'
 
         console.log(newCourseData)
         fetch(url, {

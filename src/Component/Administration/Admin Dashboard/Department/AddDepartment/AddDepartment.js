@@ -25,7 +25,7 @@ const AddDepartment = () => {
             departmentCode: data.departmentCode,
             image: imageURL,
         }
-        const url = 'http://localhost:1000/department/addDepartment'
+        const url = 'https://education-portal-1.herokuapp.com/department/addDepartment'
         fetch(url, {
             method: 'POST',
             headers: {

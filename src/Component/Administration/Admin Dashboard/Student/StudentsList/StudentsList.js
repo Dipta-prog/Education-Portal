@@ -6,7 +6,7 @@ const StudentsList = () => {
 
     const [studentsData, setStudentsData] = useState([]);
     useEffect(() => {
-        const url = "http://localhost:1000/admin/allStudent"
+        const url = "https://education-portal-1.herokuapp.com/admin/allStudent"
         fetch(url)
         .then(res => res.json())
         .then(data => setStudentsData(data.result))

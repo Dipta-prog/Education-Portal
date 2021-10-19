@@ -8,7 +8,7 @@ const CourseList = () => {
     
 
     useEffect(() =>{
-        const url = 'http://localhost:1000/course/allCourse'
+        const url = 'https://education-portal-1.herokuapp.com/course/allCourse'
         fetch(url)
         .then(res => res.json())
         .then(data => setAllCourse(data.result))

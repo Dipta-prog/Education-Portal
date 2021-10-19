@@ -22,7 +22,7 @@ const AddEvents = () => {
             eventDate: data.eventDate
         }
         console.log(tempEventData)
-        const url = 'http://localhost:1000/event/addEvent'
+        const url = 'https://education-portal-1.herokuapp.com/event/addEvent'
         fetch(url, {
             method: 'POST',
             headers: {

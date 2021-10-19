@@ -1,11 +1,11 @@
+import { animated, useTrail } from "@react-spring/web";
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 //
 import useMeasure from "react-use-measure";
-import { useTrail, animated } from "@react-spring/web";
-
 import styles from "../Component/Home/Home/styles.module.css";
+
 
 const fast = { tension: 1200, friction: 40 };
 const slow = { mass: 10, tension: 200, friction: 50 };
@@ -23,7 +23,7 @@ const InputTest = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("http://localhost:1000/inputTest", data)
+      .post("https://education-portal-1.herokuapp.com/inputTest", data)
 
       .then((data) => {
         console.log("new", data);

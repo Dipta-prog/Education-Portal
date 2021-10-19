@@ -1,17 +1,17 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React, { useContext, useEffect, useState } from "react";
+import CountUp from "react-countup";
 import { useForm } from "react-hook-form";
+import Bounce from "react-reveal/Bounce";
+import { useHistory } from "react-router";
+import { animated, useSpring } from "react-spring";
+import { UseSelcCourseContext } from "../../../../App";
 import basicElecricity from "../../../../Media/img/pages/Deshbord-img/basic-slectricity-2.jpg";
 import basicElectronics from "../../../../Media/img/pages/Deshbord-img/subject/basic-electronics.jpg";
 import javaScript from "../../../../Media/img/pages/Deshbord-img/subject/java-script.jpg";
 import php from "../../../../Media/img/pages/Deshbord-img/subject/php.jpg";
-import { useHistory } from "react-router";
 import "./CategoryWiseCourseSubject.scss";
-import { UseSelcCourseContext } from "../../../../App";
-import Bounce from "react-reveal/Bounce";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import CountUp from "react-countup";
-import { useSpring, animated } from "react-spring";
 /////////////////////
 
 const courseSubject = [
@@ -79,12 +79,12 @@ const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
   ////get////
   const [departmentSubjectData, setDepartmentSubjectData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:1000/course")
+    fetch("https://education-portal-1.herokuapp.com/course")
       .then((res) => res.json())
       .then((data) => {
-        // console.log("2", data.rasult);
+        console.log("2", data);
         // setDepartmentSubjectData(data.rasult);
-        const filterAllNews = data.rasult.filter(
+        const filterAllNews = data.result.filter(
           (subject) => subject.departmentName === selactedDepartment.course
         );
         console.log("f", filterAllNews);

@@ -43,7 +43,7 @@ const AddStudent = () => {
             country: data.country,
             image: imageURL
         }
-        const url = 'http://localhost:1000/admin/addStudent'
+        const url = 'https://education-portal-1.herokuapp.com/admin/addStudent'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -63,7 +63,7 @@ const AddStudent = () => {
             password: data.password,
         }
 
-        const signupUrl = 'http://localhost:1000/user/signup'
+        const signupUrl = 'https://education-portal-1.herokuapp.com/user/signup'
         fetch(signupUrl, {
             method: 'POST',
             headers: {

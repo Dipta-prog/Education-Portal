@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
-
-import { useForm } from "react-hook-form";
-import "./StudentRegisterForm.scss";
 import axios from "axios";
-import { UseSelcCourseContext } from "../../../../App";
+import React, { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { UseSelcCourseContext } from "../../../../App";
+import "./StudentRegisterForm.scss";
+
 const StudentRegisterForm = () => {
   const [studentSelactedCourse, setStudentSelactedCourse] =
     useContext(UseSelcCourseContext);
@@ -22,7 +22,7 @@ const StudentRegisterForm = () => {
     const datas = { studentSelactedCourse, data };
     console.log("datas", datas);
     axios
-      .post("http://localhost:1000/students", datas)
+      .post("https://education-portal-1.herokuapp.com/students", datas)
 
       .then((data) => {
         console.log("new", data);

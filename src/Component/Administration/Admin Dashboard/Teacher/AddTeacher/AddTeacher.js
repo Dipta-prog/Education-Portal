@@ -45,7 +45,7 @@ const AddTeacher = () => {
             image: imageURL
         }
         console.log(newTeacherData)
-        const url = 'http://localhost:1000/admin/addTeacher'
+        const url = 'https://education-portal-1.herokuapp.com/admin/addTeacher'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -65,7 +65,7 @@ const AddTeacher = () => {
                 password: data.password,
             }
     
-            const signupUrl = 'http://localhost:1000/user/signup'
+            const signupUrl = 'https://education-portal-1.herokuapp.com/user/signup'
             fetch(signupUrl, {
                 method: 'POST',
                 headers: {
