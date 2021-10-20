@@ -77,9 +77,9 @@ function App() {
               <Route path="/teacherForm">
                 <TeacherForm />
               </Route>
-              {/* <Route path="/sidebar">
+              <Route path="/sidebar">
                 <Sidebar></Sidebar>
-              </Route> */}
+              </Route>
               {/* arif */}
               <Route path="/deshboard">
                 <Deshbord></Deshbord>

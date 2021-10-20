@@ -6,7 +6,7 @@ import * as IoIcons from 'react-icons/io';
 export const TeacherSidebarData = [
   {
     title: 'Your Profile',
-    path: '/teacher/courses',
+    path: '/teacherProfile',
     icon: <FaIcons.FaCartPlus />
   },
   {

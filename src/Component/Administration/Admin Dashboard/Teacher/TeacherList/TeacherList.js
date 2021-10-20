@@ -1,4 +1,5 @@
 import React from 'react';
+import Sidebar from '../../../../Shared/Sidebar/Sidebar';
 import SingleTeacherData from '../SingleTeacherData/SingleTeacherData';
 
 const TeacherList = () => {
@@ -6,7 +7,9 @@ const TeacherList = () => {
     const teachersData = [{ name: 'sajal', id: 212, email: 'test@test.com' }, { name: 'sajal', id: 212, email: 'test@test.com' }, { name: 'sajal', id: 212, email: 'test@test.com' }, { name: 'sajal', id: 212, email: 'test@test.com' }, { name: 'sajal', id: 212, email: 'test@test.com' },]
 
     return (
-        <div className="row container d-flex justify-content-center align-items-center">
+       <div>
+            <div className="row col-md-2"> <Sidebar /> </div>
+        <div className="row col-md-10"><div className="row container d-flex justify-content-center align-items-center">
             <div className="page-header">
                 <div className="row">
                     <div className="col-sm-12">
@@ -29,7 +32,8 @@ const TeacherList = () => {
                     }
                 </table>
             </div>
-        </div>
+        </div></div>
+       </div>
     );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import admainImg from "../../Media/img/login-img/admain-img/a-3.png";
 import studentImg from "../../Media/img/login-img/student-img/st-1.png";
 import teacherImg from "../../Media/img/login-img/teacher-img/t-2.png";
-import admainImg from "../../Media/img/login-img/admain-img/a-3.png";
 import LoginFrom from "./LoginFrom/LoginFrom";
 const chosesLoginOption = [
   {
@@ -60,13 +60,13 @@ const NewLogin = () => {
         <br />
         <br />
         {chosesOption.role === "Student" && (
-          <LoginFrom chosesOption={chosesOption}></LoginFrom>
+          <LoginFrom chosesOption={chosesOption} role={"/student-deshbord"}></LoginFrom>
         )}
         {chosesOption.role === "Teacher" && (
-          <LoginFrom chosesOption={chosesOption}></LoginFrom>
+          <LoginFrom chosesOption={chosesOption} role={"/teacherSidebar"}></LoginFrom>
         )}
         {chosesOption.role === "Admain" && (
-          <LoginFrom chosesOption={chosesOption}></LoginFrom>
+          <LoginFrom chosesOption={chosesOption} role={"/adminDashboard"}></LoginFrom>
         )}
       </div>
     </div>

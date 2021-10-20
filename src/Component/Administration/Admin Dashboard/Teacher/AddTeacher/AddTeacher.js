@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import Sidebar from '../../../../Shared/Sidebar/Sidebar';
 
 const AddTeacher = () => {
     const [teacherData, setTeacherData] = useState({
@@ -96,7 +97,10 @@ const AddTeacher = () => {
     }
 
     return (
-        <div className="row d-flex justify-content-center align-items-center">
+        <div className="row">
+            <div className="col-md-2"> <Sidebar /> </div>
+            <div className="col-md-10">
+            <div className="row d-flex justify-content-center align-items-center">
             <div className="col component-bg-color">
                 <div className="page-header">
                     <div className="row">
@@ -213,6 +217,8 @@ const AddTeacher = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Sidebar from '../../../../Shared/Sidebar/Sidebar';
 import "../../tableStyle/tableStyle.scss";
 import SingleStudentData from '../SingleStudentData/SingleStudentData';
 
@@ -23,7 +24,9 @@ const StudentsList = () => {
     // ];
 
     return (
-        <div className="row d-flex justify-content-center align-items-center">
+       <div className="row">
+           <div className="col-md-2"> <Sidebar /> </div>
+           <div className="col-md-10"> <div className="row d-flex justify-content-center align-items-center">
             <div class="col-md-8">
                 <div class="page-header">
                     <div class="row">
@@ -49,7 +52,8 @@ const StudentsList = () => {
                     </table>
                 </div>
             </div>
-        </div>
+        </div></div>
+       </div>
     );
 };
 

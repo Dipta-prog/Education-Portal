@@ -80,19 +80,19 @@
 
 // export default LoginFrom;
 
-import React, { useContext, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useHistory, useLocation } from "react-router";
+import { UserLoggedinContext } from "../../../App";
+import admainBgImg from "../../../Media/img/login-img/admain-img/a-bg.jpg";
 import studentBgImg from "../../../Media/img/login-img/student-img/st-bg.jpg";
 import teacherBgImg from "../../../Media/img/login-img/teacher-img/T-bg.jpg";
-import admainBgImg from "../../../Media/img/login-img/admain-img/a-bg.jpg";
-import { useHistory, useLocation } from "react-router";
 import firebaseConfig from "../../firebase.config";
-import { UserLoggedinContext } from "../../../App";
-const LoginFrom = ({ chosesOption }) => {
+const LoginFrom = ({ chosesOption, role }) => {
   const [loggedinUser, setLoggedinUser] = useContext(UserLoggedinContext);
-
+  console.log(role);
   const history = useHistory();
   const location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
@@ -129,7 +129,8 @@ const LoginFrom = ({ chosesOption }) => {
         newUserInfo.role = data.role;
         setUser(newUserInfo);
         setLoggedinUser(newUserInfo);
-        history.replace(from);
+        // history.replace(from);
+        history.push(role)
       })
       .catch((error) => {
         console.log(
@@ -247,7 +248,7 @@ const LoginFrom = ({ chosesOption }) => {
                 Log out
               </button>
             ) : (
-              <input className="btn btn-success" type="submit" />
+              <input className="btn btn-success" type="submit" value="Login" />
             )}
           </form>
         </div>

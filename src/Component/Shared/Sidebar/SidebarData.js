@@ -1,18 +1,18 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
+import * as FaIcons from 'react-icons/fa';
 import * as IoIcons from 'react-icons/io';
 import * as RiIcons from 'react-icons/ri';
 
 export const SidebarData = [
   {
-    title: 'Dashboard',
-    path: '/student/dashboard',
+    title: 'Admin Dashboard',
+    path: '/adminDashboard',
     icon: <FaIcons.FaCartPlus />
   },
   {
     title: 'students',
-    path: '/student/students',
+    path: '/studentsList',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -20,24 +20,24 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Student List',
-        path: '/student/students/studentList',
+        path: '/studentsList',
         icon: <IoIcons.IoIosPaper />
       },
       {
         title: 'StudentView',
-        path: '/student/students/studentView',
+        path: '',
         icon: <IoIcons.IoIosPaper />
       },
       {
-        title: 'Revenue',
-        path: '/student/students/studentAdd',
+        title: 'Add Student',
+        path: '/addStudent',
         icon: <IoIcons.IoIosPaper />
       }
     ]
   },
   {
     title: 'Teachers',
-    path: '/student/teachers',
+    path: '/teachersList',
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -45,7 +45,7 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Teacher List',
-        path: '/student/teachers/teacherList',
+        path: '/teachersList',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
@@ -57,14 +57,14 @@ export const SidebarData = [
       },
       {
         title: 'Teacher Add',
-        path: '/student/teachers/teacherAdd',
+        path: '/addTeacher',
         icon: <IoIcons.IoIosPaper />
       }
     ]
   },
   {
-    title: 'Exam List',
-    path: '/student/ExamList',
+    title: 'Add Department',
+    path: '/addDepartment',
     icon: <IoIcons.IoMdPeople />
   },
   {
@@ -89,8 +89,8 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Fees',
-    path: '/student/fees',
+    title: 'Make New Admin',
+    path: '/makeNewAdmin',
     icon: <IoIcons.IoMdHelpCircle />
   }
 ];

@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaAward, FaDungeon, FaUserPlus, FaUserTie } from 'react-icons/fa';
+import { UserLoggedinContext } from '../../../../App';
+import Sidebar from '../../../Shared/Sidebar/Sidebar';
 import AddStudent from '../Student/AddStudent/AddStudent';
 import StudentsList from '../Student/StudentsList/StudentsList';
 
 const Dashboard = () => {
+    const [loggedinUser, setLoggedinUser] = useContext(UserLoggedinContext);
 
     return (
-        <div>
+        <div className="row">
+        <div className="col-md-2"> <Sidebar /> </div>
+        <div className="col-md-10">
             <div className="container my-5">
                 <div className="page-header">
                     <div className="row">
                         <div className="col-sm-12">
-                            <h2 className="page-title">Welcome Admin!</h2>
+                            <h2 className="page-title">Welcome {loggedinUser.email}!</h2>
                             <ul className="breadcrumb">
                                 <li className="breadcrumb-item active">Dashboard</li>
                             </ul>
@@ -91,6 +96,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

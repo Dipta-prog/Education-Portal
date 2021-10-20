@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import Sidebar from '../../../../Shared/Sidebar/Sidebar';
 
 const AddEvents = () => {
 
@@ -35,7 +36,9 @@ const AddEvents = () => {
     };
 
     return (
-        <div className="d-flex justify-content-center align-items-center">
+        <div className="row">
+            <div className="col-md-2"> <Sidebar /> </div>
+            <div className="col-md-10"><div className="d-flex justify-content-center align-items-center">
         <div className="col-md-8 component-bg-color">
             <div className="page-header">
                 <div className="row">
@@ -85,7 +88,8 @@ const AddEvents = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </div></div>
+        </div>
     );
 };
 

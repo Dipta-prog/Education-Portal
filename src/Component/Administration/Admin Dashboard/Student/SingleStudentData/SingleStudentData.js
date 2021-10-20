@@ -1,9 +1,8 @@
 import React from 'react';
-import image from '../../../../../Media/img/Home-Img/photo-gallery/1.jpg';
 import "../../tableStyle/tableStyle.scss";
 
 const SingleStudentData = ({ student }) => {
-    const { name, id, email } = student;
+    const { name, id, email, image } = student;
     return (
         
             <tr>

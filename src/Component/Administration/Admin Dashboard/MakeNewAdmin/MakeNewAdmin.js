@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import Sidebar from '../../../Shared/Sidebar/Sidebar';
 
 const MakeNewAdmin = () => {
     const [adminData, setAdminData] = useState({
@@ -34,7 +35,9 @@ const MakeNewAdmin = () => {
     };
 
     return (
-        <div className="row d-flex justify-content-center align-items-center">
+       <div className="row">
+           <div className="col-md-2"> <Sidebar /> </div>
+           <div className="col-md-10"> <div className="row d-flex justify-content-center align-items-center">
             <div className="col-md-8 component-bg-color">
                 <div className="page-header">
                     <div className="row">
@@ -86,7 +89,8 @@ const MakeNewAdmin = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div></div>
+       </div>
     );
 };
 
