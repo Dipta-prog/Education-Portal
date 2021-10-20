@@ -11,7 +11,7 @@ export const SidebarData = [
     icon: <FaIcons.FaCartPlus />
   },
   {
-    title: 'students',
+    title: 'Students',
     path: '/studentsList',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -25,7 +25,7 @@ export const SidebarData = [
       },
       {
         title: 'StudentView',
-        path: '',
+        path: 'viewStudent',
         icon: <IoIcons.IoIosPaper />
       },
       {
@@ -51,7 +51,7 @@ export const SidebarData = [
       },
       {
         title: 'Teacher View',
-        path: '/student/teachers/teacherView',
+        path: '/teacherView',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
@@ -63,9 +63,25 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Add Department',
+    title: 'Manage Department',
     path: '/addDepartment',
-    icon: <IoIcons.IoMdPeople />
+    icon: <IoIcons.IoIosPaper />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+
+    subNav: [
+      {
+        title: 'Department List',
+        path: '/allDepartment',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
+      },
+      {
+        title: 'Department Add',
+        path: '/addDepartment',
+        icon: <IoIcons.IoIosPaper />
+      }
+    ]
   },
   {
     title: 'Messages',
@@ -91,6 +107,11 @@ export const SidebarData = [
   {
     title: 'Make New Admin',
     path: '/makeNewAdmin',
+    icon: <IoIcons.IoMdHelpCircle />
+  },
+  {
+    title: 'Add Events',
+    path: '/addAnEvent',
     icon: <IoIcons.IoMdHelpCircle />
   }
 ];

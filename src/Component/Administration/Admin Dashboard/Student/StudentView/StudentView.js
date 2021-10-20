@@ -1,10 +1,14 @@
 import React from 'react';
 import studentImage from '../../../../../Media/img/Home-Img/photo-gallery/1.jpg';
+import Sidebar from '../../../../Shared/Sidebar/Sidebar';
 
 const StudentView = () => {
     return (
-        <div>
-            <div className="container my-5">
+        <div className="row component-bg-color">
+            <div className="col-md-3">
+                <Sidebar />
+            </div>
+            <div className="container col-md-9 my-5 ">
                 <div className="page-header">
                     <div className="row">
                         <div className="col-sm-12">
