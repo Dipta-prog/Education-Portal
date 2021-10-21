@@ -32,11 +32,11 @@ const Navbar = () => {
           </li> */}
           <li>
             <div className="right-menu">
-              <button className="menu-button"> Dashboard </button>
+              <button className="menu-button">DASHBOARD</button>
               <div className="dropdown-menu">
-              <Link to="/adminDashboard">Admin</Link>
+              <Link to="/adminDashboard">ADMIN</Link>
                 <br />
-                <Link to="/student-deshbord">Student</Link>
+                <Link to="/student-deshbord">STUDENT</Link>
                 <br />
               </div>
             </div>
