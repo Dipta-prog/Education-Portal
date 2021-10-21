@@ -16,7 +16,7 @@ export const TeacherSidebarData = [
   },
   {
     title: 'Enrolled Students',
-    path: '/teacher/enrolled ',
+    path: '/enrolledStudent',
     icon: <IoIcons.IoIosPaper />,
   },
   {
@@ -25,8 +25,8 @@ export const TeacherSidebarData = [
     icon: <IoIcons.IoMdPeople />
   },
   {
-    title: 'Messages',
-    path: '/sidebar/messages',
+    title: 'Content Upload Form',
+    path: '/teacherForm',
     icon: <FaIcons.FaEnvelopeOpenText />,
   },
   {

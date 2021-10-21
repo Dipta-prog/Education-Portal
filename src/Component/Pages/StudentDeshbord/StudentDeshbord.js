@@ -34,7 +34,7 @@ const StudentDeshbord = () => {
   ////get////
 
   useEffect(() => {
-    fetch("http://localhost:1000/students")
+    fetch("https://education-portal-1.herokuapp.com/students")
       .then((res) => res.json())
       .then((data) => {
         // console.log("2", data);

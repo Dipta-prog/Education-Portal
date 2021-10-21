@@ -18,9 +18,9 @@ const Navbar = () => {
         </label>
         <ul className="nav-links">
           <li>
-          <Link to="/">Home</Link>
+            <Link to="/">Home</Link>
           </li>
-           {/* <li>
+          {/* <li>
             <Link to="/">About</Link>
           </li>
          <li>
@@ -31,16 +31,17 @@ const Navbar = () => {
           <Link to="/student-deshbord"> Student Dashboard</Link>
           </li> */}
           <li>
-          <Link to="/deshboard">COURSE REQUEST</Link>
+            <Link to="/deshboard">COURSE REQUEST</Link>
           </li>
           <li>
             <div className="right-menu">
               <button className="menu-button">DASHBOARD</button>
               <div className="dropdown-menu">
-              <Link to="/adminDashboard">ADMIN</Link>
+                <Link to="/adminDashboard">Admin</Link>
                 <br />
-                <Link to="/student-deshbord">STUDENT</Link>
+                <Link to="/student-deshbord">Student</Link>
                 <br />
+                <Link to="/teacherProfile">Teacher</Link>
               </div>
             </div>
           </li>

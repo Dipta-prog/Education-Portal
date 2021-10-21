@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import TeacherSidebar from '../../Shared/TeacherSidebar/TeacherSidebar';
 import WeekInputByTeacher from './WeekInputByTeacher/WeekInputByTeacher';
 
 const TeacherForm = () => {
@@ -43,7 +44,7 @@ const TeacherForm = () => {
         <div className="teacherForm">
             <div className="row">
                 <div className="col-md-3">
-
+                    <TeacherSidebar />
                 </div>
                 <div className="col-md-7 mt-3">
                     <form onSubmit={handleSubmit(onSubmit)}>

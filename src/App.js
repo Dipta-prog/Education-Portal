@@ -29,6 +29,7 @@ import TeacherProfile from "./Component/Pages/TeacherProfile/TeacherProfile";
 import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
 import Sidebar from "./Component/Shared/Sidebar/Sidebar";
 import TeacherSidebar from "./Component/Shared/TeacherSidebar/TeacherSidebar";
+import EnrolledStudent from "./Component/Teacher/EnrolledStudent/EnrolledStudent";
 import NewLogin from "./Firebase/NewLogin/NewLogin";
 
 // =======
@@ -112,6 +113,9 @@ function App() {
               </Route>
               <Route path="/teacherProfile">
                 <TeacherProfile />
+              </Route>
+              <Route path="/enrolledStudent">
+                  <EnrolledStudent />
               </Route>
               <PrivateRoute path="/teachersList">
               <div className="row">
