@@ -60,10 +60,16 @@ const NewLogin = () => {
         <br />
         <br />
         {chosesOption.role === "Student" && (
-          <LoginFrom chosesOption={chosesOption} role={"/student-deshbord"}></LoginFrom>
+          <LoginFrom
+            chosesOption={chosesOption}
+            role={"/student-deshbord"}
+          ></LoginFrom>
         )}
         {chosesOption.role === "Teacher" && (
-          <LoginFrom chosesOption={chosesOption} role={"/teacherSidebar"}></LoginFrom>
+          <LoginFrom
+            chosesOption={chosesOption}
+            role={"/teacherSidebar"}
+          ></LoginFrom>
         )}
         {chosesOption.role === "Admin" && (
           <LoginFrom chosesOption={chosesOption} role={"/adminDashboard"}></LoginFrom>

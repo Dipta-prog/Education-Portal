@@ -23,15 +23,32 @@ const Navbar = () => {
           <li>
             <Link to="/">About</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/adminDashboard">Admin Dashboard</Link>
+            
+          </li>
+          <li>
+          <Link to="/student-deshbord"> Student Dashboard</Link>
+          </li> */}
+          <li>
+            <div className="right-menu">
+              <button className="menu-button"> Dashboard </button>
+              <div className="dropdown-menu">
+              <Link to="/adminDashboard">Admin</Link>
+                <br />
+                <Link to="/student-deshbord">Student</Link>
+                <br />
+              </div>
+            </div>
           </li>
           <li>
             <div className="right-menu">
               <button className="menu-button"> <Link to="/">EVENTS</Link></button>
               <div className="dropdown-menu">
-                <a href="">Our Event</a><br />
-                <a href="">Event Details</a><br />
+                <a href="">Our Event</a>
+                <br />
+                <a href="">Event Details</a>
+                <br />
               </div>
             </div>
           </li>
@@ -39,9 +56,12 @@ const Navbar = () => {
             <div className="right-menu">
               <button className="menu-button"> <Link to="/">COURSE</Link></button>
               <div className="dropdown-menu">
-                <a href="">Our Courses</a><br />
-                <a href="">Course List</a><br />
-                <a href="">Course Details</a><br />
+                <a href="">Our Courses</a>
+                <br />
+                <a href="">Course List</a>
+                <br />
+                <a href="">Course Details</a>
+                <br />
               </div>
             </div>
           </li>
@@ -49,8 +69,10 @@ const Navbar = () => {
             <div className="right-menu">
               <button className="menu-button">TEACHERS</button>
               <div className="dropdown-menu">
-                <a href="">Our Teacher</a><br />
-                <a href="">Teacher Details</a><br />
+                <a href="">Our Teacher</a>
+                <br />
+                <a href="">Teacher Details</a>
+                <br />
               </div>
             </div>
           </li> */}
