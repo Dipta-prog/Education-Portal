@@ -1,21 +1,14 @@
-import { Skeleton } from "@material-ui/lab";
-import React, { useContext, useEffect, useState } from "react";
-import eeeImg from "../../../Media/img/student-deshbord/1.jpg";
-import eeeImg2 from "../../../Media/img/student-deshbord/2.jpg";
-import eeeImg3 from "../../../Media/img/student-deshbord/3.jpg";
-import eeeImg4 from "../../../Media/img/student-deshbord/4.jpg";
-import eeeImg5 from "../../../Media/img/student-deshbord/5.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useContext, useEffect, useState } from "react";
+import CountUp from "react-countup";
 import { useHistory } from "react-router";
-import StudentComment from "../StudentComment/StudentComment";
-import Header from "../../Home/Home/Header/Header";
+import { UserLoggedinContext } from "../../../App";
+import eeeImg2 from "../../../Media/img/student-deshbord/2.jpg";
+import myImg from "../../../Media/img/student-img/arifull.jpg";
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
-import CountUp from "react-countup";
-import { UserLoggedinContext } from "../../../App";
-import myImg from "../../../Media/img/student-img/arifull.jpg";
+import StudentComment from "../StudentComment/StudentComment";
 const studentDeshbordCatagory = [
   {
     img: eeeImg2,
@@ -34,7 +27,7 @@ const StudentDeshbord = () => {
   ////get////
 
   useEffect(() => {
-    fetch("http://localhost:1000/students")
+    fetch("https://education-portal-1.herokuapp.com/students")
       .then((res) => res.json())
       .then((data) => {
         // console.log("2", data);
