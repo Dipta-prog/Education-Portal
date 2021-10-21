@@ -2,14 +2,16 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { UseSelcCourseContext } from "../../../../App";
+import { UserLoggedinContext, UseSelcCourseContext } from "../../../../App";
 import "./StudentRegisterForm.scss";
 
 const StudentRegisterForm = () => {
+  const [loggedinUser, setLoggedinUser] = useContext(UserLoggedinContext);
   const [studentSelactedCourse, setStudentSelactedCourse] =
     useContext(UseSelcCourseContext);
+  console.log("000", studentSelactedCourse);
   const [studentCourse, setStudentSelcCourse] = useState({});
-  console.log(studentCourse);
+  // console.log("*", studentCourse);
   const {
     register,
     handleSubmit,
@@ -18,11 +20,11 @@ const StudentRegisterForm = () => {
   } = useForm();
   const onSubmit = (data, e) => {
     console.log(data);
-    setStudentSelcCourse({ studentSelactedCourse, ...data });
-    const datas = { studentSelactedCourse, data };
+    //setStudentSelcCourse({ studentSelactedCourse, data, loggedinUser });
+    const datas = { studentSelactedCourse, data, loggedinUser };
     console.log("datas", datas);
     axios
-      .post("https://education-portal-1.herokuapp.com/students", datas)
+      .post("http://localhost:1000/students", datas)
 
       .then((data) => {
         console.log("new", data);

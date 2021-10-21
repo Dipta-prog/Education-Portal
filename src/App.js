@@ -84,15 +84,15 @@ function App() {
               <Route path="/deshboard">
                 <Deshbord></Deshbord>
               </Route>
-              <Route path="/student-register">
+              <PrivateRoute path="/student-register">
                 <StudentRegisterForm></StudentRegisterForm>
-              </Route>
+              </PrivateRoute>
               <Route path="/student-comment">
                 <StudentComment></StudentComment>
               </Route>
-              <Route path="/student-deshbord">
+              <PrivateRoute path="/student-deshbord">
                 <StudentDeshbord></StudentDeshbord>
-              </Route>
+              </PrivateRoute>
               <Route path="/login">
                 <NewLogin></NewLogin>
               </Route>

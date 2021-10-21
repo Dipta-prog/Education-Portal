@@ -21,14 +21,16 @@ const Navbar = () => {
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="/student-deshbord"> Student Dashboard</Link>
           </li>
           <li>
             <div className="right-menu">
               <button className="menu-button">EVENT</button>
               <div className="dropdown-menu">
-                <a href="">Our Event</a><br />
-                <a href="">Event Details</a><br />
+                <a href="">Our Event</a>
+                <br />
+                <a href="">Event Details</a>
+                <br />
               </div>
             </div>
           </li>
@@ -36,9 +38,12 @@ const Navbar = () => {
             <div className="right-menu">
               <button className="menu-button">COURSE</button>
               <div className="dropdown-menu">
-                <a href="">Our Courses</a><br />
-                <a href="">Course List</a><br />
-                <a href="">Course Details</a><br />
+                <a href="">Our Courses</a>
+                <br />
+                <a href="">Course List</a>
+                <br />
+                <a href="">Course Details</a>
+                <br />
               </div>
             </div>
           </li>
@@ -46,8 +51,10 @@ const Navbar = () => {
             <div className="right-menu">
               <button className="menu-button">TEACHERS</button>
               <div className="dropdown-menu">
-                <a href="">Our Teacher</a><br />
-                <a href="">Teacher Details</a><br />
+                <a href="">Our Teacher</a>
+                <br />
+                <a href="">Teacher Details</a>
+                <br />
               </div>
             </div>
           </li>

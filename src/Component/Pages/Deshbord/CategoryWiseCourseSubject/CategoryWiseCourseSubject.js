@@ -52,12 +52,15 @@ const courseSubject = [
     subjectImg: php,
   },
 ];
-console.log(courseSubject);
+// console.log(courseSubject);
 ///
 const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
   console.log("selactedDepartment", selactedDepartment);
   const [courseSubjectFilter, setCourseSubjectFilter] = useState([]);
-
+  /////
+  const [test, setTest] = useState({});
+  console.log("test", test);
+  ////
   const history = useHistory();
   const [studentSelactedCourse, setStudentSelactedCourse] =
     useContext(UseSelcCourseContext);
@@ -71,7 +74,7 @@ const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
   const onSubmit = (data) => {
     console.log(data);
     setStudentSelactedCourse({
-      selactedDepartment,
+      ...selactedDepartment,
       ...data,
     });
     history.push("/student-register");
@@ -117,6 +120,7 @@ const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
     to: { rotateZ: 180 },
   });
   //////
+
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -406,10 +410,11 @@ const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
                   </div>
                   <div>
                     <input
+                      // onClick={() => setTest(sub.image)}
                       type="checkbox"
                       id="vehicle3"
                       value={sub.courseName}
-                      {...register(`${sub.checkboxValueSubject}`)}
+                      {...register(`subject`)}
                     />
                     <label
                       for="vehicle3"
