@@ -62,13 +62,13 @@ const NewLogin = () => {
         {chosesOption.role === "Student" && (
           <LoginFrom
             chosesOption={chosesOption}
-            role={"/student-deshbord"}
+            // role={"/student-deshbord"}
           ></LoginFrom>
         )}
         {chosesOption.role === "Teacher" && (
           <LoginFrom
             chosesOption={chosesOption}
-            role={"/teacherSidebar"}
+            role={"/teacherProfile"}
           ></LoginFrom>
         )}
         {chosesOption.role === "Admin" && (

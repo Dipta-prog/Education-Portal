@@ -130,7 +130,7 @@ const LoginFrom = ({ chosesOption, role }) => {
         setUser(newUserInfo);
         setLoggedinUser(newUserInfo);
         history.replace(from);
-        // history.push(role)
+        history.push(role)
       })
       .catch((error) => {
         console.log(
