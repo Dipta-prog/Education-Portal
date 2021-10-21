@@ -64,8 +64,8 @@ const AddCourse = () => {
     }
 
     return (
-        <div className="row d-flex justify-content-center align-items-center">
-            <div className="col-md-8 component-bg-color">
+        <div className="row component-bg-color d-flex justify-content-center align-items-center">
+            <div className="">
                 <div className="page-header">
                     <div className="row">
                         <div className="col-sm-12">

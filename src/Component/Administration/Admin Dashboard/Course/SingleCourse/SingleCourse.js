@@ -5,7 +5,7 @@ const SingleCourse = ({course}) => {
     return (
         <div className="col-md-4">
             <div className="card p-3">
-            <img src={image} class="card-img-top" alt="..." />
+            <img src={image} className="card-img-top p-3" height="300px" alt="..." />
                 <div className="card-title"><h5>{courseName}</h5></div>
                 <p className="">
                 {details}

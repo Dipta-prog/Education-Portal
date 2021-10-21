@@ -14,6 +14,7 @@ import StudentsList from "./Component/Administration/Admin Dashboard/Student/Stu
 import StudentView from "./Component/Administration/Admin Dashboard/Student/StudentView/StudentView";
 import AddTeacher from "./Component/Administration/Admin Dashboard/Teacher/AddTeacher/AddTeacher";
 import TeacherList from "./Component/Administration/Admin Dashboard/Teacher/TeacherList/TeacherList";
+import TeacherView from "./Component/Administration/Admin Dashboard/Teacher/TeacherView/TeacherView";
 import Home from "./Component/Home/Home/Home";
 import NotFound from "./Component/NotFound/NotFound";
 // <<<<<<< HEAD
@@ -78,9 +79,9 @@ function App() {
               <Route path="/teacherForm">
                 <TeacherForm />
               </Route>
-              <Route path="/sidebar">
-                <Sidebar></Sidebar>
-              </Route>
+              <PrivateRoute path="/adminDashboard">
+                <Dashboard />
+              </PrivateRoute>
               {/* arif */}
               <Route path="/deshboard">
                 <Deshbord></Deshbord>
@@ -112,42 +113,81 @@ function App() {
               <Route path="/teacherProfile">
                 <TeacherProfile />
               </Route>
-              <Route path="/teachersList">
-                <TeacherList />
-              </Route>
+              <PrivateRoute path="/teachersList">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><TeacherList /></div>
+              </div>
+              </PrivateRoute>
               <Route path="/studentsList">
-                <StudentsList />
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><StudentsList /></div>
+              </div>
               </Route>
               <PrivateRoute path="/addTeacher">
-                <AddTeacher />
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><AddTeacher /></div>
+              </div>
               </PrivateRoute>
-              <Route path="/addStudent">
-                <AddStudent />
-              </Route>
-              <Route path="/viewStudent">
-                <StudentView />
-              </Route>
-              <Route path="/addCourse">
-                <AddCourse />
-              </Route>
-              <Route path="/allCourse">
-                <CourseList />
-              </Route>
-              <Route path="/allDepartment">
-                <DepartmentList />
-              </Route>
-              <Route path="/addDepartment">
-                <AddDepartment />
-              </Route>
+              <PrivateRoute path="/viewTeacher">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><TeacherView /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/addStudent">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><AddStudent /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/viewStudent">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><StudentView /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/addCourse">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><AddCourse /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/allCourse">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><CourseList /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/allDepartment">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><DepartmentList /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/addDepartment">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><AddDepartment /></div>
+              </div>
+              </PrivateRoute>
               <PrivateRoute path="/makeNewAdmin">
-                <MakeNewAdmin />
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><MakeNewAdmin /></div>
+              </div>
               </PrivateRoute>
-              <Route path="/addAnEvent">
-                <AddEvents />
-              </Route>
-              <Route path="/adminDashboard">
+              <PrivateRoute path="/addAnEvent">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><AddEvents /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/adminDashboard">
                 <Dashboard />
-              </Route>
+              </PrivateRoute>
               <Route path="/*">
                 <NotFound />
               </Route>

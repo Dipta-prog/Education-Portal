@@ -14,27 +14,30 @@ const Navbar = () => {
           <i className="fa fa-align-right"></i>
         </label>
         <label>
-          <img src={logo} alt="" className="logo" />
+          <Link to="/"> <img src={logo} alt="" className="logo" /> </Link>
         </label>
         <ul className="nav-links">
           <li>
-            <a href="#">Home</a>
+          <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="/">About</Link>
+          </li>
+          <li>
+            <Link to="/adminDashboard">Admin Dashboard</Link>
           </li>
           <li>
             <div className="right-menu">
-              <button className="menu-button">EVENT</button>
+              <button className="menu-button"> <Link to="/">EVENTS</Link></button>
               <div className="dropdown-menu">
                 <a href="">Our Event</a><br />
                 <a href="">Event Details</a><br />
               </div>
             </div>
           </li>
-          <li>
+          {/* <li>
             <div className="right-menu">
-              <button className="menu-button">COURSE</button>
+              <button className="menu-button"> <Link to="/">COURSE</Link></button>
               <div className="dropdown-menu">
                 <a href="">Our Courses</a><br />
                 <a href="">Course List</a><br />
@@ -50,10 +53,7 @@ const Navbar = () => {
                 <a href="">Teacher Details</a><br />
               </div>
             </div>
-          </li>
-          <li>
-            <a href="#">Events</a>
-          </li>
+          </li> */}
           {loggedinUser.email ? (
             <span
               style={{ color: "#86bc42", fontSize: "17px", fontWeight: "bold" }}

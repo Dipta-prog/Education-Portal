@@ -14,7 +14,7 @@ const StarStudentsList = () => {
     return (
         <div className="row component-bg-color">
             <div>
-                <h2 className="page-title my-3">Star Students List</h2>
+                <h2 className="page-title my-5 text-center">Star Students List</h2>
                 <div className="table-users bg-white shadow-lg">
                     <div className="table-header">Star Students</div>
                     <table className="table" cellSpacing="0">

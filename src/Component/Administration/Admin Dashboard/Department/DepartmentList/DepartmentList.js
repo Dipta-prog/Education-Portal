@@ -13,11 +13,9 @@ const DepartmentList = () => {
 
 
     return (
-        <div className="row component-bg-color">
-            <div className="col-md-3">
-                {/* <Sidebar /> */}
-            </div>
-            <div className="row col-md-9">
+        <div className="component-bg-color">
+         <h2 className="page-title my-5 text-center">All Department</h2>
+            <div className="row d-flex justify-content-center align-items-center">
                 {
                     allDepartment.map(department => <SingleDepartment key={department.id} department={department} />)
                 }

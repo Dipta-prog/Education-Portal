@@ -21,17 +21,20 @@ export const SidebarData = [
       {
         title: 'Student List',
         path: '/studentsList',
-        icon: <IoIcons.IoIosPaper />
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
       },
       {
         title: 'StudentView',
         path: 'viewStudent',
-        icon: <IoIcons.IoIosPaper />
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
       },
       {
         title: 'Add Student',
         path: '/addStudent',
-        icon: <IoIcons.IoIosPaper />
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
       }
     ]
   },
@@ -51,20 +54,21 @@ export const SidebarData = [
       },
       {
         title: 'Teacher View',
-        path: '/teacherView',
+        path: '/viewTeacher',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
       {
         title: 'Teacher Add',
         path: '/addTeacher',
-        icon: <IoIcons.IoIosPaper />
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
       }
     ]
   },
   {
     title: 'Manage Department',
-    path: '/addDepartment',
+    path: '/allDepartment',
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -79,6 +83,27 @@ export const SidebarData = [
       {
         title: 'Department Add',
         path: '/addDepartment',
+        icon: <IoIcons.IoIosPaper />
+      }
+    ]
+  },
+  {
+    title: 'Manage Courses',
+    path: '/allCourse',
+    icon: <IoIcons.IoIosPaper />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+
+    subNav: [
+      {
+        title: 'Course List',
+        path: '/allCourse',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
+      },
+      {
+        title: 'Course Add',
+        path: '/addCourse',
         icon: <IoIcons.IoIosPaper />
       }
     ]
@@ -112,6 +137,11 @@ export const SidebarData = [
   {
     title: 'Add Events',
     path: '/addAnEvent',
+    icon: <IoIcons.IoMdHelpCircle />
+  },
+  {
+    title: 'Back to Home',
+    path: '/',
     icon: <IoIcons.IoMdHelpCircle />
   }
 ];

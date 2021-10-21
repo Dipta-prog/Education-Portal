@@ -14,7 +14,7 @@ const chosesLoginOption = [
   },
   {
     img: admainImg,
-    role: "Admain",
+    role: "Admin",
   },
 ];
 const NewLogin = () => {
@@ -65,7 +65,7 @@ const NewLogin = () => {
         {chosesOption.role === "Teacher" && (
           <LoginFrom chosesOption={chosesOption} role={"/teacherSidebar"}></LoginFrom>
         )}
-        {chosesOption.role === "Admain" && (
+        {chosesOption.role === "Admin" && (
           <LoginFrom chosesOption={chosesOption} role={"/adminDashboard"}></LoginFrom>
         )}
       </div>

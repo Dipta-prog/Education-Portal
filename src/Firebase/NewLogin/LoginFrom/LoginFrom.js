@@ -129,8 +129,8 @@ const LoginFrom = ({ chosesOption, role }) => {
         newUserInfo.role = data.role;
         setUser(newUserInfo);
         setLoggedinUser(newUserInfo);
-        // history.replace(from);
-        history.push(role)
+        history.replace(from);
+        // history.push(role)
       })
       .catch((error) => {
         console.log(
@@ -190,7 +190,7 @@ const LoginFrom = ({ chosesOption, role }) => {
               style={{ width: "100%", height: "340px" }}
             />
           )}
-          {chosesOption.role === "Admain" && (
+          {chosesOption.role === "Admin" && (
             <img
               src={admainBgImg}
               alt=""

@@ -90,18 +90,8 @@ const Dashboard = () => {
                         </div>
                     </div>
                     <StarStudentsList />
-
-                    <div className="row mt-4">
-                        <div className="col-md-6">
-                        <h2>All Department</h2>
-                            <DepartmentList />
-                        </div>
-                        <div className="col-md-6">
-                        <h2>All Course</h2>
-                            <CourseList />
-                        </div>
-                    </div>
-                    
+                    <DepartmentList />
+                    <CourseList />
                 </div>
             </div>
         </div>
