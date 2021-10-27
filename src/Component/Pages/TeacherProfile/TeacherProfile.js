@@ -1,12 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faGooglePlusG, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useContext } from 'react';
+import { UserLoggedinContext } from '../../../App';
+import TeacherImage from '../../../Media/img/TeacherProfile/teacherProfile.jpeg';
 import TeacherSidebar from '../../Shared/TeacherSidebar/TeacherSidebar';
 import './TeacherProfile.scss';
-import TeacherImage from '../../../Media/img/TeacherProfile/teacherProfile.jpeg';
 
 const TeacherProfile = () => {
+    const [loggedinUser, setLoggedinUser] = useContext(UserLoggedinContext);
+
     return (
+        loggedinUser.role === 'teacher' ?
         <>
 
             <div className="row">
@@ -53,7 +57,7 @@ const TeacherProfile = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </> : <div className="text-danger text-center"> you are not authorized for this route</div>
     );
 };
 

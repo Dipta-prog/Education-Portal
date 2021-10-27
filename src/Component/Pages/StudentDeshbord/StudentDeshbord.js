@@ -55,6 +55,8 @@ const StudentDeshbord = () => {
   console.log("test", test);
   ///////
   return (
+
+    loggedinUser.role === 'student' ?
     <div>
       <Navbar></Navbar>
       <div className="container">
@@ -219,6 +221,8 @@ const StudentDeshbord = () => {
       </div>
       <Footer></Footer>
     </div>
+
+: <div className="text-danger text-center"> you are not authorized for this route</div>
   );
 };
 

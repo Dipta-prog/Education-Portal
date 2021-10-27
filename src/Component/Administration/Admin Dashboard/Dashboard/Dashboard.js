@@ -10,6 +10,8 @@ const Dashboard = () => {
     const [loggedinUser, setLoggedinUser] = useContext(UserLoggedinContext);
 
     return (
+        
+        loggedinUser.role === 'admin' ? 
         <div className="row">
             <div className="col-md-2">
                 <Sidebar />
@@ -95,6 +97,7 @@ const Dashboard = () => {
                 </div>
             </div>
         </div>
+        : <div className="text-danger text-center"> you are not authorized for this route</div>
     );
 };
 
