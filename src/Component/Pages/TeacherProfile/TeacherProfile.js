@@ -57,7 +57,9 @@ const TeacherProfile = () => {
                     </div>
                 </div>
             </div>
-        </> : <div className="text-danger text-center"> you are not authorized for this route</div>
+        </> : <div className="m-5 p-5">
+                <div className="text-danger text-center p-5 m-5"> <h4 className="text-danger p-5 m-5" >You are not authorized for this route</h4></div>
+            </div>
     );
 };
 
