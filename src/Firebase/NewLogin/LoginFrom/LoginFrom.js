@@ -39,7 +39,7 @@ const LoginFrom = ({ chosesOption, role }) => {
       password: data.password
   }
  
-  const loginUrl = 'http://localhost:1000/user/login'
+  const loginUrl = 'https://education-portal-1.herokuapp.com/user/login'
   fetch(loginUrl, {
       method: 'POST',
       headers: {
