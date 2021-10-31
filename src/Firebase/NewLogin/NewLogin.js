@@ -3,6 +3,7 @@ import admainImg from "../../Media/img/login-img/admain-img/a-3.png";
 import studentImg from "../../Media/img/login-img/student-img/st-1.png";
 import teacherImg from "../../Media/img/login-img/teacher-img/t-2.png";
 import LoginFrom from "./LoginFrom/LoginFrom";
+
 const chosesLoginOption = [
   {
     img: studentImg,
@@ -17,6 +18,7 @@ const chosesLoginOption = [
     role: "Admin",
   },
 ];
+
 const NewLogin = () => {
   const [chosesOption, setChosesOption] = useState(true);
   console.log(chosesOption);
