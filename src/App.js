@@ -74,9 +74,9 @@ function App() {
               <Login></Login>
                 </Route> */}
 
-              <Route path="/courseDetails">
+              <PrivateRoute path="/courseDetails">
                 <CourseDetails />
-              </Route>
+              </PrivateRoute>
               <Route path="/teacherForm">
                 <TeacherForm />
               </Route>
@@ -102,21 +102,21 @@ function App() {
               <Route path="/admin">
                 <AdminDashboard />
               </Route>
-              <Route path="/teacherProfile">
+              <PrivateRoute path="/teacherProfile">
                 <TeacherProfile />
-              </Route>
-              <Route path="/assign">
+              </PrivateRoute>
+              <PrivateRoute path="/assign">
                 <Assign />
-              </Route>
-              <Route path="/teacherSidebar">
+              </PrivateRoute>
+              <PrivateRoute path="/teacherSidebar">
                 <TeacherSidebar />
-              </Route>
-              <Route path="/teacherProfile">
+              </PrivateRoute>
+              <PrivateRoute path="/teacherProfile">
                 <TeacherProfile />
-              </Route>
-              <Route path="/enrolledStudent">
+              </PrivateRoute>
+              <PrivateRoute path="/enrolledStudent">
                   <EnrolledStudent />
-              </Route>
+              </PrivateRoute>
               <PrivateRoute path="/teachersList">
               <div className="row">
                 <div className="col-md-3"><Sidebar /></div>
