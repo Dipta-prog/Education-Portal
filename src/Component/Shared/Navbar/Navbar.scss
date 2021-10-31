@@ -127,3 +127,37 @@
     padding: 7px 0;
   }
 }
+
+.menu-button{
+  background-color: rgb(32, 32, 32);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.right-menu{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  background-color: #1a1818;
+  min-width: 158px;
+  z-index: 1;
+}
+
+dropdown-menu a:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+.right-menu:hover .dropdown-menu{
+  display: block;
+}
+
+.right-menu:hover .menu-button{
+  background-color: transparent;
+}
+

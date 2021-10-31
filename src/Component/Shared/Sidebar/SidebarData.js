@@ -1,18 +1,18 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
+import * as FaIcons from 'react-icons/fa';
 import * as IoIcons from 'react-icons/io';
 import * as RiIcons from 'react-icons/ri';
 
 export const SidebarData = [
   {
-    title: 'Dashboard',
-    path: '/student/dashboard',
+    title: 'Admin Dashboard',
+    path: '/adminDashboard',
     icon: <FaIcons.FaCartPlus />
   },
   {
-    title: 'students',
-    path: '/student/students',
+    title: 'Students',
+    path: '/studentsList',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -20,24 +20,27 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Student List',
-        path: '/student/students/studentList',
-        icon: <IoIcons.IoIosPaper />
+        path: '/studentsList',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
       },
       {
         title: 'StudentView',
-        path: '/student/students/studentView',
-        icon: <IoIcons.IoIosPaper />
+        path: 'viewStudent',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
       },
       {
-        title: 'Revenue',
-        path: '/student/students/studentAdd',
-        icon: <IoIcons.IoIosPaper />
+        title: 'Add Student',
+        path: '/addStudent',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
       }
     ]
   },
   {
     title: 'Teachers',
-    path: '/student/teachers',
+    path: '/teachersList',
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -45,27 +48,65 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Teacher List',
-        path: '/student/teachers/teacherList',
+        path: '/teachersList',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
       {
         title: 'Teacher View',
-        path: '/student/teachers/teacherView',
+        path: '/viewTeacher',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
       {
         title: 'Teacher Add',
-        path: '/student/teachers/teacherAdd',
+        path: '/addTeacher',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
+      }
+    ]
+  },
+  {
+    title: 'Manage Department',
+    path: '/allDepartment',
+    icon: <IoIcons.IoIosPaper />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+
+    subNav: [
+      {
+        title: 'Department List',
+        path: '/allDepartment',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
+      },
+      {
+        title: 'Department Add',
+        path: '/addDepartment',
         icon: <IoIcons.IoIosPaper />
       }
     ]
   },
   {
-    title: 'Exam List',
-    path: '/student/ExamList',
-    icon: <IoIcons.IoMdPeople />
+    title: 'Manage Courses',
+    path: '/allCourse',
+    icon: <IoIcons.IoIosPaper />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+
+    subNav: [
+      {
+        title: 'Course List',
+        path: '/allCourse',
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'sub-nav'
+      },
+      {
+        title: 'Course Add',
+        path: '/addCourse',
+        icon: <IoIcons.IoIosPaper />
+      }
+    ]
   },
   {
     title: 'Messages',
@@ -89,8 +130,18 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Fees',
-    path: '/student/fees',
+    title: 'Make New Admin',
+    path: '/makeNewAdmin',
+    icon: <IoIcons.IoMdHelpCircle />
+  },
+  {
+    title: 'Add Events',
+    path: '/addAnEvent',
+    icon: <IoIcons.IoMdHelpCircle />
+  },
+  {
+    title: 'Back to Home',
+    path: '/',
     icon: <IoIcons.IoMdHelpCircle />
   }
 ];

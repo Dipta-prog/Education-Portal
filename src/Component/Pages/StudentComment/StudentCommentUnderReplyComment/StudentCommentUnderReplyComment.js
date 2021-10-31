@@ -1,8 +1,5 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaFacebook } from "react-icons/fa";
-import ReplyCommentList from "./ReplyCommentList/ReplyCommentList";
 const StudentCommentUnderReplyComment = ({ comment }, props) => {
   console.log(props.comment);
 
@@ -12,7 +9,7 @@ const StudentCommentUnderReplyComment = ({ comment }, props) => {
 
   const loadPost = (id) => {
     // console.log(id);
-    // let url = `http://localhost:1000/studentComment/postes/${id}`;
+    // let url = `https://education-portal-1.herokuapp.com/studentComment/postes/${id}`;
     // fetch(url)
     //   .then((res) => res.json())
     //   .then((data) => {
@@ -39,7 +36,7 @@ const StudentCommentUnderReplyComment = ({ comment }, props) => {
     console.log(datas);
     //${id}
 
-    fetch(`http://localhost:1000/studentComment/postes/${updates}`, {
+    fetch(`https://education-portal-1.herokuapp.com/studentComment/postes/${updates}`, {
       method: "PUT",
       body: JSON.stringify(datas),
       headers: {
@@ -52,7 +49,7 @@ const StudentCommentUnderReplyComment = ({ comment }, props) => {
       });
 
     // axios
-    //   .put(`http://localhost:1000/studentComment/postes/${updates}`, datas)
+    //   .put(`https://education-portal-1.herokuapp.com/studentComment/postes/${updates}`, datas)
 
     //   .then((data) => {
     //     console.log("new", data);

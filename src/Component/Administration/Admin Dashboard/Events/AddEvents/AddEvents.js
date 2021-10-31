@@ -22,7 +22,7 @@ const AddEvents = () => {
             eventDate: data.eventDate
         }
         console.log(tempEventData)
-        const url = 'http://localhost:1000/event/addEvent'
+        const url = 'https://education-portal-1.herokuapp.com/event/addEvent'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -36,7 +36,7 @@ const AddEvents = () => {
 
     return (
         <div className="d-flex justify-content-center align-items-center">
-        <div className="col-md-8 component-bg-color">
+        <div className="component-bg-color">
             <div className="page-header">
                 <div className="row">
                     <div className="col-sm-12">

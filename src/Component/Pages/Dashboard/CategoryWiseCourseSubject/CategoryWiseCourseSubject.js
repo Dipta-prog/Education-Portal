@@ -6,11 +6,11 @@ import { useForm } from "react-hook-form";
 import Bounce from "react-reveal/Bounce";
 import { useHistory } from "react-router";
 import { animated, useSpring } from "react-spring";
-import { UseSelcCourseContext } from "../../../../App";
-import basicElecricity from "../../../../Media/img/pages/Deshbord-img/basic-slectricity-2.jpg";
-import basicElectronics from "../../../../Media/img/pages/Deshbord-img/subject/basic-electronics.jpg";
-import javaScript from "../../../../Media/img/pages/Deshbord-img/subject/java-script.jpg";
-import php from "../../../../Media/img/pages/Deshbord-img/subject/php.jpg";
+import { UseSelectCourseContext } from "../../../../App";
+import basicElecricity from "../../../../Media/img/pages/Dashboard-img/basic-slectricity-2.jpg";
+import basicElectronics from "../../../../Media/img/pages/Dashboard-img/subject/basic-electronics.jpg";
+import javaScript from "../../../../Media/img/pages/Dashboard-img/subject/java-script.jpg";
+import php from "../../../../Media/img/pages/Dashboard-img/subject/php.jpg";
 import "./CategoryWiseCourseSubject.scss";
 /////////////////////
 
@@ -52,18 +52,15 @@ const courseSubject = [
     subjectImg: php,
   },
 ];
-// console.log(courseSubject);
+console.log(courseSubject);
 ///
 const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
   console.log("selactedDepartment", selactedDepartment);
   const [courseSubjectFilter, setCourseSubjectFilter] = useState([]);
-  /////
-  const [test, setTest] = useState({});
-  console.log("test", test);
-  ////
+
   const history = useHistory();
   const [studentSelactedCourse, setStudentSelactedCourse] =
-    useContext(UseSelcCourseContext);
+    useContext(UseSelectCourseContext);
   console.log("studentSelactedCourse", studentSelactedCourse);
   console.log(selactedDepartment);
   const {
@@ -74,7 +71,7 @@ const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
   const onSubmit = (data) => {
     console.log(data);
     setStudentSelactedCourse({
-      ...selactedDepartment,
+      selactedDepartment,
       ...data,
     });
     history.push("/student-register");
@@ -85,9 +82,9 @@ const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
     fetch("https://education-portal-1.herokuapp.com/course")
       .then((res) => res.json())
       .then((data) => {
-        console.log("2", data);
+        // console.log("2", data.rasult);
         // setDepartmentSubjectData(data.rasult);
-        const filterAllNews = data.result.filter(
+        const filterAllNews = data.rasult.filter(
           (subject) => subject.departmentName === selactedDepartment.course
         );
         console.log("f", filterAllNews);
@@ -105,7 +102,7 @@ const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
   //   setCourseSubjectFilter(filterAllNews);
   // }, []);
   //////
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   //////////
   console.log("courseSubjectFilter", courseSubjectFilter);
@@ -120,7 +117,6 @@ const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
     to: { rotateZ: 180 },
   });
   //////
-
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -410,11 +406,10 @@ const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
                   </div>
                   <div>
                     <input
-                      // onClick={() => setTest(sub.image)}
                       type="checkbox"
                       id="vehicle3"
                       value={sub.courseName}
-                      {...register(`subject`)}
+                      {...register(`${sub.checkboxValueSubject}`)}
                     />
                     <label
                       for="vehicle3"
@@ -446,7 +441,7 @@ const CategoryWiseCourseSubject = ({ subject, selactedDepartment }) => {
               type="submit"
               value="Register Now !!"
               className="resister_btn"
-              // onClick={() => history.push("/student-register")}
+            // onClick={() => history.push("/student-register")}
             />
           </div>
         )}

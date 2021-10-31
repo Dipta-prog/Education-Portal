@@ -75,16 +75,14 @@
 
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation } from "react-router";
-import loginImg from "../../../Media/img/login-img/bg.svg";
-import firebaseConfig from "../../firebase.config";
-import LoginFrom from "../../NewLogin/LoginFrom/LoginFrom";
+import admainImg from "../../../Media/img/login-img/admain-img/a-3.png";
 import studentImg from "../../../Media/img/login-img/student-img/st-1.png";
 import teacherImg from "../../../Media/img/login-img/teacher-img/t-2.png";
-import admainImg from "../../../Media/img/login-img/admain-img/a-3.png";
-import { fireEvent } from "@testing-library/dom";
+import firebaseConfig from "../../firebase.config";
+import LoginFrom from "../../NewLogin/LoginFrom/LoginFrom";
 
 const chosesLoginOption = [
   {
@@ -97,7 +95,7 @@ const chosesLoginOption = [
   },
   {
     img: admainImg,
-    role: "Admain",
+    role: "Admin",
   },
 ];
 const Login = () => {
@@ -221,7 +219,7 @@ const Login = () => {
         {chosesOption.role === "Teacher" && (
           <LoginFrom chosesOption={chosesOption}></LoginFrom>
         )}
-        {chosesOption.role === "Admain" && (
+        {chosesOption.role === "Admin" && (
           <LoginFrom chosesOption={chosesOption}></LoginFrom>
         )}
       </div>

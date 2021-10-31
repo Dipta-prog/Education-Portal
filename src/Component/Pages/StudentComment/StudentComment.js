@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import myImg from "../../../Media/img/student-img/arifull.jpg";
 import "./StudentComment.scss";
-import ReplyCommentList from "./StudentCommentUnderReplyComment/ReplyCommentList/ReplyCommentList";
 import StudentCommentUnderReplyComment from "./StudentCommentUnderReplyComment/StudentCommentUnderReplyComment";
 const StudentComment = () => {
   const [clicked, setClicked] = useState("web");
@@ -26,7 +25,7 @@ const StudentComment = () => {
     console.log("data", datas);
     setStudentComment(datas);
     axios
-      .post("http://localhost:1000/studentComment", datas)
+      .post("https://education-portal-1.herokuapp.com/studentComment", datas)
 
       .then((data) => {
         console.log("1", data);
@@ -39,13 +38,13 @@ const StudentComment = () => {
   ////get////
 
   useEffect(() => {
-    fetch("http://localhost:1000/studentComment")
+    fetch("https://education-portal-1.herokuapp.com/studentComment")
       .then((res) => res.json())
       .then((data) => {
         console.log("2", data.rasult);
         setStudentsCommentsdata(data.rasult);
       });
-  }, []);
+  }, [studentsCommentsdata]);
 
   // ///java script code read more//////
 

@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { FaHeart, FaVideo } from "react-icons/fa";
+import Bounce from "react-reveal/Bounce";
 import eeeImg from "../../../Media/img/pages/Deshbord-img/eee.jpg";
-import cseImg from "../../../Media/img/pages/Deshbord-img/subject/cse.jpg";
 import cevilImg from "../../../Media/img/pages/Deshbord-img/subject/cevil-1.jpeg";
-import CategoryWiseCourseSubject from "./CategoryWiseCourseSubject/CategoryWiseCourseSubject";
-
-import "./Deshbord.scss";
+import cseImg from "../../../Media/img/pages/Deshbord-img/subject/cse.jpg";
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
-import { FcLike } from "react-icons/fc";
-import { FaVideo, FaHeart } from "react-icons/fa";
-import Bounce from "react-reveal/Bounce";
+import CategoryWiseCourseSubject from "./CategoryWiseCourseSubject/CategoryWiseCourseSubject";
+import "./Deshbord.scss";
+
 const courses = [
   {
     img: eeeImg,
@@ -38,7 +37,7 @@ const Deshbord = () => {
   ////get////
 
   useEffect(() => {
-    fetch("http://localhost:1000/department")
+    fetch("https://education-portal-1.herokuapp.com/department")
       .then((res) => res.json())
       .then((data) => {
         console.log("2", data.rasult);

@@ -1,35 +1,37 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
 import SingleTeacherData from '../SingleTeacherData/SingleTeacherData';
 
 const TeacherList = () => {
-    
-    const teachersData = [{ name: 'sajal', id: 212, email: 'test@test.com' }, { name: 'sajal', id: 212, email: 'test@test.com' }, { name: 'sajal', id: 212, email: 'test@test.com' }, { name: 'sajal', id: 212, email: 'test@test.com' }, { name: 'sajal', id: 212, email: 'test@test.com' },]
+
+    const [teachersData, setTeachersData] = useState([]);
+    useEffect(() => {
+        const url = "https://education-portal-1.herokuapp.com/admin/allTeacher"
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setTeachersData(data.result))
+    }, [teachersData])
+
 
     return (
-        <div className="row container d-flex justify-content-center align-items-center">
-            <div className="page-header">
-                <div className="row">
-                    <div className="col-sm-12">
-                        <h3 className="page-title">Teachers List</h3>
+        <div className="component-bg-color">
+                    <h2 className="page-title my-3">Teachers List</h2>
+                    <div class="table-users bg-white shadow-lg">
+                        <div class="table-header">Teachers</div>
+
+                        <table className="table" cellSpacing="0">
+                            <tr>
+                                <th>Picture</th>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Handle</th>
+                            </tr>
+                            {
+                                teachersData.map(teacher => <SingleTeacherData key={teacher.id} teacher={teacher} />)
+                            }
+                        </table>
                     </div>
                 </div>
-            </div>
-            <div classNameName="col-md-8 border border-2">
-                <table className="table table-hover">
-                    <thead className="table-header">
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    {
-                        teachersData.map(teacher => <SingleTeacherData key={teacher.id} teacher={teacher} />)
-                    }
-                </table>
-            </div>
-        </div>
     );
 };
 

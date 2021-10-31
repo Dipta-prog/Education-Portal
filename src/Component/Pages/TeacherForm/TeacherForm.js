@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useForm } from "react-hook-form";
+import TeacherSidebar from '../../Shared/TeacherSidebar/TeacherSidebar';
 import WeekInputByTeacher from './WeekInputByTeacher/WeekInputByTeacher';
 
 const TeacherForm = () => {
@@ -28,7 +29,7 @@ const TeacherForm = () => {
             announcement: data.announcement,
         };
 
-        fetch('http://localhost:1000/courseInformation/addCourseDataByTeacher', {
+        fetch('https://education-portal-1.herokuapp.com/courseInformation/addCourseDataByTeacher', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(eventData)
@@ -43,7 +44,7 @@ const TeacherForm = () => {
         <div className="teacherForm">
             <div className="row">
                 <div className="col-md-3">
-
+                    <TeacherSidebar />
                 </div>
                 <div className="col-md-7 mt-3">
                     <form onSubmit={handleSubmit(onSubmit)}>

@@ -14,24 +14,72 @@ const Navbar = () => {
           <i className="fa fa-align-right"></i>
         </label>
         <label>
-          <img src={logo} alt="" className="logo" />
+          <Link to="/"> <img src={logo} alt="" className="logo" /> </Link>
         </label>
         <ul className="nav-links">
           <li>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
+          </li>
+          {/* <li>
+            <Link to="/">About</Link>
+          </li>
+         <li>
+            <Link to="/adminDashboard">Admin Dashboard</Link>
+            
           </li>
           <li>
-            <a href="#">About</a>
+          <Link to="/student-deshbord"> Student Dashboard</Link>
+          </li> */}
+          <li>
+            <Link to="/deshboard">COURSE REQUEST</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <div className="right-menu">
+              <button className="menu-button">DASHBOARD</button>
+              <div className="dropdown-menu">
+                <Link to="/adminDashboard">Admin</Link>
+                <br />
+                <Link to="/student-deshbord">Student</Link>
+                <br />
+                <Link to="/teacherProfile">Teacher</Link>
+              </div>
+            </div>
+          </li>
+          {/* <li>
+            <div className="right-menu">
+              <button className="menu-button"> <Link to="/">EVENTS</Link></button>
+              <div className="dropdown-menu">
+                <a href="">Our Event</a>
+                <br />
+                <a href="">Event Details</a>
+                <br />
+              </div>
+            </div>
+          </li> 
+          <li>
+            <div className="right-menu">
+              <button className="menu-button"> <Link to="/">COURSE</Link></button>
+              <div className="dropdown-menu">
+                <a href="">Our Courses</a>
+                <br />
+                <a href="">Course List</a>
+                <br />
+                <a href="">Course Details</a>
+                <br />
+              </div>
+            </div>
           </li>
           <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">Events</a>
-          </li>
+            <div className="right-menu">
+              <button className="menu-button">TEACHERS</button>
+              <div className="dropdown-menu">
+                <a href="">Our Teacher</a>
+                <br />
+                <a href="">Teacher Details</a>
+                <br />
+              </div>
+            </div>
+          </li> */}
           {loggedinUser.email ? (
             <span
               style={{ color: "#86bc42", fontSize: "17px", fontWeight: "bold" }}

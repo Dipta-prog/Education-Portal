@@ -6,6 +6,7 @@ import AddCourse from "./Component/Administration/Admin Dashboard/Course/AddCour
 import CourseList from "./Component/Administration/Admin Dashboard/Course/CourseList/CourseList";
 import Dashboard from "./Component/Administration/Admin Dashboard/Dashboard/Dashboard";
 import AddDepartment from "./Component/Administration/Admin Dashboard/Department/AddDepartment/AddDepartment";
+import DepartmentList from "./Component/Administration/Admin Dashboard/Department/DepartmentList/DepartmentList";
 import AddEvents from "./Component/Administration/Admin Dashboard/Events/AddEvents/AddEvents";
 import MakeNewAdmin from "./Component/Administration/Admin Dashboard/MakeNewAdmin/MakeNewAdmin";
 import AddStudent from "./Component/Administration/Admin Dashboard/Student/AddStudent/AddStudent";
@@ -13,6 +14,7 @@ import StudentsList from "./Component/Administration/Admin Dashboard/Student/Stu
 import StudentView from "./Component/Administration/Admin Dashboard/Student/StudentView/StudentView";
 import AddTeacher from "./Component/Administration/Admin Dashboard/Teacher/AddTeacher/AddTeacher";
 import TeacherList from "./Component/Administration/Admin Dashboard/Teacher/TeacherList/TeacherList";
+import TeacherView from "./Component/Administration/Admin Dashboard/Teacher/TeacherView/TeacherView";
 import Home from "./Component/Home/Home/Home";
 import NotFound from "./Component/NotFound/NotFound";
 // <<<<<<< HEAD
@@ -27,6 +29,7 @@ import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
 import TeacherProfile from "./Component/Pages/TeacherProfile/TeacherProfile";
 import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
 import TeacherSidebar from "./Component/Shared/TeacherSidebar/TeacherSidebar";
+import EnrolledStudent from "./Component/Teacher/EnrolledStudent/EnrolledStudent";
 import NewLogin from "./Firebase/NewLogin/NewLogin";
 
 
@@ -55,79 +58,124 @@ function App() {
               <Login></Login>
                 </Route> */}
 
-              <Route path="/courseDetails">
+              <PrivateRoute path="/courseDetails">
                 <CourseDetails />
-              </Route>
+              </PrivateRoute>
               <Route path="/teacherForm">
                 <TeacherForm />
               </Route>
-              {/* <Route path="/sidebar">
-                <Sidebar></Sidebar>
-              </Route> */}
+              <PrivateRoute path="/adminDashboard">
+                <Dashboard />
+              </PrivateRoute>
               {/* arif */}
               <Route path="/deshboard">
                 <Deshbord></Deshbord>
               </Route>
-              <Route path="/student-register">
+              <PrivateRoute path="/student-register">
                 <StudentRegisterForm></StudentRegisterForm>
-              </Route>
+              </PrivateRoute>
               <Route path="/student-comment">
                 <StudentComment></StudentComment>
               </Route>
-              <Route path="/student-deshbord">
+              <PrivateRoute path="/student-deshbord">
                 <StudentDeshbord></StudentDeshbord>
-              </Route>
+              </PrivateRoute>
               <Route path="/login">
                 <NewLogin></NewLogin>
               </Route>
               <Route path="/admin">
                 <AdminDashboard />
               </Route>
-              <Route path="/teacherProfile">
+              <PrivateRoute path="/teacherProfile">
                 <TeacherProfile />
-              </Route>
-              <Route path="/assign">
+              </PrivateRoute>
+              <PrivateRoute path="/assign">
                 <Assign />
-              </Route>
-              <Route path="/teacherSidebar">
+              </PrivateRoute>
+              <PrivateRoute path="/teacherSidebar">
                 <TeacherSidebar />
-              </Route>
-              <Route path="/teacherProfile">
+              </PrivateRoute>
+              <PrivateRoute path="/teacherProfile">
                 <TeacherProfile />
-              </Route>
-              <Route path="/teachersList">
-                <TeacherList />
-              </Route>
+              </PrivateRoute>
+              <PrivateRoute path="/enrolledStudent">
+                  <EnrolledStudent />
+              </PrivateRoute>
+              <PrivateRoute path="/teachersList">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><TeacherList /></div>
+              </div>
+              </PrivateRoute>
               <Route path="/studentsList">
-                <StudentsList />
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><StudentsList /></div>
+              </div>
               </Route>
               <PrivateRoute path="/addTeacher">
-                <AddTeacher />
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><AddTeacher /></div>
+              </div>
               </PrivateRoute>
-              <Route path="/addStudent">
-                <AddStudent />
-              </Route>
-              <Route path="/viewStudent">
-                <StudentView />
-              </Route>
-              <Route path="/addCourse">
-                <AddCourse />
-              </Route>
-              <Route path="/allCourse">
-                <CourseList />
-              </Route>
-              <Route path="/addDepartment">
-                <AddDepartment />
-              </Route>
+              <PrivateRoute path="/viewTeacher">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><TeacherView /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/addStudent">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><AddStudent /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/viewStudent">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><StudentView /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/addCourse">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><AddCourse /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/allCourse">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><CourseList /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/allDepartment">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><DepartmentList /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/addDepartment">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><AddDepartment /></div>
+              </div>
+              </PrivateRoute>
               <PrivateRoute path="/makeNewAdmin">
-                <MakeNewAdmin />
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><MakeNewAdmin /></div>
+              </div>
               </PrivateRoute>
-              <Route path="/addAnEvent">
-                <AddEvents />
-              </Route>
-              <Route path="/adminDashboard">
+              <PrivateRoute path="/addAnEvent">
+              <div className="row">
+                <div className="col-md-3"><Sidebar /></div>
+                <div className="col-md-9"><AddEvents /></div>
+              </div>
+              </PrivateRoute>
+              <PrivateRoute path="/adminDashboard">
                 <Dashboard />
-              </Route>
+              </PrivateRoute>
               <Route to="/ourTeachers">
                 <OurTeachers />
               </Route>
