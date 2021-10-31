@@ -28,10 +28,10 @@ import StudentDeshbord from "./Component/Pages/StudentDeshbord/StudentDeshbord";
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
 import TeacherProfile from "./Component/Pages/TeacherProfile/TeacherProfile";
 import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
+import Sidebar from "./Component/Shared/Sidebar/Sidebar";
 import TeacherSidebar from "./Component/Shared/TeacherSidebar/TeacherSidebar";
 import EnrolledStudent from "./Component/Teacher/EnrolledStudent/EnrolledStudent";
 import NewLogin from "./Firebase/NewLogin/NewLogin";
-
 
 export const UseSelcCourseContext = createContext();
 export const UserLoggedinContext = createContext();
