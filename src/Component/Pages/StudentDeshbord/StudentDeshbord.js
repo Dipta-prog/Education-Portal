@@ -41,6 +41,15 @@ const StudentDeshbord = () => {
       });
   }, []);
   console.log("raju", studentDeshboardData);
+  /////
+  // const [studentDeshboardDataMaping, setStudentDeshboardDataMaping] = useState(
+  //   []
+  // );
+  const studentDeshboardDataMaping = studentDeshboardData.map(
+    (stDeshboardData) =>
+      stDeshboardData.studentSelactedCourse.courseSubjectFilters.departmentName
+  );
+  console.log("niha", studentDeshboardDataMaping);
   /////////////
 
   useEffect(() => {
@@ -53,7 +62,75 @@ const StudentDeshbord = () => {
         // console.log("/", courses);
       });
   }, []);
-  console.log("test", test);
+  // console.log("test", test);
+  ////teacher find///
+  const [allTeachers, setAllTeachers] = useState([]);
+  const [departmentTeachers, setDepartmentTeachers] = useState([]);
+  const [findTeachers, setFindTeacher] = useState([]);
+  useEffect(() => {
+    const url = "https://education-portal-1.herokuapp.com/admin/allTeacher";
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("....", data.result);
+        // setFindTeacher(data.result);
+        setAllTeachers(data.result);
+
+        // setFindTeacher(findTeacher);
+      });
+  }, []);
+  /////
+
+  const findDepTeacher = () => {
+    console.log("inside findDepTeacher");
+    let temp = [];
+    for (let i = 0; i < allTeachers.length; i++) {
+      const element = allTeachers[i];
+      console.log(
+        "element",
+        element.department,
+        "studentDeshboardData",
+        studentDeshboardData.length > 0
+          ? studentDeshboardData[0].studentSelactedCourse.courseSubjectFilters
+              .departmentName
+          : ""
+      );
+
+      // const condition = element.departmentName === newCondition;
+
+      const newCondition =
+        studentDeshboardData.length > 0
+          ? studentDeshboardData[0].studentSelactedCourse.courseSubjectFilters
+              .departmentName
+          : "";
+      // console.log("condition", condition);
+      // if (condition) {
+      //   temp = [...temp, element];
+      // }
+    }
+  };
+  findDepTeacher();
+  //////
+  // console.log(
+  //   "allT.department",
+  //   allT.department,
+  //   "studentDeshboardDataMaping",
+  //   studentDeshboardDataMaping[0]
+  // )
+  // allT.department === studentDeshboardDataMaping
+  const allteacher = allTeachers.filter(
+    (allT) => allT.department === studentDeshboardDataMaping[0]
+    // studentDeshboardDataMaping.map(
+    //   (dp) =>
+    //     allT.department === dp
+    //     if (allT.department === dp) {
+    //       return allT;
+    //     }
+    // )
+  );
+  // setFindTeacher(allteacher);
+  console.log("arifull", allteacher);
+
   ///////
   return (
     <div>

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { UserLoggedinContext, UseSelcCourseContext } from "../../../../App";
 import "./StudentRegisterForm.scss";
@@ -152,7 +153,20 @@ const StudentRegisterForm = () => {
           {/*  */}
         </div>
       ) : (
-        <p>sorry</p>
+        <div id="notFound-div">
+          <div class="notFound">
+            <div class="notFound-404"></div>
+            {/* <h1>404</h1> */}
+            <h2>Oops! Page Not Be Found</h2>
+            <p>
+              Sorry, you already have our course request, which will no longer
+              be approved
+            </p>
+            <Link to="/student-deshbord" class="back-link btn btn-primary">
+              Back to your Deshboard
+            </Link>
+          </div>
+        </div>
       )}
     </section>
   );
