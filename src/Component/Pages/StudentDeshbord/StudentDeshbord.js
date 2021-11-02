@@ -9,6 +9,7 @@ import myImg from "../../../Media/img/student-img/arifull.jpg";
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import StudentComment from "../StudentComment/StudentComment";
+import TodoList from "./StudentTodo/TodoList/TodoList/TodoList";
 const studentDeshbordCatagory = [
   {
     img: eeeImg2,
@@ -30,7 +31,7 @@ const StudentDeshbord = () => {
     fetch("https://education-portal-1.herokuapp.com/students")
       .then((res) => res.json())
       .then((data) => {
-        // console.log("2", data);
+        console.log("222", data);
         const filterRoleAndLoginUser = data.rasult.filter(
           (filter) => filter.loggedinUser.email === loggedinUser.email
           // filter.loggedinUser.role === "Student"
@@ -58,6 +59,7 @@ const StudentDeshbord = () => {
     <div>
       <Navbar></Navbar>
       <div className="container">
+        {" "}
         <div className="row">
           {studentDeshboardData.map((studentDeshboard) => (
             <div className="col-sm-4">
@@ -84,134 +86,154 @@ const StudentDeshbord = () => {
             </div>
           ))}
         </div>
-        <div
-          style={{
-            borderBottom: "3px solid gray",
-            padding: "10px 20px",
-            display: "flex",
-            alignItems: "center",
-            background: "#8080805c",
-            marginTop: "3%",
-          }}
-        >
-          <FontAwesomeIcon
-            icon={faBars}
-            style={{ color: "green", fontSize: "20px" }}
-          />{" "}
-          <h4
-            style={{
-              fontSize: "19px",
-              paddingTop: "1%",
-              paddingLeft: "2%",
-              lineHeight: "24px",
-            }}
-          >
-            Course Overview
-          </h4>
-        </div>
-        <div
-          style={{
-            background: "#dddddd4d",
-            padding: "6% 3%",
-            paddingTop: "3%",
-          }}
-        >
-          <div className="row">
-            {studentDeshbordCatagory.map((catagory) => (
-              <>
-                {studentDeshboardData.map((data) => (
-                  <div
-                    className=" col-xl-3 col-lg-4 col-md-6 col-sm-6 "
-                    style={{ marginBottom: "2%" }}
-                  >
-                    <div
-                      onClick={() => history.push("/courseDetails")}
-                      style={{ cursor: "pointer" }}
-                    >
-                      <img
-                        src={catagory.img}
-                        alt=""
-                        style={{ width: "100%", height: "200px" }}
-                      />
+        <div className="row">
+          <div className="col-sm-8">
+            <div
+              style={{
+                borderBottom: "3px solid gray",
+                padding: "10px 20px",
+                display: "flex",
+                alignItems: "center",
+                background: "#8080805c",
+                marginTop: "3%",
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faBars}
+                style={{ color: "green", fontSize: "20px" }}
+              />{" "}
+              <h4
+                style={{
+                  fontSize: "19px",
+                  paddingTop: "1%",
+                  paddingLeft: "2%",
+                  lineHeight: "24px",
+                }}
+              >
+                Course Overview
+              </h4>
+            </div>
+            <div
+              style={{
+                background: "#dddddd4d",
+                padding: "6% 3%",
+                paddingTop: "3%",
+              }}
+            >
+              <div className="row">
+                {studentDeshbordCatagory.map((catagory) => (
+                  <>
+                    {studentDeshboardData.map((data) => (
                       <div
-                        style={{
-                          border: "1px solid #dddd",
-                          padding: "5%",
-                          background: "white",
-                          height: "159px",
-                          overflowY: "auto",
-                        }}
+                        className=" col-xl-4 col-lg-4 col-md-6 col-sm-6 "
+                        style={{ marginBottom: "2%" }}
                       >
-                        <small style={{ textDecoration: "none" }}>
-                          {data.studentSelactedCourse.course} (BSC)
-                        </small>
-                        <h4
-                          style={{
-                            fontSize: "16px",
-                            padding: "3% 0",
-                            color: "#555",
-                          }}
-                        >
-                          <p
-                            style={{
-                              fontSize: "14px",
-                              marginBottom: "3%",
-                              color: "gray",
-                              fontStyle: "italic",
-                              fontWeight: "400",
-                            }}
-                          >
-                            Enroll Course :
-                          </p>
-                          {/* {catagory.subject} */}
-                          {data?.studentSelactedCourse?.subject?.map((sub) => (
-                            <li>{sub}</li>
-                          ))}
-                        </h4>
-                        <div
-                          style={{
-                            display: "flex",
-                            // justifyContent: "center",
-                            alignItems: "center",
-                          }}
-                        >
+                        <div style={{ cursor: "pointer" }}>
+                          <img
+                            src={catagory.img}
+                            alt=""
+                            style={{ width: "100%", height: "200px" }}
+                          />
                           <div
                             style={{
-                              width: "80%",
-                              height: "30px",
                               border: "1px solid #dddd",
-                              borderRadius: "5px",
+                              padding: "5%",
+                              background: "white",
+                              height: "159px",
+                              overflowY: "auto",
                             }}
                           >
+                            <small style={{ textDecoration: "none" }}>
+                              {
+                                data.studentSelactedCourse.courseSubjectFilters
+                                  .departmentName
+                              }{" "}
+                              (BSC)
+                            </small>
+                            <h4
+                              style={{
+                                fontSize: "16px",
+                                padding: "3% 0",
+                                color: "#555",
+                              }}
+                            >
+                              <p
+                                style={{
+                                  fontSize: "14px",
+                                  marginBottom: "3%",
+                                  color: "gray",
+                                  fontStyle: "italic",
+                                  fontWeight: "400",
+                                }}
+                              >
+                                Enroll Course :
+                              </p>
+                              {/* {catagory.subject} */}
+                              {data?.studentSelactedCourse?.subject?.map(
+                                (sub) => (
+                                  <li
+                                    onClick={() =>
+                                      history.push("/courseDetails")
+                                    }
+                                  >
+                                    {sub}
+                                  </li>
+                                )
+                              )}
+                            </h4>
                             <div
                               style={{
-                                width: "40%",
-                                height: "28px",
-                                background: "#3189b3",
-                                borderRadius: "5px",
+                                display: "flex",
+                                // justifyContent: "center",
+                                alignItems: "center",
                               }}
-                            ></div>
-                          </div>
-                          <div style={{ paddingLeft: "6%" }}>
-                            <span style={{ fontSize: "17px", color: "#555" }}>
-                              <CountUp
-                                start={0}
-                                end="57"
-                                duration={3.5}
-                                separator=","
-                              />
-                              %
-                            </span>
+                            >
+                              <div
+                                style={{
+                                  width: "80%",
+                                  height: "30px",
+                                  border: "1px solid #dddd",
+                                  borderRadius: "5px",
+                                }}
+                              >
+                                <div
+                                  style={{
+                                    width: "40%",
+                                    height: "28px",
+                                    background: "#3189b3",
+                                    borderRadius: "5px",
+                                  }}
+                                ></div>
+                              </div>
+                              <div style={{ paddingLeft: "6%" }}>
+                                <span
+                                  style={{ fontSize: "17px", color: "#555" }}
+                                >
+                                  <CountUp
+                                    start={0}
+                                    end="57"
+                                    duration={3.5}
+                                    separator=","
+                                  />
+                                  %
+                                </span>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    ))}
+                  </>
                 ))}
-              </>
-            ))}
+              </div>
+            </div>
           </div>
+          <div className="col-sm-4">Hellow</div>
         </div>
+      </div>
+      <div style={{ padding: "4%" }}>
+        {" "}
+        <TodoList></TodoList>
       </div>
       <div style={{ padding: "4%" }}>
         {" "}
