@@ -11,7 +11,7 @@ export const TeacherSidebarData = [
   },
   {
     title: 'Your Courses',
-    path: '/teacher/uploadContents',
+    path: '/teacher/teacherCourse',
     icon: <AiIcons.AiFillHome />,
   },
   {
