@@ -44,7 +44,7 @@ const StudentComment = () => {
         console.log("2", data.rasult);
         setStudentsCommentsdata(data.rasult);
       });
-  }, [studentsCommentsdata]);
+  }, []);
 
   // ///java script code read more//////
 
