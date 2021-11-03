@@ -6,6 +6,7 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const [loggedinUser, setLoggedinUser] = useContext(UserLoggedinContext);
+
   return (
     <div className="nav-section">
       <nav className=" container nav-area">
