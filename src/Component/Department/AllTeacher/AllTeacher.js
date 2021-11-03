@@ -25,7 +25,7 @@ const allteacherdetls = [
     teacherSelcDepartment: "EEE",
   },
 ];
-
+//arifull
 const AllTeacher = () => {
   const [allTeacher, setAllTeacher] = useState([]);
   useEffect(() => {
