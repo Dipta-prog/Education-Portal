@@ -3,7 +3,8 @@ import admainImg from "../../Media/img/login-img/admain-img/a-3.png";
 import studentImg from "../../Media/img/login-img/student-img/st-1.png";
 import teacherImg from "../../Media/img/login-img/teacher-img/t-2.png";
 import LoginFrom from "./LoginFrom/LoginFrom";
-
+import Navbar from "../../../src/Component/Shared/Navbar/Navbar";
+import Footer from "../../../src/Component/Shared/Footer/Footer";
 const chosesLoginOption = [
   {
     img: studentImg,
@@ -24,6 +25,8 @@ const NewLogin = () => {
   console.log(chosesOption);
   return (
     <div>
+      <Navbar></Navbar> <br />
+      <br />
       <div className="container">
         <h3 style={{ textAlign: "center", padding: "3%", fontSize: "40px" }}>
           Login - Choose Option
@@ -74,9 +77,14 @@ const NewLogin = () => {
           ></LoginFrom>
         )}
         {chosesOption.role === "Admin" && (
-          <LoginFrom chosesOption={chosesOption} role={"/adminDashboard"}></LoginFrom>
+          <LoginFrom
+            chosesOption={chosesOption}
+            role={"/adminDashboard"}
+          ></LoginFrom>
         )}
       </div>
+      <br />
+      <br /> <br /> <Footer></Footer>
     </div>
   );
 };

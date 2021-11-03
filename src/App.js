@@ -26,12 +26,12 @@ import OurTeachers from "./Component/Pages/OurTeachers/OurTeachers";
 import StudentComment from "./Component/Pages/StudentComment/StudentComment";
 import StudentDeshbord from "./Component/Pages/StudentDeshbord/StudentDeshbord";
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
-import TeacherProfile from "./Component/Teacher/TeacherProfile/TeacherProfile";
 import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
 import Sidebar from "./Component/Shared/Sidebar/Sidebar";
 import TeacherSidebar from "./Component/Shared/TeacherSidebar/TeacherSidebar";
 import EnrolledStudent from "./Component/Teacher/EnrolledStudent/EnrolledStudent";
 import TeacherCourse from "./Component/Teacher/TeacherCourses/TeacherCourse";
+import TeacherProfile from "./Component/Teacher/TeacherProfile/TeacherProfile";
 import NewLogin from "./Firebase/NewLogin/NewLogin";
 
 export const UseSelcCourseContext = createContext();
@@ -59,9 +59,9 @@ function App() {
               <Login></Login>
                 </Route> */}
 
-              <PrivateRoute path="/courseDetails">
+              <Route path="/courseDetails">
                 <CourseDetails />
-              </PrivateRoute>
+              </Route>
               <Route path="/teacherForm">
                 <TeacherForm />
               </Route>
@@ -87,79 +87,136 @@ function App() {
               <Route path="/admin">
                 <AdminDashboard />
               </Route>
-              <PrivateRoute path="/teacherProfile">
+              <Route path="/teacherProfile">
                 <TeacherProfile />
-              </PrivateRoute>
-              <PrivateRoute path="/assign">
+              </Route>
+              <Route path="/assign">
                 <Assign />
-              </PrivateRoute>
-              <PrivateRoute path="/teacherSidebar">
+              </Route>
+              <Route path="/teacherSidebar">
                 <TeacherSidebar />
-              </PrivateRoute>
-              <PrivateRoute path="/teacherProfile">
+              </Route>
+              <Route path="/teacherProfile">
                 <TeacherProfile />
-              </PrivateRoute>
-              <PrivateRoute path="/enrolledStudent">
+              </Route>
+              <Route path="/enrolledStudent">
                 <EnrolledStudent />
-              </PrivateRoute>
+              </Route>
               <PrivateRoute path="/teachersList">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><TeacherList /></div>
+                  <div className="col-md-3">
+                    {" "}
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <TeacherList />
+                  </div>
                 </div>
               </PrivateRoute>
               <Route path="/studentsList">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><StudentsList /></div>
+                  <div className="col-md-3">
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <StudentsList />
+                  </div>
                 </div>
               </Route>
               <PrivateRoute path="/addTeacher">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><AddTeacher /></div>
+                  <div className="col-md-3">
+                    {" "}
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <AddTeacher />
+                  </div>
                 </div>
               </PrivateRoute>
               <PrivateRoute path="/viewTeacher">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><TeacherView /></div>
+                  <div className="col-md-3">
+                    {" "}
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <TeacherView />
+                  </div>
                 </div>
               </PrivateRoute>
               <PrivateRoute path="/addStudent">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><AddStudent /></div>
+                  <div className="col-md-3">
+                    <Sidebar />
+                  </div>
+                  <div className="col-md-9">
+                    <AddStudent />
+                  </div>
                 </div>
               </PrivateRoute>
               <PrivateRoute path="/viewStudent">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><StudentView /></div>
+                  <div className="col-md-3">
+                    {" "}
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <StudentView />
+                  </div>
                 </div>
               </PrivateRoute>
               <PrivateRoute path="/addCourse">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><AddCourse /></div>
+                  <div className="col-md-3">
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <AddCourse />
+                  </div>
                 </div>
               </PrivateRoute>
               <PrivateRoute path="/allCourse">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><CourseList /></div>
+                  <div className="col-md-3">
+                    {" "}
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <CourseList />
+                  </div>
                 </div>
               </PrivateRoute>
               <PrivateRoute path="/allDepartment">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><DepartmentList /></div>
+                  <div className="col-md-3">
+                    {" "}
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <DepartmentList />
+                  </div>
                 </div>
               </PrivateRoute>
               <PrivateRoute path="/addDepartment">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><AddDepartment /></div>
+                  <div className="col-md-3">
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <AddDepartment />
+                  </div>
+                </div>
+              </PrivateRoute>
+              <PrivateRoute path="/makeNewAdmin">
+                <div className="row">
+                  <div className="col-md-3">
+                    {" "}
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <MakeNewAdmin />
+                  </div>
                 </div>
               </PrivateRoute>
               <PrivateRoute path="/teacher/teacherCourse">
@@ -169,6 +226,17 @@ function App() {
                   </div>
                   <div className="col-md-9">
                     <TeacherCourse />
+                  </div>
+                </div>
+              </PrivateRoute>
+              <PrivateRoute path="/addAnEvent">
+                <div className="row">
+                  <div className="col-md-3">
+                    {" "}
+                    <Sidebar />{" "}
+                  </div>
+                  <div className="col-md-9">
+                    <AddEvents />
                   </div>
                 </div>
               </PrivateRoute>
