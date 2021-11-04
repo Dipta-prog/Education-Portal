@@ -6,3 +6,29 @@
 .deshbord_description {
   padding: 2%;
 }
+.deshbord_courseDetls_bottom_part {
+  border: 1px solid #e5e5e5;
+  padding: 0 5%;
+  padding-left: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resister_btn {
+  padding: 5 px 18 px;
+  border: none;
+  background-color: #86bc42;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border-radius: 3 px;
+}
+.deshbord_courseDetls_bottom_part_icons_part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deshbord_courseDetls_bottom_part_icons {
+  border-left: 1 px solid #cfcece;
+  padding: 30% !important;
+}
