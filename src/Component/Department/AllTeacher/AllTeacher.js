@@ -25,7 +25,7 @@ const allteacherdetls = [
     teacherSelcDepartment: "EEE",
   },
 ];
-//arifull
+
 const AllTeacher = () => {
   const [allTeacher, setAllTeacher] = useState([]);
   useEffect(() => {
@@ -59,12 +59,12 @@ const AllTeacher = () => {
                 {" "}
                 <span>{teacher.name}</span>
                 <small>{teacher.department}</small>
-                <li className="teacher_social">
+                <span className="teacher_social">
                   <img src={facebook} alt="" style={{ width: "6%" }} />
                   <img src={insta} alt="" style={{ width: "6%" }} />
                   <img src={twitter} alt="" style={{ width: "6%" }} />
                   <img src={youtube} alt="" style={{ width: "6%" }} />
-                </li>
+                </span>
               </div>
             </Bounce>
           </div>

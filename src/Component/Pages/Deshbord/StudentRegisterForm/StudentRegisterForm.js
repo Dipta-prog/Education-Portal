@@ -55,9 +55,14 @@ const StudentRegisterForm = () => {
       });
   }, []);
   ///////
+  console.log(
+    "studentDeshboardData === loggedinUser.email",
+    studentDeshboardData,
+    loggedinUser.email
+  );
   return (
     <section className="student_form_container">
-      {studentDeshboardData === loggedinUser.email ? (
+      {studentDeshboardData !== loggedinUser.email ? (
         <div className="container">
           <h3
             style={{

@@ -58,8 +58,9 @@ const ImportantFact = () => {
                 <div
                   style={{
                     border: "1px solid #eeeeee",
-                    //  padding: "5%",
-                    paddingTop: "5%",
+                    padding: "5%",
+                    // paddingTop: "5%",
+                    textAlign: "center",
                   }}
                 >
                   {fact.icon}

@@ -16,7 +16,7 @@ const Header = () => {
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.{" "}
           </p>
-          <Link to="/deshboard">
+          <Link to="/department">
             <button>start now!</button>
           </Link>
         </div>
@@ -28,7 +28,7 @@ const Header = () => {
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.{" "}
           </p>
-          <Link to="/deshboard">
+          <Link to="/department">
             <button>start now!</button>
           </Link>
         </div>

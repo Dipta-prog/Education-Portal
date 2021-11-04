@@ -36,7 +36,8 @@ const NewLogin = () => {
             <div className="col-sm-4">
               <div
                 style={{
-                  textAlign: "center",
+                  display: "flex",
+                  justifyContent: "center",
                   border: "1px solid #dddd",
                   padding: "2%",
                   paddingTop: "4%",
@@ -48,15 +49,18 @@ const NewLogin = () => {
                   })
                 }
               >
-                <img src={option.img} alt="" style={{ width: "100px" }} />
-                <h5
-                  style={{
-                    paddingTop: "7%",
-                    color: "#161616cf",
-                  }}
-                >
-                  {option.role}
-                </h5>
+                <div>
+                  <img src={option.img} alt="" style={{ width: "100px" }} />
+                  <h5
+                    style={{
+                      paddingTop: "12%",
+                      color: "#161616cf",
+                      textAlign: "center",
+                    }}
+                  >
+                    {option.role}
+                  </h5>
+                </div>
               </div>
             </div>
           ))}
@@ -84,7 +88,10 @@ const NewLogin = () => {
         )}
       </div>
       <br />
-      <br /> <br /> <Footer></Footer>
+      <br /> <br /> <br />
+      <br />
+      <br />
+      <br /> <Footer></Footer>
     </div>
   );
 };

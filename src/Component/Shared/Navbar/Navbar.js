@@ -15,7 +15,10 @@ const Navbar = () => {
           <i className="fa fa-align-right"></i>
         </label>
         <label>
-          <Link to="/"> <img src={logo} alt="" className="logo" /> </Link>
+          <Link to="/">
+            {" "}
+            <img src={logo} alt="" className="logo" />{" "}
+          </Link>
         </label>
         <ul className="nav-links">
           <li>
@@ -32,7 +35,7 @@ const Navbar = () => {
           <Link to="/student-deshbord"> Student Dashboard</Link>
           </li> */}
           <li>
-            <Link to="/deshboard">COURSE REQUEST</Link>
+            <Link to="/department">COURSE REQUEST</Link>
           </li>
           <li>
             <div className="right-menu">
