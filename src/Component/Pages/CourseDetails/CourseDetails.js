@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import welcomeBanner from "../../../Media/img/Welcome-banner/Welcome.jpg";
+import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
+import CoundDownTimes from "../StudentDeshbord/CoundDownTimes/CoundDownTimes";
 import Weekly from "../Weekly/Weekly";
 import "./CourseDetails.scss";
 
@@ -43,7 +45,13 @@ const CourseDetails = () => {
           <a href="#myCourses">My Courses</a> /{" "}
           <a href="#aboutThisCourse">About this course</a>
         </p>
-      </div>
+      </div>{" "}
+      <br /> <br />{" "}
+      <h6 style={{ textAlign: "center", color: "red" }}>
+        Next Lesson will be uploaded
+      </h6>{" "}
+      <br />
+      <CoundDownTimes></CoundDownTimes>
       <div className="full-page">
         <h5>Welcome to Computer Networks</h5>
         <div className="outlineFix ml-4">
@@ -117,7 +125,8 @@ const CourseDetails = () => {
 
           <Weekly />
         </div>
-      </div>
+      </div>{" "}
+      <Footer></Footer>
     </div>
   );
 };

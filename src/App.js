@@ -44,6 +44,7 @@ import TodoList from "../src/Component/Pages/StudentDeshbord/StudentTodo/TodoLis
 import Test from "./Component/Test/Test";
 import Navbar from "../src/Component/Shared/Navbar/Navbar";
 import Footer from "../src/Component/Shared/Footer/Footer";
+import CoundDownTimes from "./Component/Pages/StudentDeshbord/CoundDownTimes/CoundDownTimes";
 export const UseSelcCourseContext = createContext();
 export const UserLoggedinContext = createContext();
 export const UseSelcDepartmentContext = createContext();
@@ -326,7 +327,9 @@ function App() {
                 <Route path="/quiz">
                   <StudentAssignment></StudentAssignment>
                 </Route>
-                <Route path="/times">{/* <SetTimes></SetTimes> */}</Route>
+                <Route path="/times">
+                  <CoundDownTimes></CoundDownTimes>
+                </Route>
                 <Route path="/todo">
                   <TodoList></TodoList>
                 </Route>
