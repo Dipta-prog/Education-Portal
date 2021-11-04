@@ -19,6 +19,7 @@ const chosesLoginOption = [
     role: "Admin",
   },
 ];
+
 const NewLogin = () => {
   const [chosesOption, setChosesOption] = useState(true);
   console.log(chosesOption);
