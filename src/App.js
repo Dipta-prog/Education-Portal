@@ -87,9 +87,9 @@ function App() {
               <Route path="/admin">
                 <AdminDashboard />
               </Route>
-              <Route path="/teacherProfile">
+              <PrivateRoute path="/teacherProfile">
                 <TeacherProfile />
-              </Route>
+              </PrivateRoute>
               <Route path="/assign">
                 <Assign />
               </Route>
@@ -242,14 +242,22 @@ function App() {
               </PrivateRoute>
               <PrivateRoute path="/makeNewAdmin">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><MakeNewAdmin /></div>
+                  <div className="col-md-3">
+                    <Sidebar />
+                  </div>
+                  <div className="col-md-9">
+                    <MakeNewAdmin />
+                  </div>
                 </div>
               </PrivateRoute>
               <PrivateRoute path="/addAnEvent">
                 <div className="row">
-                  <div className="col-md-3"><Sidebar /></div>
-                  <div className="col-md-9"><AddEvents /></div>
+                  <div className="col-md-3">
+                    <Sidebar />
+                  </div>
+                  <div className="col-md-9">
+                    <AddEvents />
+                  </div>
                 </div>
               </PrivateRoute>
               <PrivateRoute path="/adminDashboard">
