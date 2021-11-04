@@ -9,7 +9,7 @@ import AllDepartment from "../../AllDepartment/AllDepartment";
 import Department from "../../Department";
 import SelactedDepartmentDetls from "../../SelactedDepartmentDetls/SelactedDepartmentDetls";
 import { Link } from "react-router-dom";
-
+import Bounce from "react-reveal/Bounce";
 const Courses = () => {
   const history = useHistory();
   const { departmentNames, departmentKey } = useParams();

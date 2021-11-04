@@ -7,7 +7,7 @@ import "./SelactedDepartmentDetls.css";
 import DepartmentOverview from "./SelactedDepartmentDetlsOverviewPart/DepartmentOverview/DepartmentOverview";
 import DepartmentReviews from "./SelactedDepartmentDetlsOverviewPart/DepartmentReviews/DepartmentReviews";
 import { FaHeart, FaVideo } from "react-icons/fa";
-
+import Bounce from "react-reveal/Bounce";
 const dpp = [];
 const SelactedDepartmentDetls = ({
   selctedDepartment,
@@ -19,28 +19,29 @@ const SelactedDepartmentDetls = ({
   console.log(click);
   return (
     <>
-      <Link to={"/subject/" + selctedDepartment.departmentName}>
-        <img src={selctedDepartment.image} alt="" style={{ width: "100%" }} />
-      </Link>
-      {/*  */}
-      <div className="deshbord_courseDetls_bottom_part">
-        <div>
-          {" "}
-          <Link to={"/subject/" + selctedDepartment.departmentName}>
-            <button className="resister_btn  ">select</button>{" "}
-          </Link>
-        </div>
-
-        <div className="deshbord_courseDetls_bottom_part_icons_part">
-          <div className="deshbord_courseDetls_bottom_part_icons">
-            <FaHeart />
+      <Bounce left>
+        <Link to={"/subject/" + selctedDepartment.departmentName}>
+          <img src={selctedDepartment.image} alt="" style={{ width: "100%" }} />
+        </Link>
+        {/*  */}
+        <div className="deshbord_courseDetls_bottom_part">
+          <div>
+            {" "}
+            <Link to={"/subject/" + selctedDepartment.departmentName}>
+              <button className="resister_btn  ">select</button>{" "}
+            </Link>
           </div>
-          <div className="deshbord_courseDetls_bottom_part_icons">
-            <FaVideo />
+
+          <div className="deshbord_courseDetls_bottom_part_icons_part">
+            <div className="deshbord_courseDetls_bottom_part_icons">
+              <FaHeart />
+            </div>
+            <div className="deshbord_courseDetls_bottom_part_icons">
+              <FaVideo />
+            </div>
           </div>
         </div>
-      </div>
-
+      </Bounce>
       {/*  */}
       <div className="department_click_overview">
         {click === "overView" ? (
@@ -74,20 +75,22 @@ const SelactedDepartmentDetls = ({
           <span onClick={() => setClick("reviews")}>Reviews</span>
         )}
       </div>
-      <div>
-        {click === "overView" && (
-          <DepartmentOverview
-            findCourses={findCourses}
-            selctedDepartment={selctedDepartment}
-          ></DepartmentOverview>
-        )}
-        {click === "instructor" && (
-          <DepartmentInstructor
-            findTeacher={findTeacher}
-          ></DepartmentInstructor>
-        )}
-        {click === "reviews" && <DepartmentReviews></DepartmentReviews>}
-      </div>
+      <Bounce up>
+        <div>
+          {click === "overView" && (
+            <DepartmentOverview
+              findCourses={findCourses}
+              selctedDepartment={selctedDepartment}
+            ></DepartmentOverview>
+          )}
+          {click === "instructor" && (
+            <DepartmentInstructor
+              findTeacher={findTeacher}
+            ></DepartmentInstructor>
+          )}
+          {click === "reviews" && <DepartmentReviews></DepartmentReviews>}
+        </div>
+      </Bounce>
     </>
   );
 };
