@@ -1,6 +1,10 @@
 import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import OurCourses from "../src/Component/Department/Department/OurCourses/OurCourses/OurCourses";
 import CourseDetails from "../src/Component/Pages/CourseDetails/CourseDetails";
+import TodoList from "../src/Component/Pages/StudentDeshbord/StudentTodo/TodoList/TodoList/TodoList";
+import Footer from "../src/Component/Shared/Footer/Footer";
+import Navbar from "../src/Component/Shared/Navbar/Navbar";
 import "./App.scss";
 import AddCourse from "./Component/Administration/Admin Dashboard/Course/AddCourse/AddCourse";
 import CourseList from "./Component/Administration/Admin Dashboard/Course/CourseList/CourseList";
@@ -10,26 +14,26 @@ import DepartmentList from "./Component/Administration/Admin Dashboard/Departmen
 import AddEvents from "./Component/Administration/Admin Dashboard/Events/AddEvents/AddEvents";
 import MakeNewAdmin from "./Component/Administration/Admin Dashboard/MakeNewAdmin/MakeNewAdmin";
 import AddStudent from "./Component/Administration/Admin Dashboard/Student/AddStudent/AddStudent";
+import EditStudent from "./Component/Administration/Admin Dashboard/Student/EditStudent/EditStudent";
 import StudentsList from "./Component/Administration/Admin Dashboard/Student/StudentsList/StudentsList";
-import StudentView from "./Component/Administration/Admin Dashboard/Student/StudentView/StudentView";
 import AddTeacher from "./Component/Administration/Admin Dashboard/Teacher/AddTeacher/AddTeacher";
+import EditTeacher from "./Component/Administration/Admin Dashboard/Teacher/EditTeacher/EditTeacher";
 import TeacherList from "./Component/Administration/Admin Dashboard/Teacher/TeacherList/TeacherList";
-import TeacherView from "./Component/Administration/Admin Dashboard/Teacher/TeacherView/TeacherView";
+import Courses from "./Component/Department/Department/Courses/Courses/Courses";
+import Department from "./Component/Department/Department/Department";
 import Home from "./Component/Home/Home/Home";
 import NotFound from "./Component/NotFound/NotFound";
-
-import OurCourses from "../src/Component/Department/Department/OurCourses/OurCourses/OurCourses";
 // <<<<<<< HEAD
 import AdminDashboard from "./Component/Pages/Admin/AdminDashboard/AdminDashboard";
 import Assign from "./Component/Pages/Assign/Assign";
 import Deshbord from "./Component/Pages/Deshbord/Deshbord";
 import StudentRegisterForm from "./Component/Pages/Deshbord/StudentRegisterForm/StudentRegisterForm";
-import OurTeachers from "./Component/Pages/OurTeachers/OurTeachers";
 import StudentComment from "./Component/Pages/StudentComment/StudentComment";
+import CoundDownTimes from "./Component/Pages/StudentDeshbord/CoundDownTimes/CoundDownTimes";
+import StudentAssignment from "./Component/Pages/StudentDeshbord/StudentAssignment/StudentAssignment";
 // import SetTimes from "./Component/Pages/StudentDeshbord/StudentAssignment/SetTimes/SetTimes";
 // import StudentAssignment from "../src/Component/Pages/StudentDeshbord/";
 import StudentDeshbord from "./Component/Pages/StudentDeshbord/StudentDeshbord";
-import StudentAssignment from "./Component/Pages/StudentDeshbord/StudentAssignment/StudentAssignment";
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
 import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
 import Sidebar from "./Component/Shared/Sidebar/Sidebar";
@@ -38,13 +42,6 @@ import EnrolledStudent from "./Component/Teacher/EnrolledStudent/EnrolledStudent
 import TeacherCourse from "./Component/Teacher/TeacherCourses/TeacherCourse";
 import TeacherProfile from "./Component/Teacher/TeacherProfile/TeacherProfile";
 import NewLogin from "./Firebase/NewLogin/NewLogin";
-import Courses from "./Component/Department/Department/Courses/Courses/Courses";
-import Department from "./Component/Department/Department/Department";
-import TodoList from "../src/Component/Pages/StudentDeshbord/StudentTodo/TodoList/TodoList/TodoList";
-import Test from "./Component/Test/Test";
-import Navbar from "../src/Component/Shared/Navbar/Navbar";
-import Footer from "../src/Component/Shared/Footer/Footer";
-import CoundDownTimes from "./Component/Pages/StudentDeshbord/CoundDownTimes/CoundDownTimes";
 export const UseSelcCourseContext = createContext();
 export const UserLoggedinContext = createContext();
 export const UseSelcDepartmentContext = createContext();
@@ -79,10 +76,14 @@ function App() {
                   <CourseDetails />
                 </Route>
                 <Route path="/teacherForm">
+                <Navbar />
                   <TeacherForm />
+                  <Footer />
                 </Route>
                 <PrivateRoute path="/adminDashboard">
+                <Navbar />
                   <Dashboard />
+                  <Footer />
                 </PrivateRoute>
                 {/* arif */}
                 <Route path="/deshboard">
@@ -98,7 +99,9 @@ function App() {
                   <StudentDeshbord></StudentDeshbord>
                 </PrivateRoute>
                 <Route path="/login">
+               
                   <NewLogin></NewLogin>
+    
                 </Route>
                 <Route path="/admin">
                   <AdminDashboard />
@@ -113,10 +116,14 @@ function App() {
                   <TeacherSidebar />
                 </Route>
                 <PrivateRoute path="/teacherProfile">
+                <Navbar />
                   <TeacherProfile />
+                  <Footer />
                 </PrivateRoute>
                 <Route path="/enrolledStudent">
+                <Navbar />
                   <EnrolledStudent />
+                  <Footer />
                 </Route>
                 <PrivateRoute path="/teachersList">
                   <div>
@@ -171,7 +178,7 @@ function App() {
                     </div>
                   </div>
                 </PrivateRoute>
-                <PrivateRoute path="/viewTeacher">
+                <PrivateRoute path="/editTeacher">
                   <div>
                     {" "}
                     <Navbar></Navbar>
@@ -181,7 +188,7 @@ function App() {
                         <Sidebar />{" "}
                       </div>
                       <div className="col-md-9">
-                        <TeacherView />
+                        <EditTeacher />
                       </div>{" "}
                       <div style={{ paddingTop: "5%" }}>
                         <Footer></Footer>
@@ -206,7 +213,7 @@ function App() {
                     </div>
                   </div>
                 </PrivateRoute>
-                <PrivateRoute path="/viewStudent">
+                <PrivateRoute path="/editStudent">
                   <div>
                     <Navbar></Navbar>
                     <div className="row">
@@ -215,7 +222,7 @@ function App() {
                         <Sidebar />{" "}
                       </div>
                       <div className="col-md-9">
-                        <StudentView />
+                        <EditStudent />
                       </div>{" "}
                       <div style={{ paddingTop: "5%" }}>
                         <Footer></Footer>
@@ -224,6 +231,7 @@ function App() {
                   </div>
                 </PrivateRoute>
                 <PrivateRoute path="/addCourse">
+                <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       <Sidebar />{" "}
@@ -232,8 +240,10 @@ function App() {
                       <AddCourse />
                     </div>
                   </div>
+                  <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/allCourse">
+                <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       {" "}
@@ -243,8 +253,10 @@ function App() {
                       <CourseList />
                     </div>
                   </div>
+                  <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/allDepartment">
+                <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       {" "}
@@ -254,8 +266,10 @@ function App() {
                       <DepartmentList />
                     </div>
                   </div>
+                  <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/addDepartment">
+                <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       <Sidebar />{" "}
@@ -264,8 +278,10 @@ function App() {
                       <AddDepartment />
                     </div>
                   </div>
+                  <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/makeNewAdmin">
+                <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       {" "}
@@ -275,6 +291,7 @@ function App() {
                       <MakeNewAdmin />
                     </div>
                   </div>
+                  <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/teacher/teacherCourse">
                   <div className="row">
@@ -287,6 +304,7 @@ function App() {
                   </div>
                 </PrivateRoute>
                 <PrivateRoute path="/addAnEvent">
+                <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       {" "}
@@ -296,6 +314,7 @@ function App() {
                       <AddEvents />
                     </div>
                   </div>
+                  <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/makeNewAdmin">
                   <div className="row">

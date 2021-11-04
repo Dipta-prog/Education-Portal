@@ -25,8 +25,8 @@ export const SidebarData = [
         cName: 'sub-nav'
       },
       {
-        title: 'StudentView',
-        path: 'viewStudent',
+        title: 'Student Edit',
+        path: 'editStudent',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
@@ -53,8 +53,8 @@ export const SidebarData = [
         cName: 'sub-nav'
       },
       {
-        title: 'Teacher View',
-        path: '/viewTeacher',
+        title: 'Teacher Edit',
+        path: '/editTeacher',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
@@ -108,27 +108,27 @@ export const SidebarData = [
       }
     ]
   },
-  {
-    title: 'Messages',
-    path: '/student/messages',
-    icon: <FaIcons.FaEnvelopeOpenText />,
+  // {
+  //   title: 'Messages',
+  //   path: '/student/messages',
+  //   icon: <FaIcons.FaEnvelopeOpenText />,
 
-    iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpSFill />,
+  //   iconClosed: <RiIcons.RiArrowDownSFill />,
+  //   iconOpened: <RiIcons.RiArrowUpSFill />,
 
-    subNav: [
-      {
-        title: 'Message 1',
-        path: 'student/messages/message1',
-        icon: <IoIcons.IoIosPaper />
-      },
-      {
-        title: 'Message 2',
-        path: 'student/messages/message2',
-        icon: <IoIcons.IoIosPaper />
-      }
-    ]
-  },
+  //   subNav: [
+  //     {
+  //       title: 'Message 1',
+  //       path: 'student/messages/message1',
+  //       icon: <IoIcons.IoIosPaper />
+  //     },
+  //     {
+  //       title: 'Message 2',
+  //       path: 'student/messages/message2',
+  //       icon: <IoIcons.IoIosPaper />
+  //     }
+  //   ]
+  // },
   {
     title: 'Make New Admin',
     path: '/makeNewAdmin',

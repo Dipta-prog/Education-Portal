@@ -36,7 +36,7 @@
 import React from "react";
 import "./CoundDownTimes.css";
 const CoundDownTimes = () => {
-  var countDownDate = new Date("Decemver 5, 2021 15:37:25").getTime();
+  var countDownDate = new Date("November 11, 2021 15:37:25").getTime();
 
   // Update the count down every 1 second
   var x = setInterval(function () {

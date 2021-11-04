@@ -26,7 +26,6 @@ const AddStudent = () => {
         reset('', {
             keepValues: false,
         })
-        console.log(data);
         const newStudentData = {
             ...studentData,
             id: data.id,
@@ -56,7 +55,7 @@ const AddStudent = () => {
 
         const userData = {
             ...studentData,
-            name: data.name, 
+            name: data.name,
             email: data.email,
             role: data.role,
             userName: data.userName,
@@ -72,14 +71,38 @@ const AddStudent = () => {
             body: JSON.stringify(userData)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data.message)
+            })
+        const loginData = {
+            ...studentData,
+            name: data.name,
+            email: data.email,
+            userName: data.userName,
+            password: data.password,
+        }
+
+        fetch("https://education-portal-1.herokuapp.com/send", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(loginData)
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data)
+            }).catch(err => {
+                console.log(err)
+            })
+        // educationportaldevzone302  pass and api
+        //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
     };
     const handleImageUpload = event => {
         console.log(event.target.files[0])
         const imageData = new FormData();
         imageData.set('key', '3a55021cd0e8e960fecdb61ee3bca9f2')
         imageData.append('image', event.target.files[0])
-    
+
         axios.post('https://api.imgbb.com/1/upload', imageData)
             .then(function (response) {
                 console.log(response.data.data.display_url)
@@ -88,7 +111,7 @@ const AddStudent = () => {
             .catch(function (error) {
                 console.log(error);
             });
-    
+
     }
 
 
