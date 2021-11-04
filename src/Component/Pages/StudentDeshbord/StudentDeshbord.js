@@ -21,117 +21,54 @@ const StudentDeshbord = () => {
   const [loggedinUser, setLoggedinUser] = useContext(UserLoggedinContext);
   const [studentDeshboardData, setStudentDeshboardData] = useState([]);
   const history = useHistory();
-  ////
-  const [test, setTest] = useState({});
-
-  ////
-  ////get////
-
-  useEffect(() => {
-    fetch("https://education-portal-1.herokuapp.com/students")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("222", data);
-        const filterRoleAndLoginUser = data.rasult.filter(
-          (filter) => filter.loggedinUser.email === loggedinUser.email
-          // filter.loggedinUser.role === "Student"
-        );
-
-        setStudentDeshboardData(filterRoleAndLoginUser);
-      });
-  }, []);
-  console.log("raju", studentDeshboardData);
-  /////
-  // const [studentDeshboardDataMaping, setStudentDeshboardDataMaping] = useState(
-  //   []
-  // );
-  const studentDeshboardDataMaping = studentDeshboardData.map(
-    (stDeshboardData) =>
-      stDeshboardData.studentSelactedCourse.courseSubjectFilters.departmentName
-  );
-  console.log("niha", studentDeshboardDataMaping);
-  /////////////
-
-  useEffect(() => {
-    fetch("https://education-portal-1.herokuapp.com/course")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("2", data);
-        // setDepartmentSubjectData(data.rasult);
-        const courses = data.result.map((subject) => setTest(subject));
-        // console.log("/", courses);
-      });
-  }, []);
-  // console.log("test", test);
-  ////teacher find///
   const [allTeachers, setAllTeachers] = useState([]);
   const [departmentTeachers, setDepartmentTeachers] = useState([]);
-  const [findTeachers, setFindTeacher] = useState([]);
+
   useEffect(() => {
-    const url = "https://education-portal-1.herokuapp.com/admin/allTeacher";
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("....", data.result);
-        // setFindTeacher(data.result);
-        setAllTeachers(data.result);
-
-        // setFindTeacher(findTeacher);
-      });
+    fetchStudentDashboardData()
+    fetchAllTeacher()
   }, []);
-  /////
 
+  const fetchStudentDashboardData = async () => {
+    const res = await fetch("https://education-portal-1.herokuapp.com/students");
+    let data = await res.json()
+    data = data.rasult
+    console.log("🚀 ~ file: StudentDeshbord.js ~ line 37 ~ loadStudentDashboardData ~ data", data)
+    const filterRoleAndLoginUser = data.filter((course) => course.loggedinUser.email === loggedinUser.email);
+    setStudentDeshboardData(filterRoleAndLoginUser);
+  }
+
+  const fetchAllTeacher = async () => {
+    const url = "https://education-portal-1.herokuapp.com/admin/allTeacher";
+    const res = await fetch(url);
+    let data = await res.json();
+    data = data.result;
+    setAllTeachers(data);
+  }
+  console.log("Dipta", studentDeshboardData);
+
+// I suggest you to do this work via an api, It has performance issue, but its working
   const findDepTeacher = () => {
-    console.log("inside findDepTeacher");
-    let temp = [];
-    for (let i = 0; i < allTeachers.length; i++) {
-      const element = allTeachers[i];
-      console.log(
-        "element",
-        element.department,
-        "studentDeshboardData",
-        studentDeshboardData.length > 0
-          ? studentDeshboardData[0].studentSelactedCourse.courseSubjectFilters
-              .departmentName
-          : ""
-      );
-
-      // const condition = element.departmentName === newCondition;
-
-      const newCondition =
-        studentDeshboardData.length > 0
-          ? studentDeshboardData[0].studentSelactedCourse.courseSubjectFilters
-              .departmentName
-          : "";
-      // console.log("condition", condition);
-      // if (condition) {
-      //   temp = [...temp, element];
-      // }
+    if ((studentDeshboardData.length > 0)) {
+      let temp = [];
+      if (temp.length > 0) return;
+      const deptName = studentDeshboardData[0].studentSelactedCourse.courseSubjectFilters.departmentName
+      console.log("student-dashboard data", deptName, "allTeachers", allTeachers);
+      for (let i = 0; i < allTeachers.length - 1; i++) {
+        const element = allTeachers[i];
+        console.log("all teacher loop", element.department === deptName)
+        if (element.department === deptName) {
+          temp = [...temp, element]
+        }
+      }
+      console.log("filtered dept teacher", temp)
+      setDepartmentTeachers(temp)
     }
   };
-  findDepTeacher();
-  //////
-  // console.log(
-  //   "allT.department",
-  //   allT.department,
-  //   "studentDeshboardDataMaping",
-  //   studentDeshboardDataMaping[0]
-  // )
-  // allT.department === studentDeshboardDataMaping
-  const allteacher = allTeachers.filter(
-    (allT) => allT.department === studentDeshboardDataMaping[0]
-    // studentDeshboardDataMaping.map(
-    //   (dp) =>
-    //     allT.department === dp
-    //     if (allT.department === dp) {
-    //       return allT;
-    //     }
-    // )
-  );
-  // setFindTeacher(allteacher);
-  console.log("arifull", allteacher);
+  setTimeout(() => {
+    findDepTeacher()
+  }, 3000);
 
-  ///////
   return (
     <div>
       <Navbar></Navbar>
@@ -305,7 +242,16 @@ const StudentDeshbord = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm-4">Hellow</div>
+          <div className="col-sm-4">
+            <h1>Dept. teachers</h1>
+            <ul>
+              {
+                departmentTeachers.map((teacher, i) => (
+                  <li key={i}>{teacher.name}</li>
+                ))
+              }
+            </ul>
+          </div>
         </div>
       </div>
       <div style={{ padding: "4%" }}>

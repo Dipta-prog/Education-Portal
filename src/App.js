@@ -131,7 +131,8 @@ function App() {
                 <PrivateRoute path="/teachersList">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      {" "}
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <TeacherList />
@@ -141,7 +142,7 @@ function App() {
                 <Route path="/studentsList">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <StudentsList />
@@ -151,7 +152,8 @@ function App() {
                 <PrivateRoute path="/addTeacher">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      {" "}
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <AddTeacher />
@@ -161,7 +163,8 @@ function App() {
                 <PrivateRoute path="/viewTeacher">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      {" "}
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <TeacherView />
@@ -181,7 +184,8 @@ function App() {
                 <PrivateRoute path="/viewStudent">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      {" "}
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <StudentView />
@@ -191,7 +195,7 @@ function App() {
                 <PrivateRoute path="/addCourse">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <AddCourse />
@@ -201,7 +205,8 @@ function App() {
                 <PrivateRoute path="/allCourse">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      {" "}
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <CourseList />
@@ -211,7 +216,8 @@ function App() {
                 <PrivateRoute path="/allDepartment">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      {" "}
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <DepartmentList />
@@ -221,7 +227,7 @@ function App() {
                 <PrivateRoute path="/addDepartment">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <AddDepartment />
@@ -231,7 +237,8 @@ function App() {
                 <PrivateRoute path="/makeNewAdmin">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      {" "}
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <MakeNewAdmin />
@@ -241,7 +248,8 @@ function App() {
                 <PrivateRoute path="/addAnEvent">
                   <div className="row">
                     <div className="col-md-3">
-                      <Sidebar />
+                      {" "}
+                      <Sidebar />{" "}
                     </div>
                     <div className="col-md-9">
                       <AddEvents />
