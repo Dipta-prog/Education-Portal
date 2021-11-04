@@ -27,7 +27,7 @@ const StudentRegisterForm = () => {
     const datas = { studentSelactedCourse, data, loggedinUser };
     console.log("datas", datas);
     axios
-      .post("http://localhost:1000/students", datas)
+      .post("https://education-portal-1.herokuapp.com/students", datas)
 
       .then((data) => {
         console.log("new", data);

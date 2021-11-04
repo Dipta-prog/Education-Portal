@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserLoggedinContext } from "../../../App";
-import logo from "../../../Media/img/Shared-Images/education-portal-logo.jpg";
+import logo from "../../../Media/img/Shared-Images/ep-logo.png";
+import chatIcon from "../../../Media/img/Shared-Images/text.png";
 import "./Navbar.scss";
 
 const Navbar = () => {
   const [loggedinUser, setLoggedinUser] = useContext(UserLoggedinContext);
-
   return (
     <div className="nav-section">
       <nav className=" container nav-area">
@@ -90,6 +90,7 @@ const Navbar = () => {
             >
               {loggedinUser.email}
             </span>
+
           ) : (
             <li>
               <Link className=" border border-2" to="/login">
@@ -97,6 +98,13 @@ const Navbar = () => {
               </Link>
             </li>
           )}
+          <li>{loggedinUser.email &&
+            
+              <a href="https://jsmchatapp.netlify.app/create?fbclid=IwAR045kZG-8NRDzRj_Uc4XM8u0cmkkszlKvIvyCZp6jD6KN4ErscQuhCKhFw" target="_blank" rel="noreferrer">
+              <img src={chatIcon} alt="" height="40px" width="40px" className="d-inline-block" />
+              </a>
+            
+          }</li>
         </ul>
       </nav>
     </div>
