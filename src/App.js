@@ -230,6 +230,7 @@ function App() {
                   </div>
                 </PrivateRoute>
                 <PrivateRoute path="/addCourse">
+                <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       <Sidebar />{" "}
@@ -238,6 +239,7 @@ function App() {
                       <AddCourse />
                     </div>
                   </div>
+                  <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/allCourse">
                 <Navbar />
@@ -275,6 +277,7 @@ function App() {
                       <AddDepartment />
                     </div>
                   </div>
+                  <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/makeNewAdmin">
                 <Navbar />
