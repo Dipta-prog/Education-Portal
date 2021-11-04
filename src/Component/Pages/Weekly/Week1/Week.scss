@@ -1,8 +1,24 @@
-.text-center{
-    text-align: center;
+.text-center {
+  text-align: center;
 }
 
-.lectureMaterials{
-    padding-left: 2rem;
-    margin-left: 2rem;
+.lectureMaterials {
+  padding-left: 2rem;
+  margin-left: 2rem;
+}
+.week1 h5 {
+  color: white !important;
+  background-color: #86bc42;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.lectureMaterials p {
+  color: black;
+  font-weight: bold;
+}
+.lectureMaterials h6 {
+  padding-right: 3%;
+  list-style: circle !important;
+  color: #86bc42;
 }
