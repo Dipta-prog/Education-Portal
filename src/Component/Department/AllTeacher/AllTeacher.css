@@ -1,0 +1,32 @@
+.all_teacher_list {
+  padding: 4% 0;
+  border-bottom: 1px solid #e5e5e5c2;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.all_teacher_list img {
+  border-radius: 100%;
+}
+.teacher_social {
+  list-style: none;
+  float: left !important;
+}
+.teacher_social img {
+  margin: 0 2%;
+  display: inline;
+}
+.all_teacher_list_basicInfo {
+  padding-left: 5%;
+}
+.all_teacher_list_basicInfo span {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+.all_teacher_list_basicInfo small {
+  font-size: 14px;
+  color: #999;
+}

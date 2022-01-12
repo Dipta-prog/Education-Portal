@@ -1,0 +1,41 @@
+.select-department-from {
+  margin-left: 3%;
+}
+.select-department-from select option {
+  color: #86bc42;
+}
+.all_department_header {
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+}
+.all_department_header h4 {
+  text-transform: uppercase;
+  color: #333;
+  font-size: 32px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+/* ------ */
+.all_department_list {
+  padding: 4% 0;
+}
+.all_department_list li {
+  list-style: none;
+  border-bottom: 1px solid #e5e5e5c2;
+  padding: 14px 0;
+  cursor: pointer;
+}
+.all_department_list li:hover {
+  color: #86bc42;
+}
+.n_line {
+  border-bottom: 1.3px solid #333;
+  width: 13%;
+}
+.department_sources {
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #333;
+}

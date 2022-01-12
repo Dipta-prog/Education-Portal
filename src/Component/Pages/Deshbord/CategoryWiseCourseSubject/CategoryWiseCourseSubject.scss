@@ -1,0 +1,64 @@
+.course_subject_timming {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course_subject_timming h4 {
+  border-right: 2px solid gray;
+  padding: 0 2%;
+  color: #666666 !important;
+  font-family: sans-serif !important;
+  font-size: 20px !important;
+}
+.course_subject_timming h4 span {
+  color: #86bc42 !important;
+}
+.course_subject_reating_card {
+  border: 1px solid #f4f7f9;
+  padding: 3% 5%;
+}
+.course_subject_reating {
+  background-color: #f4f7f9;
+  width: 100%;
+  height: 1.7857em;
+  border-radius: 2px;
+  margin: 0 1%;
+}
+.course_subject_student_retings {
+  height: 27px;
+  border-radius: 2px;
+}
+.course_subject_student_retings p {
+  font-size: 17px;
+  color: white !important;
+  padding: 0 5%;
+  color: #666666;
+  line-height: 25px;
+  font-family: inherit;
+}
+.course_subject_detls small {
+  color: #1eaace;
+  font-weight: 650;
+  font-size: 19px;
+  display: block;
+}
+.course_subject_detls span {
+  font-size: 3rem;
+  color: #222222;
+  font-weight: 1;
+}
+.course_subject_detls p {
+  padding-top: 2%;
+}
+.resister_btn {
+  padding: 5px 18px;
+  border: none;
+  background-color: #86bc42;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border-radius: 3px;
+}
+.resister_btn:hover {
+  background-color: #222;
+}

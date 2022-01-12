@@ -1,0 +1,28 @@
+.single_importantFact_card {
+  text-align: center !important;
+  background-color: white;
+  padding: 5% 5%;
+
+  box-shadow: 0px 0px 0px 2px #80808008;
+  border-radius: 5px;
+}
+.single_importantFact_card h5 {
+  padding-top: 5%;
+  color: #222;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+.single_importantFact_card p {
+  color: #86bc42;
+  font-size: 18px;
+  font-weight: 499;
+}
+@media (max-width: 575px) {
+  .single_importantFact_card h5 {
+    padding-top: 9%;
+
+    font-size: 25px !important;
+    font-weight: 600;
+  }
+}
