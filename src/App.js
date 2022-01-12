@@ -28,12 +28,14 @@ import AdminDashboard from "./Component/Pages/Admin/AdminDashboard/AdminDashboar
 import Assign from "./Component/Pages/Assign/Assign";
 import Deshbord from "./Component/Pages/Deshbord/Deshbord";
 import StudentRegisterForm from "./Component/Pages/Deshbord/StudentRegisterForm/StudentRegisterForm";
+import NoticePeriod from "./Component/Pages/NoticePeriod/NoticePeriod";
 import StudentComment from "./Component/Pages/StudentComment/StudentComment";
 import CoundDownTimes from "./Component/Pages/StudentDeshbord/CoundDownTimes/CoundDownTimes";
 import StudentAssignment from "./Component/Pages/StudentDeshbord/StudentAssignment/StudentAssignment";
 // import SetTimes from "./Component/Pages/StudentDeshbord/StudentAssignment/SetTimes/SetTimes";
 // import StudentAssignment from "../src/Component/Pages/StudentDeshbord/";
 import StudentDeshbord from "./Component/Pages/StudentDeshbord/StudentDeshbord";
+import TeacherCourseDetails from "./Component/Pages/TeacherCourseDetails/TeacherCourseDetails";
 import TeacherForm from "./Component/Pages/TeacherForm/TeacherForm";
 import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
 import Sidebar from "./Component/Shared/Sidebar/Sidebar";
@@ -76,12 +78,12 @@ function App() {
                   <CourseDetails />
                 </Route>
                 <Route path="/teacherForm">
-                <Navbar />
+                  <Navbar />
                   <TeacherForm />
                   <Footer />
                 </Route>
                 <PrivateRoute path="/adminDashboard">
-                <Navbar />
+                  <Navbar />
                   <Dashboard />
                   <Footer />
                 </PrivateRoute>
@@ -99,9 +101,9 @@ function App() {
                   <StudentDeshbord></StudentDeshbord>
                 </PrivateRoute>
                 <Route path="/login">
-               
+
                   <NewLogin></NewLogin>
-    
+
                 </Route>
                 <Route path="/admin">
                   <AdminDashboard />
@@ -116,12 +118,12 @@ function App() {
                   <TeacherSidebar />
                 </Route>
                 <PrivateRoute path="/teacherProfile">
-                <Navbar />
+                  <Navbar />
                   <TeacherProfile />
                   <Footer />
                 </PrivateRoute>
                 <Route path="/enrolledStudent">
-                <Navbar />
+                  <Navbar />
                   <EnrolledStudent />
                   <Footer />
                 </Route>
@@ -231,7 +233,7 @@ function App() {
                   </div>
                 </PrivateRoute>
                 <PrivateRoute path="/addCourse">
-                <Navbar />
+                  <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       <Sidebar />{" "}
@@ -243,7 +245,7 @@ function App() {
                   <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/allCourse">
-                <Navbar />
+                  <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       {" "}
@@ -256,7 +258,7 @@ function App() {
                   <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/allDepartment">
-                <Navbar />
+                  <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       {" "}
@@ -269,7 +271,7 @@ function App() {
                   <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/addDepartment">
-                <Navbar />
+                  <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       <Sidebar />{" "}
@@ -281,7 +283,7 @@ function App() {
                   <Footer />
                 </PrivateRoute>
                 <PrivateRoute path="/makeNewAdmin">
-                <Navbar />
+                  <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       {" "}
@@ -303,8 +305,28 @@ function App() {
                     </div>
                   </div>
                 </PrivateRoute>
+                <PrivateRoute path='/teacher/teacherCourseDetails'>
+                  <div className="row">
+                    <div className="col-md-3">
+                      <TeacherSidebar />
+                    </div>
+                    <div className="col-md-9">
+                      <TeacherCourseDetails />
+                    </div>
+                  </div>
+                </PrivateRoute>
+                <PrivateRoute>
+                  <div className="row">
+                    <div className="col-md-3">
+                      <TeacherSidebar />
+                    </div>
+                    <div className="col-md-9">
+                      <NoticePeriod />
+                    </div>
+                  </div>
+                </PrivateRoute>
                 <PrivateRoute path="/addAnEvent">
-                <Navbar />
+                  <Navbar />
                   <div className="row">
                     <div className="col-md-3">
                       {" "}
