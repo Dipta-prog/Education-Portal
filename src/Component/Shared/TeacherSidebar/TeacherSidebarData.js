@@ -30,8 +30,8 @@ export const TeacherSidebarData = [
     icon: <FaIcons.FaEnvelopeOpenText />,
   },
   {
-    title: "Fees",
-    path: "/sidebar/admin/fees",
+    title: "Notices",
+    path: "/sidebar/notices",
     icon: <IoIcons.IoMdHelpCircle />,
   },
 ];

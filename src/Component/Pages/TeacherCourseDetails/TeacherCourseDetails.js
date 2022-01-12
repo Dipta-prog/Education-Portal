@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import welcomeBanner from "../../../Media/img/Welcome-banner/Welcome.jpg";
+import welcomeTeacherCourse from "../../../Media/img/welcomeTeacherCourse.jpg";
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import CoundDownTimes from "../StudentDeshbord/CoundDownTimes/CoundDownTimes";
 import Weekly from "../Weekly/Weekly";
-import "./CourseDetails.scss";
+import "./TeacherCourseDetails.scss";
 
-const CourseDetails = () => {
+const TeacherCourseDetails = () => {
   const [studentCourses, setStudentCourses] = useState([]);
 
   const loadData = () => {
@@ -114,7 +114,7 @@ const CourseDetails = () => {
         </div>
 
         <div>
-          <img src={welcomeBanner} alt="" />
+          <img src={welcomeTeacherCourse} alt="" />
           <h5>
             Believe in your infinite potential. Your only limitations are those
             you set upon yourself. Believe in yourself, your abilities and your
@@ -124,7 +124,6 @@ const CourseDetails = () => {
           <a href="#abc">Student Survey of the course</a>
 
           <Weekly />
-          
         </div>
       </div>{" "}
       <Footer></Footer>
@@ -132,4 +131,4 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+export default TeacherCourseDetails;
