@@ -315,7 +315,7 @@ function App() {
                     </div>
                   </div>
                 </PrivateRoute>
-                <PrivateRoute>
+                <PrivateRoute path='/notices'>
                   <div className="row">
                     <div className="col-md-3">
                       <TeacherSidebar />

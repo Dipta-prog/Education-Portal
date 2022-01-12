@@ -31,7 +31,7 @@ export const TeacherSidebarData = [
   },
   {
     title: "Notices",
-    path: "/sidebar/notices",
+    path: "/notices",
     icon: <IoIcons.IoMdHelpCircle />,
   },
 ];
