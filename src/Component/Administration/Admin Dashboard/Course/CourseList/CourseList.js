@@ -13,7 +13,7 @@ const CourseList = () => {
             .then(res => res.json())
             .then(data => setAllCourse(data.result))
             .catch(err => console.log(err))
-    }, [])
+    }, [allCourse])
 
 
     return (

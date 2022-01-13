@@ -9,7 +9,7 @@ const DepartmentList = () => {
             .then(res => res.json())
             .then(data => setAllDepartment(data.result))
             .catch(err => console.log(err))
-    }, [])
+    }, [allDepartment])
 
 
     return (

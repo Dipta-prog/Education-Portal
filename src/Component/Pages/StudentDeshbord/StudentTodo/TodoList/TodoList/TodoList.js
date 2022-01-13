@@ -14,7 +14,7 @@ const TodoList = () => {
       let obj = JSON.parse(arr);
       setTaskList(obj);
     }
-  }, []);
+  }, [taskList]);
 
   const deleteTask = (index) => {
     let tempList = taskList;

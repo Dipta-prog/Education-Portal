@@ -1,4 +1,5 @@
 import React from 'react';
+import './SingleCourse.scss';
 
 const SingleCourse = ({course}) => {
     const {courseName, courseId, image, details, _id} = course;
@@ -15,7 +16,7 @@ const SingleCourse = ({course}) => {
 
     return (
         <div className="col-md-4">
-            <div className="card p-3">
+            <div className="card p-3 my-3 courseBorder">
             <img src={image} className="card-img-top p-3" height="300px" alt="..." />
                 <div className="card-title"><h5>{courseName}</h5></div>
                 <p className="">
@@ -25,6 +26,8 @@ const SingleCourse = ({course}) => {
                     <div className="btn btn-success">Edit</div>
                     <div className="btn btn-danger" onClick={()=> handleDelete(_id)}>Delete</div>
                 </div>
+
+                <h1 className="text-white text-center my-3" style={{backgroundColor: '#4f81bd'}}>Final Defense</h1>
             </div>
         </div>
     );

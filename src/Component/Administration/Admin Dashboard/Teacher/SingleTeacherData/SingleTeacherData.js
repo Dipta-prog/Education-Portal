@@ -14,9 +14,9 @@ const SingleTeacherData = ({ teacher }) => {
     return (
             <tr>
                 <td><img className="table-img" src={image} alt="" /></td>
-                <td>{id}</td>
-                <td>{name}</td>
-                <td>{email}</td>
+                <td><b>{id}</b></td>
+                <td><b>{name}</b></td>
+                <td><b>{email}</b></td>
                 <td>
                     <div className="d-flex justify-content-lg-center align-items-center">
                         <button className="btn btn-primary me-2">Edit</button>

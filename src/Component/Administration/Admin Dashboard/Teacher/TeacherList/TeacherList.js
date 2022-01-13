@@ -20,11 +20,11 @@ const TeacherList = () => {
 
                         <table className="table" cellSpacing="0">
                             <tr>
-                                <th>Picture</th>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Handle</th>
+                                <th><b>Picture</b></th>
+                                <th><b>Id</b></th>
+                                <th><b>Name</b></th>
+                                <th><b>Email</b></th>
+                                <th><b>Handle</b></th>
                             </tr>
                             {
                                 teachersData.map(teacher => <SingleTeacherData key={teacher.id} teacher={teacher} />)

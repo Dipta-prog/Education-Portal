@@ -1,4 +1,5 @@
 import React from 'react';
+import './SingleDepartment.scss';
 
 const SingleDepartment = ({ department }) => {
     const { departmentName, image, departmentCode, _id } = department;
@@ -16,7 +17,7 @@ const SingleDepartment = ({ department }) => {
 
     return (
         <div className="col-md-4">
-            <div className="card p-3">
+            <div className="card departmentBorder p-3 my-3">
             <img src={image} class="card-img-top" maxHeight="150px" alt="..." />
                 <div className="card-title"><h5>{departmentName}</h5></div>
                 <div className="card-body">
