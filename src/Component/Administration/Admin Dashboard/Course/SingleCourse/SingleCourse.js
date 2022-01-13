@@ -27,7 +27,7 @@ const SingleCourse = ({course}) => {
                     <div className="btn btn-danger" onClick={()=> handleDelete(_id)}>Delete</div>
                 </div>
 
-                <h1 className="text-white text-center my-3" style={{backgroundColor: '#4f81bd'}}>Final Defense</h1>
+                <h1 className="text-white text-center my-3" style={{backgroundColor: '#215968'}}>Final Defense</h1>
             </div>
         </div>
     );
